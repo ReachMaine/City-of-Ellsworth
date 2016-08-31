@@ -1,0 +1,39 @@
+// our themes sytling.
+.widget_woothemes_our_team {
+	.team-members {
+		.team-member {
+			vertical-align: top;
+			h3.member {
+				margin-bottom: 0px;
+				padding-top: 10px;
+			}
+			.role {
+				margin-top: 0px;
+			}
+			.team-member-text {
+				ul.author-details {
+					list-style: none;
+					margin-left: 0px;
+					margin-top: 0px;
+					li {
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+	}
+	
+	.team-members:after,
+	.team-members.columns-2:after {
+		clear: both;
+		content: " ";
+	}
+}
+
+@media (min-width: 768px) { // mobile break for columns in content (Visual Composer)
+	.team-members.columns-2 .team-member {
+		width: 50%;
+		//float: left;
+		display: inline-block;
+	}
+}

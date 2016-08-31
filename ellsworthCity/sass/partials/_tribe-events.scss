@@ -1,0 +1,22 @@
+$calendar-button-color: #1e408d;
+$calendar-link-color: #781514;
+	
+	// background of calendar buttons
+	#tribe-events .tribe-events-button,
+	#tribe-events .tribe-events-button:hover, 
+	#tribe_events_filters_wrapper input[type=submit], 
+	.tribe-events-button, 
+	.tribe-events-button.tribe-active:hover, 
+	.tribe-events-button.tribe-inactive, 
+	.tribe-events-button:hover,
+	.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], 
+	.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+		background-color: $calendar-button-color;
+	}
+	
+	#tribe-events-content .tribe-events-tooltip h4, 
+	#tribe_events_filters_wrapper .tribe_events_slider_val, 
+	.single-tribe_events a.tribe-events-gcal, 
+	.single-tribe_events a.tribe-events-ical {
+		color: $calendar-link-color;
+	}

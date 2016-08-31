@@ -1,0 +1,1120 @@
+/* -----------------------------------------------------------------------------
+
+	TABLE OF CONTENTS
+
+	1.) General
+	2.) Components
+	3.) Header
+	4.) Core
+	5.) Sidebar
+	6.) Footer
+	7.) Other
+	8.) Responsive
+
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+
+    1.) GENERAL
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+		COLORS
+	-------------------------------------------------------------------------- */
+
+	// MAIN PALETTE
+	$accent: #ec5237; // primary accent color
+	$xx-soft-gray: #fcfcfc; // very very soft backgrounds
+	$x-soft-gray: #f0f0f0; // very soft backgrounds
+	$soft-gray: #e5e5e5; // soft background
+	$medium-gray: #bebebe; // lighter texts
+	$medium-dark-gray: #848484; // darker texts
+	$dark-gray: #333; // titles
+	$x-dark-gray: #1a1a1a; // titles, strong text on bright bg
+
+	// GENERAL
+	$body-bg: #f2f2f2;
+	$body-font: #565656;
+	$body-link: $accent;
+	$content-bg: #FFF;
+
+	// FOOTER
+	$footer-bg: #111111;
+
+	/* -------------------------------------------------------------------------
+		MIXINS
+	-------------------------------------------------------------------------- */
+
+	// BOX SHADOW
+	@mixin box-shadow ( $shadow1, $shadow2:false ) {
+		$params: $shadow1;
+		@if $shadow2 { $params: $shadow1, $shadow2; }
+		-moz-box-shadow: $params;
+		-webkit-box-shadow: $params;
+		box-shadow: $params;
+	}
+
+	// HORIZONTAL GRADIENT
+	@mixin horizontal-gradient( $from, $to ) {
+		background-image: -webkit-gradient( linear, left top, right top, from( $from ), to( $to ) );
+		background-image: -webkit-linear-gradient( left, $from, $to );
+		background-image:    -moz-linear-gradient( left, $from, $to );
+		background-image:      -o-linear-gradient( left, $from, $to );
+		background-image:         linear-gradient( to right, $from, $to );
+	}
+
+	// INPUT PLACEHOLDER
+	@mixin input-placeholder ( $color ) {
+		&::-webkit-input-placeholder { color: $color; }
+		&:-moz-placeholder { color: $color; }
+		&::-moz-placeholder { color: $color; }
+		&:-ms-input-placeholder { color: $color; }
+	}
+
+	// VERTICAL GRADIENT
+	@mixin vertical-gradient( $from, $to ) {
+		background-image: -webkit-gradient( linear, left top, left bottom, from( $from ), to( $to ) );
+		background-image: -webkit-linear-gradient( top, $from, $to );
+		background-image:    -moz-linear-gradient( top, $from, $to );
+		background-image:      -o-linear-gradient( top, $from, $to );
+		background-image:         linear-gradient( to bottom, $from, $to );
+	}
+	@mixin vertical-gradient-from-bottom( $from, $to ) {
+		background-image: -webkit-gradient( linear, left bottom, left top, from( $from ), to( $to ) );
+		background-image: -webkit-linear-gradient( bottom, $from, $to );
+		background-image:    -moz-linear-gradient( bottom, $from, $to );
+		background-image:      -o-linear-gradient( bottom, $from, $to );
+		background-image:         linear-gradient( to top, $from, $to );
+	}
+
+	/* -------------------------------------------------------------------------
+        TYPOGRAPHY
+	------------------------------------------------------------------------- */
+
+	body { color: $body-font; background-color: $body-bg; }
+
+	a { color: $body-link; }
+	abbr { border-color: $body-font; }
+	blockquote { border-color: $soft-gray; }
+	code { border-color: $soft-gray; }
+	pre { border-color: $soft-gray; }
+
+	// HEADINGS
+	h1, h2, h3, h4, h5, h6 { color: $dark-gray; }
+
+	// TABLE
+	table thead th { color: #FFF; background-color: $accent; }
+	table thead th a { color: #FFF; }
+	table tbody > tr:nth-child(even) > td { background-color: $soft-gray; }
+
+	/* -------------------------------------------------------------------------
+		FORMS
+	------------------------------------------------------------------------- */
+
+	label { color: $dark-gray; }
+	label > span { color: $accent; }
+	input, textarea, select { color: $body-font; background-color: $x-soft-gray; }
+	input[type="submit"] { color: #FFF; border-color: $accent; background-color: $accent; }
+	input[type="submit"]:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+	input[type="file"] { background-color: transparent; }
+
+	// CHECKBOX & RADIO INPUTS
+	.checkbox-input, .radio-input {
+		label { color: $body-font; }
+		label:before { color: $medium-gray; }
+		&.m-checked label:before { color: $accent; }
+	}
+
+	// SELECTBOX INPUT
+	.selectbox-input {
+		.toggle:after { color: $accent; }
+		.fake-selectbox { background-color: $soft-gray; }
+		.fake-selectbox > li:hover { color: #FFF; background-color: $accent; }
+	}
+
+
+/* -----------------------------------------------------------------------------
+
+    2.) COMPONENTS
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+		ACCORDION
+	------------------------------------------------------------------------- */
+
+	.accordion-items {
+		> li { border-color: $soft-gray; }
+		.accordion-title { color: $dark-gray; }
+		.accordion-title:after { color: $accent; }
+		.accordion-title .ico { color: $accent; }
+	}
+
+	/* -------------------------------------------------------------------------
+		ALERT MESSAGES
+	------------------------------------------------------------------------- */
+
+	.c-alert-message { color: #265e88; background-color: #e1edf9;
+		&.m-warning { color: #d40041; background-color: #ffdfe0; }
+		&.m-success { color: #499143; background-color: #d4fbd3; }
+		&.m-notification { color: #c88435; background-color: #fff4cf; }
+		.alert-close { color: $dark-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+		ARTICLE LIST
+	------------------------------------------------------------------------- */
+
+	.c-article-list {
+		.article-list-title .ico { color: $accent; }
+		.article-list-title a { color: $dark-gray; }
+		.brief-article { border-color: $x-soft-gray; }
+		.article-date { color: $medium-dark-gray; }
+		.more-btn-holder { border-color: $x-soft-gray; }
+	}
+	.m-no-boxes .brief-article { border-color: $soft-gray; }
+	.m-no-boxes .more-btn-holder { border-color: $soft-gray }
+
+	/* -------------------------------------------------------------------------
+		BUTTON
+	------------------------------------------------------------------------- */
+
+	.c-button { color: #FFF; border-color: $accent; background-color: $accent; }
+	.c-button.m-outline { color: $accent; background-color: transparent; }
+	.c-button:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+	.c-button.m-outline:hover { background-color: transparent; }
+
+	/* -------------------------------------------------------------------------
+		CONTENT BOX
+	------------------------------------------------------------------------- */
+
+	.c-content-box { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+	.c-content-box .c-content-box,
+	.m-no-boxes .c-content-box { background-color: transparent; @include box-shadow( none ); }
+	.m-no-boxes .c-content-box.m-forced { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+
+	/* -------------------------------------------------------------------------
+		COUNTER
+	------------------------------------------------------------------------- */
+
+	.c-counter .counter-data { color: $accent; }
+
+	/* -------------------------------------------------------------------------
+		CTA MESSAGE
+	------------------------------------------------------------------------- */
+
+	.c-cta-message .cta-title { border-color: $soft-gray; }
+
+	/* -------------------------------------------------------------------------
+		DEFINITION LIST
+	------------------------------------------------------------------------- */
+
+	.c-definition-list {
+		dl > dt { color: $dark-gray; }
+		dl > dt,
+		dl > dd { border-color: $soft-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+		DIRECTORY
+	------------------------------------------------------------------------- */
+
+	.c-directory {
+		.directory-title .ico { color: $accent; }
+		.directory-menu > li > a { color: $dark-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+		DOCUMENTS
+		This component is using LSVR Documents widget
+	------------------------------------------------------------------------- */
+
+	.c-documents {
+		.widget-title { color: $dark-gray; }
+		.widget-ico { color: $accent; }
+		.show-all-btn { border-color: $x-soft-gray; }
+		.widget.lsvr-documents {
+			ul > li { border-color: $x-soft-gray; }
+			.document-icon { color: $medium-gray; }
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+		EVENTS
+		This component is using LSVR Events widget
+	------------------------------------------------------------------------- */
+
+	.c-events {
+		.widget-title { color: $dark-gray; }
+		.widget-ico { color: $accent; }
+		.show-all-btn { border-color: $x-soft-gray; }
+		.widget.lsvr-events {
+			ul > li { border-color: $x-soft-gray; }
+			.event-month { color: #FFF; background-color: $accent; }
+			.event-day { color: $dark-gray; background-color: $soft-gray; }
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+		FEATURE
+	------------------------------------------------------------------------- */
+
+	.c-feature .feature-icon { color: $accent; }
+
+	/* -------------------------------------------------------------------------
+		NOTICES
+		This component is using LSVR Notices widget
+	------------------------------------------------------------------------- */
+
+	.c-notices {
+		.widget-title { color: $dark-gray; }
+		.widget-ico { color: $accent; }
+		.show-all-btn { border-color: $x-soft-gray; }
+		.widget.lsvr-notices {
+			ul > li { border-color: $x-soft-gray; }
+		}
+	}
+
+	/* -------------------------------------------------------------------------
+		PAGINATION
+	------------------------------------------------------------------------- */
+
+	.c-pagination {
+		a:hover { background-color: #FFF; }
+		.m-active a { color: #FFF; background-color: $accent; }
+	}
+	.navigation.pagination {
+		.nav-links a:hover { background-color: #FFF; }
+		.nav-links span.current { color: #FFF; background-color: $accent; }
+		.nav-links span.dots { color: $medium-gray;  }
+	}
+
+	/* -------------------------------------------------------------------------
+		PROGRESS BAR
+	------------------------------------------------------------------------- */
+
+	.c-progress-bar {
+		.bar-indicator { background-color: $soft-gray; }
+		.bar-indicator-inner { background-color: $accent; }
+	}
+
+	/* -------------------------------------------------------------------------
+		SOCIAL ICONS
+	------------------------------------------------------------------------- */
+
+	.c-social-icons {
+		a { color: #FFF; }
+		.ico-angellist a { background-color: #000; }
+		.ico-behance a { background-color: #1769ff; }
+		.ico-bitbucket a { background-color: #205081; }
+		.ico-bitcoin a { background-color: #dc9229; }
+		.ico-codepen a { background-color: #000; }
+		.ico-delicious a { background-color: #3399ff; }
+		.ico-deviantart a { background-color: #05cc47; }
+		.ico-digg a { background-color: #000; }
+		.ico-dribbble a { background-color: #ea4c89; }
+		.ico-dropbox a { background-color: #007ee5; }
+		.ico-email a { background-color: $accent; }
+		.ico-facebook a { background-color: #3b5998; }
+		.ico-flickr a { background-color: #0063dc; }
+		.ico-foursquare a { background-color: #0072b1; }
+		.ico-git a { background-color: #4183c4; }
+		.ico-github a { background-color: #4183c4; }
+		.ico-googleplus a { background-color: #dd4b39; }
+		.ico-instagram a { background-color: #3f729b; }
+		.ico-lastfm a { background-color: #c3000d; }
+		.ico-linkedin a { background-color: #0976b4; }
+		.ico-paypal a { background-color: #003087; }
+		.ico-pinterest a { background-color: #cc2127; }
+		.ico-reddit a { background-color: #ff4500; }
+		.ico-skype a { background-color: #00aff0; }
+		.ico-soundcloud a { background-color: #ff8800; }
+		.ico-spotify a { background-color: #2ebd59; }
+		.ico-steam a { background-color: #000; }
+		.ico-trello a { background-color: #256a92; }
+		.ico-tumblr a { background-color: #35465c; }
+		.ico-twitch a { background-color: #6441a5; }
+		.ico-twitter a { background-color: #55acee; }
+		.ico-vimeo a { background-color: #1ab7ea; }
+		.ico-vine a { background-color: #00b488; }
+		.ico-vk a { background-color: #45668e; }
+		.ico-wordpress a { background-color: #21759b; }
+		.ico-xing a { background-color: #026466; }
+		.ico-yahoo a { background-color: #400191; }
+		.ico-yelp a { background-color: #af0606; }
+		.ico-youtube a { background-color: #e52d27; }
+		a:hover { @include box-shadow( inset 0 0 50px rgba( #FFF, .2 ) ); }
+	}
+
+	/* -------------------------------------------------------------------------
+		SEPARATOR
+	------------------------------------------------------------------------- */
+
+	.c-separator { border-color: $soft-gray; }
+	.c-separator.m-transparent { border-color: transparent; }
+
+	/* -------------------------------------------------------------------------
+		SLIDER
+	------------------------------------------------------------------------- */
+
+	.c-slider { background-color: $medium-gray;
+
+		.slide { color: #FFF; }
+		h1, h2, h3, h4, h5, h6 { color: #FFF; }
+		h1 a, h2 a, h3 a { color: #FFF; }
+
+		// ARROW NAVIGATION
+		.owl-prev,
+		.owl-next { color: #FFF; background-color: rgba( #FFF, .2 ); }
+
+		// SLIDER INDICATOR
+		.slider-indicator { background-color: #FFF; background-color: rgba( #FFF, .2 ); }
+		.slider-indicator > span { background-color: $accent; }
+
+	}
+
+	/* -------------------------------------------------------------------------
+		TABS
+	------------------------------------------------------------------------- */
+
+	.c-tabs {
+		.tab-list > li { color: $dark-gray; }
+		.tab-list > li.m-active { border-color: $accent; }
+	}
+
+	/* -------------------------------------------------------------------------
+		TEAM MEMBER
+	------------------------------------------------------------------------- */
+
+	.c-team-member {
+		.member-role { color: $medium-dark-gray; }
+	}
+
+
+/* -----------------------------------------------------------------------------
+
+    3.) HEADER
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+		HEADER TOGGLE
+	------------------------------------------------------------------------- */
+
+	.header-toggle { color: $body-font; background-color: #FFF; }
+	.header-toggle:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); }
+	.header-toggle.m-active { color: #FFF; background-color: $accent; @include box-shadow( none ); }
+
+	/* -------------------------------------------------------------------------
+		HEADER MENU
+	------------------------------------------------------------------------- */
+
+	.header-menu nav { background-color: $accent; border-color: rgba( #000, .2 ); @include box-shadow( -10px 10px 10px rgba( #000, .25 ) );
+
+		> ul > li > a { color: #FFF; }
+
+		// SUBMENU
+		ul ul { background-color: #FFF; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ), -5px 5px 8px rgba( 0, 0, 0, .05 ) ); }
+		ul ul li { border-color: $x-soft-gray; }
+		ul ul .m-has-submenu > a:after,
+		ul ul .m-has-submenu > a:before { color: $medium-gray; }
+
+	}
+
+	/* -------------------------------------------------------------------------
+		HEADER TOOLS
+	------------------------------------------------------------------------- */
+
+	// LANGUAGE SWITCHER
+	.header-lang-switcher {
+		li { background-color: #FFF; }
+		li { border-color: $soft-gray; }
+		a, button { color: $body-font; }
+		a:hover,
+		button:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); }
+		a.m-active,
+		button.m-active { color: #FFF; background-color: $accent; @include box-shadow( none ); }
+	}
+
+	// HEADER SEARCH
+	.header-search {
+		.form-fields { background-color: #FFF;  }
+		.submit-btn { color: #FFF; background-color: $accent; }
+		.submit-btn:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); }
+	}
+
+	// HEADER LOGIN
+	.header-login a { color: $body-font; background-color: #FFF; }
+	.header-login a:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); text-decoration: none; }
+	.header-login a i { color: $accent; }
+	.header-login a.logout { background-color: $accent; }
+	.header-login a.logout i { color: #FFF; }
+
+	// GMAP SWITCHER
+	.header-gmap-switcher { color: $body-font; background-color: #FFF; }
+	.header-gmap-switcher:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); }
+	.header-gmap-switcher .ico-open { color: $accent; }
+	.header-gmap-switcher.m-active { color: #FFF; background-color: $accent; @include box-shadow( none ); }
+
+	/* -------------------------------------------------------------------------
+		HEADER BG
+	------------------------------------------------------------------------- */
+
+	// HEADER IMAGE
+	.header-image:after { background-color: transparent; @include vertical-gradient( rgba( $body-bg, 0 ), $body-bg ); }
+	.header-image .image-layer { background-color: #FFF; }
+
+
+/* -----------------------------------------------------------------------------
+
+    4.) CORE
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+        PAGE HEADER
+    ------------------------------------------------------------------------- */
+
+	#page-header { color: #FFF; background-color: $dark-gray; background-color: rgba( #000, .8 ); }
+	#page-header:after { border-top-color: $dark-gray; border-top-color: rgba( #000, .8 ); }
+
+	// PAGE TITLE
+	.page-title h1 { color: #FFF; }
+	.m-has-breadcrumbs .page-title { border-color: #FFF; border-color: rgba( #FFF, .1 ); }
+	.m-has-breadcrumbs .page-title:after { background-color: #FFF; }
+
+	// BREADCRUMBS
+	.breadcrumbs { color: $medium-gray; }
+	.breadcrumbs a { color: #FFF; }
+
+	/* -------------------------------------------------------------------------
+        ARTICLES
+    ------------------------------------------------------------------------- */
+
+	.article-page {
+		.article-footer { border-color: $x-soft-gray; }
+		.article-footer .ico { color: $medium-gray; }
+		.article-date-permalink { color: $body-font; }
+	}
+	.article-archive-page .article.sticky .c-content-box { @include box-shadow( inset 0 0 0 10px rgba( #000, .1 ) ); }
+	.article-navigation h5,
+	.article-navigation h5 a { color: $dark-gray; }
+
+	// ARTICLE COMMENTS
+	.article-comments .comment-list {
+		.comment-author { color: $dark-gray; }
+		.comment-info { border-color: $x-soft-gray; }
+		.comment-date:before,
+		.comment-edit:before,
+		.comment-reply:before { color: $medium-gray; }
+		.comment-edit:hover:before,
+		.comment-reply:hover:before { color: $accent; }
+	}
+
+	// COMMENT FORM
+	#respond #cancel-comment-reply-link { color: $body-font; }
+	#respond #cancel-comment-reply-link:before { color: $medium-gray; }
+	#respond #cancel-comment-reply-link:hover:before { color: $accent; }
+
+	/* -------------------------------------------------------------------------
+        CPT GENERAL
+    ------------------------------------------------------------------------- */
+
+    .cpt-archive-page {
+    	.bottom-tools { border-color: $x-soft-gray; }
+    }
+
+	/* -------------------------------------------------------------------------
+        NOTICES
+    ------------------------------------------------------------------------- */
+
+	.notice-page {
+		.notice-footer { border-color: $x-soft-gray; }
+		.notice-footer .ico { color: $medium-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+        DOCUMENTS
+    ------------------------------------------------------------------------- */
+
+	.document-page {
+		.document-list > li { border-color: $x-soft-gray; }
+		.document-icon { color: $medium-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+        EVENTS
+    ------------------------------------------------------------------------- */
+
+	.event-page {
+		.group-title { color: #FFF; background-color: $accent; }
+		.event-info { border-color: $x-soft-gray; }
+		.event-info .ico { color: $accent; }
+		.event-content { border-color: $x-soft-gray; }
+	}
+
+	/* -------------------------------------------------------------------------
+        GALLERIES
+    ------------------------------------------------------------------------- */
+
+	.gallery-page {
+		.gallery-footer { border-color: $x-soft-gray; }
+		.gallery-footer .ico { color: $medium-gray; }
+	}
+	.gallery-archive-page .c-gallery article { background-color: #FFF; }
+
+	/* -------------------------------------------------------------------------
+        SEARCH RESULTS
+    ------------------------------------------------------------------------- */
+
+	.search-results-page .c-search-form {
+		.submit-btn { color: #FFF; background-color: $accent; }
+		.submit-btn:hover { @include box-shadow( inset 0 0 0 5px rgba( #000, .1 ) ); }
+	}
+
+
+/* -----------------------------------------------------------------------------
+
+    5.) SIDEBAR
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+		SIDE MENU
+	------------------------------------------------------------------------- */
+
+	.side-menu nav { background-color: $accent; border-color: rgba( #000, .1 );
+
+		> ul > li { border-color: rgba( #FFF, .1 ); }
+		> ul > li > a { color: #FFF; }
+		> ul > li.m-hover > a,
+		> ul > li > a:hover { color: #FFF; }
+		.m-has-submenu > a:after,
+		.m-has-submenu > a:before { color: #FFF; }
+		.submenu-toggle { color: $accent; }
+
+			// SUBMENU
+			ul > li > ul { background-color: #FFF; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+			ul > li > ul > li { border-color: $x-soft-gray; }
+			ul ul .m-has-submenu > a:after,
+			ul ul .m-has-submenu > a:before { color: $medium-gray; }
+
+	}
+
+	// VISIBLE SUBMENU
+	.side-menu.m-show-submenu nav {
+
+		> ul > .current-menu-ancestor > ul,
+		> ul > .current_page_ancestor > ul,
+		> ul > .current_page_parent > ul,
+		> ul > .current_page_item > ul,
+		> ul > .current-menu-item > ul { background-color: rgba(0, 0, 0, 0.1); }
+		.current-menu-ancestor > ul,
+		.current_page_ancestor > ul,
+		.current_page_parent > ul,
+		.current_page_item > ul,
+		.current-menu-item > ul { background-color: transparent; @include box-shadow( none ); }
+		.current-menu-ancestor > ul > li,
+		.current_page_ancestor > ul > li,
+		.current_page_parent > ul > li,
+		.current_page_item > ul > li,
+		.current-menu-item > ul > li { border-color: transparent; border-color: rgba( #FFF, .1 ); }
+		.current-menu-ancestor > ul > li > a,
+		.current_page_ancestor > ul > li > a,
+		.current_page_parent > ul > li > a,
+		.current_page_item > ul > li > a,
+		.current-menu-item > ul > li > a { color: #FFF; }
+		.current-menu-ancestor a:after,
+		.current-menu-ancestor a:before,
+		.current_page_ancestor a:after,
+		.current_page_ancestor a:before,
+		.current_page_parent a:after,
+		.current_page_parent a:before,
+		.current_page_item a:after,
+		.current_page_item a:before,
+		.current-menu-item a:after,
+		.current-menu-item a:before { color: #FFF; }
+
+	}
+
+	/* -------------------------------------------------------------------------
+		WIDGETS
+	------------------------------------------------------------------------- */
+
+	.sidebar {
+
+		.widget { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+		.widget-title { color: $dark-gray; }
+		.widget-ico { color: $accent; }
+		.show-all-btn { border-color: $x-soft-gray; }
+
+		//LSVR CUSTOM CODE & IMAGE
+		.widget.lsvr-image,
+		.widget.lsvr-custom-code { background-color: transparent; @include box-shadow( none ); }
+
+		//LSVR DEFINITION LIST
+		.widget.lsvr-definition-list {
+			dl > dt { color: $dark-gray; }
+			dl > dt,
+			dl > dd { border-color: $x-soft-gray; }
+		}
+
+		// LSVR DOCUMENTS WIDGET
+		.widget.lsvr-documents {
+			ul > li { border-color: $x-soft-gray; }
+			.document-icon { color: $medium-gray; }
+		}
+
+		// LSVR EVENTS WIDGET
+		.widget.lsvr-events {
+			ul > li { border-color: $x-soft-gray; }
+			.event-month { color: #FFF; background-color: $accent; }
+			.event-day { color: $dark-gray; background-color: $soft-gray; }
+		}
+
+		// LSVR GALLERIES WIDGET
+		.widget.lsvr-galleries {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+		// LSVR LOCALE WIDGET
+		.widget.lsvr-locale-info {
+			.widget-content > ul > li { border-color: $x-soft-gray; }
+			.local-icon { color: $medium-gray; }
+			.m-has-bg { color: #FFF; }
+			.m-has-bg .widget-title,
+			.m-has-bg .widget-ico,
+			.m-has-bg .widget-ico-shadow { color: #FFF; }
+			.m-has-bg .widget-title { border-color: transparent; }
+			.m-has-bg .widget-content > ul > li { border-color: rgba( #FFF, .2 ); }
+			.m-has-bg .local-icon { color: #FFF; }
+			.m-has-bg h4 { color: #FFF; }
+		}
+
+		// LSVR MAILCHIMP SUBSCRIBE
+		.widget.lsvr-mailchimp-subscribe {
+			.submit-btn { color: $accent; }
+		}
+
+		// LSVR NOTICES WIDGET
+		.widget.lsvr-notices {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+		// LSVR NOTICE, DOCUMENT, EVENT, GALLERY CATEGORIES WIDGET
+		.widget.lsvr-document-categories,
+		.widget.lsvr-event-categories,
+		.widget.lsvr-gallery-categories,
+		.widget.lsvr-notice-categories {
+			.widget-content > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// ARCHIVE WIDGET
+		.widget.widget_archive {
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// CALENDAR WIDGET
+		.widget.widget_calendar {
+			caption { border-color: $x-soft-gray; }
+			thead th { color: $dark-gray; border-color: $x-soft-gray; }
+			tfoot td { border-color: $x-soft-gray; }
+		}
+
+		// CATEGORIES WIDGET
+		.widget.widget_categories {
+			ul { color: $medium-gray; }
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// CUSTOM MENU WIDGET
+		.widget.widget_nav_menu {
+			.widget-inner > * > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// META WIDGET
+		.widget.widget_meta {
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// PAGES WIDGET
+		.widget.widget_pages {
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// RECENT COMMENTS WIDGET
+		.widget.widget_recent_comments {
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// RECENT POSTS WIDGET
+		.widget.widget_recent_entries {
+			.widget-inner > ul > li { border-color: $x-soft-gray; }
+		}
+
+		// RSS WIDGET
+		.widget.widget_rss {
+			ul > li { border-color: $x-soft-gray; }
+			.rss-date { color: $medium-gray;  }
+		}
+
+		// SEARCH WIDGET
+		.widget.widget_search {
+			.c-search-form button { color: $accent; }
+		}
+
+        // bbPRESS FORUM LIST
+		.widget.widget_display_forums {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+        // bbPRESS LOGIN WIDGET
+		.widget.bbp_widget_login {
+			.bbp-submit-wrapper .button { color: #FFF; border-color: $accent; background-color: $accent; }
+			.bbp-submit-wrapper .button:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+		}
+
+        // bbPRESS RECENT REPLIES
+		.widget.widget_display_replies {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+        // bbPRESS RECENT TOPICS
+		.widget.widget_display_topics {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+        // bbPRESS TOPICS LIST WIDGET
+		.widget.widget_display_views {
+			ul > li { border-color: $x-soft-gray; }
+		}
+
+        // bbPRESS STATISTICS WIDGET
+		.widget.widget_display_stats {
+			dl > dt { color: $dark-gray; }
+			dl > dt,
+			dl > dd { border-color: $x-soft-gray; }
+		}
+
+	}
+
+
+/* -----------------------------------------------------------------------------
+
+    6.) FOOTER
+
+----------------------------------------------------------------------------- */
+
+.footer-bg:before { background-color: $body-bg; background-color: rgba( $body-bg, .9 ); @include vertical-gradient( $body-bg, rgba( $body-bg, 0 ) ); }
+
+	/* -------------------------------------------------------------------------
+		FOOTER TOP
+	------------------------------------------------------------------------- */
+
+	.footer-top { color: $medium-gray; background-color: $footer-bg; background-color: rgba( $footer-bg, .9 ); }
+	.footer-top .c-separator { border-color: #303030; border-color: rgba( #FFF, .1 ); }
+
+	/* -------------------------------------------------------------------------
+		BOTTOM PANEL
+	------------------------------------------------------------------------- */
+
+	#bottom-panel {
+
+		h1, h2, h3, h4, h5, h6 { color: $medium-gray; }
+		input { color: #FFF; background-color: #000; background-color: rgba( #000, .8 ); }
+		label { color: #FFF; }
+
+		.widget-title { color: #FFF; }
+		.widget-ico { color: $accent; }
+		.show-all-btn { border-color: rgba( #FFF, .1 ); }
+
+		// ALERT MESSAGE
+		.c-alert-message { color: #FFF; background-color: transparent; border-color: #FFF; border-color: rgba( #FFF, .1 ); }
+
+		//LSVR DEFINITION LIST
+		.widget.lsvr-definition-list {
+			dl > dt,
+			dl > dd { border-color: rgba( #FFF, .1 ); }
+			dl > dd { color: #FFF; }
+		}
+
+		// LSVR DOCUMENTS WIDGET
+		.widget.lsvr-documents {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+			.document-icon { color: $medium-gray; }
+		}
+
+		// LSVR EVENTS WIDGET
+		.widget.lsvr-events {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+			.event-month { color: #FFF; background-color: $accent; }
+			.event-day { color: $dark-gray; background-color: $soft-gray; }
+		}
+
+		// LSVR GALLERIES WIDGET
+		.widget.lsvr-galleries {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// LSVR LOCALE WIDGET
+		.widget.lsvr-locale-info {
+			.widget-inner { background: none; }
+			.widget-content > ul > li { border-color: rgba( #FFF, .1 ); }
+			.row-value { color: #FFF; }
+		}
+
+		// LSVR MAILCHIMP SUBSCRIBE
+		.widget.lsvr-mailchimp-subscribe {
+			.submit-btn { color: #FFF; }
+		}
+
+		// LSVR NOTICES WIDGET
+		.widget.lsvr-notices {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// LSVR NOTICE, DOCUMENT, EVENT, GALLERY CATEGORIES WIDGET
+		.widget.lsvr-document-categories,
+		.widget.lsvr-event-categories,
+		.widget.lsvr-gallery-categories,
+		.widget.lsvr-notice-categories {
+			.widget-content > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+        // ARCHIVE WIDGET
+		.widget.widget_archive {
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// CALENDAR WIDGET
+		.widget.widget_calendar {
+			caption { border-color: rgba( #FFF, .1 ); }
+			thead th { border-color: rgba( #FFF, .1 ); }
+			tfoot td { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// CATEGORIES WIDGET
+		.widget.widget_categories {
+			ul { color: $medium-gray; }
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// CUSTOM MENU WIDGET
+		.widget.widget_nav_menu {
+			.widget-inner > * > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// META WIDGET
+		.widget.widget_meta {
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// PAGES WIDGET
+		.widget.widget_pages {
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// RECENT COMMENTS WIDGET
+		.widget.widget_recent_comments {
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// RECENT POSTS WIDGET
+		.widget.widget_recent_entries {
+			.widget-inner > ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// RSS WIDGET
+		.widget.widget_rss {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+			.rss-date { color: $medium-gray;  }
+		}
+
+		// SEARCH WIDGET
+		.widget.widget_search {
+			.form-fields { background-color: $medium-dark-gray; background-color: rgba( #FFF, .1 ); }
+			input { color: #FFF; }
+			.c-search-form button { color: $accent; }
+		}
+
+		// bbPRESS FORUM LIST WIDGET
+		.widget.widget_display_forums {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// bbPRESS RECENT REPLIES WIDGET
+		.widget.widget_display_replies {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+        // bbPRESS LOGIN WIDGET
+		.widget.bbp_widget_login {
+			.bbp-submit-wrapper .button { color: #FFF; border-color: $accent; background-color: $accent; }
+			.bbp-submit-wrapper .button:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+		}
+
+		// bbPRESS RECENT TOPICS WIDGET
+		.widget.widget_display_topics {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+		// bbPRESS STATISTICS WIDGET
+		.widget.widget_display_stats {
+			dl > dt,
+			dl > dd { border-color: rgba( #FFF, .1 ); }
+		}
+
+		//bbPRESS TOPICS LIST WIDGET
+		.widget.widget_display_views {
+			ul > li { border-color: rgba( #FFF, .1 ); }
+		}
+
+
+	}
+
+	/* -------------------------------------------------------------------------
+		FOOTER BOTTOM
+	------------------------------------------------------------------------- */
+
+	.footer-bottom:before { background-color: $body-bg; background-color: rgba( $body-bg, .9 ); @include vertical-gradient( rgba( $body-bg, 0 ), $body-bg ); }
+
+
+/* -----------------------------------------------------------------------------
+
+    7.) OTHER
+
+----------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------
+        bbPRESS
+    ------------------------------------------------------------------------- */
+
+	// LOGIN
+	.bbp-submit-wrapper button { color: #FFF; border-color: $accent; background-color: $accent; }
+	.bbp-submit-wrapper button:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+
+	// NOTICES
+	div.bbp-template-notice,
+	div.bbp-template-notice.info { color: #265e88; background-color: #e1edf9; }
+	div.bbp-template-notice.error { color: #d40041; background-color: #ffdfe0; }
+	div.bbp-template-notice a { color: $body-link; }
+	div.bbp-template-notice a:hover { color: $body-link; }
+
+	#bbpress-forums {
+
+		// SUBSCRIBE TOGGLE
+		#subscription-toggle > span { background-color: $dark-gray; background-color: rgba( 0, 0, 0, .2 ); }
+		#subscription-toggle a { color: #FFF; }
+		.bbp-reply-content #subscription-toggle { color: $x-soft-gray; }
+		.bbp-reply-content #subscription-toggle > span { background-color: transparent; }
+		.bbp-reply-content #subscription-toggle a { color: $accent; }
+
+		// TAGS
+		.bbp-topic-tags { color: #FFF; background-color: $dark-gray; background-color: rgba( 0, 0, 0, .2 ); }
+		.bbp-topic-tags a { color: #FFF; }
+
+		// PAGINATION
+		.bbp-pagination-count { color: $dark-gray; }
+		.bbp-pagination-links .page-numbers:hover { background-color: #FFF; }
+		.bbp-pagination-links .page-numbers.current { color: #FFF; background-color: $accent; }
+
+		// WRAPPER
+		.bbp-forums,
+		.bbp-topics,
+		.bbp-replies { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+
+		// HEADER
+		li.bbp-header { background-color: #FFF; border-color: $x-soft-gray; }
+		.forum-titles { color: $dark-gray; }
+
+		// TOPIC
+		div.bbp-topic-header { border-color: $x-soft-gray; background-color: transparent; }
+		li.bbp-body ul.forum,
+		li.bbp-body ul.topic { border-color: $x-soft-gray; }
+		div.odd,
+		ul.odd { background-color: $xx-soft-gray; }
+		.bbp-forums-list { border-color: $soft-gray; }
+
+		// POST
+		div.bbp-reply-header { border-color: $x-soft-gray; background-color: transparent; }
+
+		// FORMS
+		.bbp-reply-form,
+		.bbp-topic-form { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+		form > fieldset.bbp-form > legend,
+		fieldset.bbp-form fieldset.bbp-form > legend { color: $dark-gray; }
+		.quicktags-toolbar { background-color: #FFF; border-color: $x-soft-gray; }
+
+		// FOOTER
+		li.bbp-footer { background-color: #FFF; border-color: $x-soft-gray; }
+
+		// USER
+		#bbp-user-wrapper { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+		#bbp-single-user-details #bbp-user-navigation li.current a { background-color: transparent; }
+
+		// OTHER
+		.status-closed,
+		.status-closed a { color: $medium-gray; }
+		span.bbp-admin-links a,
+		.bbp-forum-header a.bbp-forum-permalink,
+		.bbp-topic-header a.bbp-topic-permalink,
+		.bbp-reply-header a.bbp-reply-permalink { color: $medium-dark-gray; }
+
+		// PROFILE EDIT
+		#bbp-your-profile {
+			fieldset input, fieldset textarea { color: $body-font; background-color: $x-soft-gray; }
+			fieldset input[type="file"] { background-color: transparent; }
+			#bbp_user_edit_submit { color: #FFF; border-color: $accent; background-color: $accent; }
+			#bbp_user_edit_submit:hover { border-color: rgba( $accent, .5 ); background-color: rgba( $accent, .8 ); }
+			fieldset input:focus,
+			fieldset textarea:focus { border: 0; @include box-shadow( none ); outline-color: transparent; }
+		}
+
+		// SEARCH RESULTS
+		#bbp-search-results { background-color: #FFF; }
+
+	}
+
+	/* -------------------------------------------------------------------------
+        CONTACT FORM 7
+    ------------------------------------------------------------------------- */
+
+	.wpcf7 { background-color: $content-bg; @include box-shadow( 1px 1px 0 rgba( 0, 0, 0, .05 ) ); }
+	.c-content-box .wpcf7,
+	.m-no-boxes .wpcf7 { background-color: transparent; @include box-shadow( none ); }
+    .wpcf7-response-output { color: #265e88; background-color: #e1edf9; }
+    .wpcf7-response-output.wpcf7-validation-errors { color: #d40041; background-color: #ffdfe0; }
+    .wpcf7-response-output.wpcf7-mail-sent-ok { color: #499143; background-color: #d4fbd3; }
+
+
+/* -----------------------------------------------------------------------------
+
+    8.) RESPONSIVE
+
+----------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------
+        MEDIUM DEVICES
+    ------------------------------------------------------------------------- */
+
+    @media ( max-width: 991px ) {
+
+    	// HEADER MENU
+		.header-menu nav { @include box-shadow( none );
+
+		> ul > li { border-color: rgba( #FFF, .1 ); }
+		> ul > li.m-hover > a,
+		> ul > li > a:hover { color: #FFF; }
+		a { color: #FFF; }
+		.submenu-toggle { color: #FFF; }
+
+			// SUBMENU
+			ul ul { @include box-shadow( none ); background-color: transparent; }
+			> ul > li > ul { background-color: rgba( #000, .1 ); }
+			> ul > li > ul > li { border-color: rgba( #FFF, .1 ); }
+
+		}
+
+    }

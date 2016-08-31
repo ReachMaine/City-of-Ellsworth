@@ -1,0 +1,326 @@
+/*
+Theme Name:     City of Ellsworth 
+Description:    Child theme of the TownPress theme for the city of Ellsworth ME
+Author:      	ReachMaine
+Template:       townpress
+Version:        1.0.0
+*/
+@import "partials/settings";
+@import "partials/townpress";
+@import "partials/tribe-events";
+@import "partials/our_team";
+@import "partials/cf7";
+
+ 
+/* =Theme customization starts here */
+.header-content {
+	.header-branding {
+		//padding-bottom: 0px;
+	}
+}
+.header-menu {
+	nav>ul>li>a {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+#page-header {
+	margin-bottom: 10px;
+}
+
+#page-header:after {
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+}
+
+// content
+.middle-column {
+	padding-left: 5px
+}	
+.col-md-7.middle-column {
+	padding-right: 5px;
+}
+// widget under page header 
+#coe_above_content {
+	margin-top: -10px;
+/*	h4 {
+		font-size: 1.25em; // make h4's same as h4.accordian-title
+	}
+	.accordion-items .accordion-title {
+		padding-bottom: 5px;
+		padding-right: 0px;
+	}
+	
+	.accordion-items .accordion-title:before {
+		content: "\f056";
+	    display: block;
+	    font-size: 16px;
+	    display: inline-block;
+	    font-family: FontAwesome;
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: 1;
+	    padding-right: 3px;
+	    -webkit-font-smoothing: antialiased;
+	}
+	.accordion-items>li.m-active .accordion-title:before {
+		content: "\f055";
+	} 
+
+	.accordion-items .accordion-title:after { // regular (closed)
+		content: "\F067"; // "\f056"; 
+	}
+	.accordion-items>li.m-active .accordion-title:after{ // active (open)
+		content: "\F068" ; // "\f055"; 
+	}
+
+	
+	.accordion-content {
+		background-color: #e9e9e9;
+		padding: 10px 0 10px 10px;
+	}*/
+}
+
+// alerts box on home page at top of content
+#coe_home_banner {
+	border: 6px solid $accent;
+	padding-bottom: 24px;
+	box-shadow: 2px 2px #c7c5c5;
+	.widget {
+		.widget-title {
+			font-size: 1.5em;
+			.widget-ico {
+				color: $accent;
+				font-size: 32px;
+				padding-right: 5px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+#primary-sidebar {
+	// accorian menu on sidebar
+	.widget.NextendAccordionMenuWidget {
+		background-color: $accent;
+		dl.level1 dt.parent .inner:after { // minus/closed 107 = angle down
+			font-family: FontAwesome;
+	    	font-style: normal;
+	    	font-weight: normal;
+			content: "\f107";
+			position: absolute;
+			right:0;
+			top: 3px;
+		}
+		dl.level1 dt.parent.opened .inner:after, 
+		dl.level1 dt.parent.opening .inner:after { // f106 = angle up.
+			content: "\f106";
+		}
+	}
+}
+
+
+div.ells-accordion-title h4.accordion-title {
+	//font-size: 1.5em;
+	font-size: 1.25em;
+	text-transform: none;
+	color: #781514;
+}
+
+
+/*  tabs in content */
+// the vertical tabs ffs-tabbed-nav resp-vtabs
+.ffs-tabbed-nav.resp-vtabs {
+	border: 1px solid $medium-gray; //#808080;
+    .resp-tabs-list {
+    	background-color: $inactive-background;
+ 		li.resp-tab-active,
+    	li:hover {
+    		border-left-color: $accent!important;
+    	}
+    }
+    .resp-tabs-container {
+    	border: 0px;
+    	h2.resp-accordion {
+    		background-color: $inactive-background;
+    	}
+    	h2.resp-accordion.resp-tab-active {
+    		background-color: $bkgoundContent;
+    	}
+    }
+}
+
+.page-content-inner .ffs-tabbed-nav .resp-tabs-list li {
+	font-size: 16px;
+	line-height: 1em;
+}
+// ************* CONTENT **********
+// the horizontal tabs from theme.
+.c-tabs {
+	border: 1px solid $medium-gray;
+
+	.tabs-list {
+		background-color: $inactive-background;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+	.tabs-list > li {
+		padding: 10px 20px 12px 5px; // use padding instead of margin 
+		margin: 0px;
+	}
+	.content-list {
+		padding: 10px;
+	}
+
+
+}
+
+// verifcal tabs
+.ffs-tabbed-nav.resp-vtabs {
+	.resp-tabs-container {
+		.fruitful_tab {
+			h4 {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+.page-content-inner .ffs-tabbed-nav .resp-tabs-list li {
+	border-bottom: 1px solid #a7a7a7;
+}
+
+
+// left and top rule for documents in tabs
+
+@media (max-width: 768px) {
+	.coe_doc_in_tab {
+		border-top: 2px solid #781514;
+		padding-top: 8px;
+
+}
+}
+
+@media (min-width: 769px) {
+	.coe_doc_in_tab {
+		border-left: 2px solid #781514;
+
+}
+}
+
+// Online Services page styling of list
+
+.online-services h4 {
+	margin-bottom: 0px;
+}
+
+.services-header-link h4 {
+	font-size: 1em;
+	padding-left: 1em;
+}
+
+.services-header-link-two h4 {
+	font-size: 1em;
+	padding-left: 1em;
+}
+
+.services-header-link h4 a {
+	color: #333;
+}
+
+.services-header-link-two h4 a {
+	color: #333;
+}
+
+.wpb_text_column.wpb_content_element.services-header-link {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+}
+
+.wpb_text_column.wpb_content_element.services-header-link-two {
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+}
+
+
+.wpb_text_column.wpb_content_element.services-header-link a:hover {
+	text-decoration: none;
+}
+
+.wpb_text_column.wpb_content_element.services-header-link-two a:hover {
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.wpb_text_column.wpb_content_element.services-header-link-two {
+		border-top: 1px solid #e5e5e5;
+	}
+	.wpb_text_column.wpb_content_element.services-header-link-two h4 {
+		margin-top: 12px;
+	}
+	.services-header-first ul {
+		margin-bottom: 0px;
+	}
+	.resp-vtabs .resp-tabs-container {
+		width: 100% !important;
+	}
+}
+
+// ************* CONTACT FORMS **********
+.wpcf7 .wpcf7-form dl dt {
+	padding-left: 10px;
+	text-align: left;
+	width: 100%;
+}
+
+.wpcf7 .wpcf7-form dl dd {
+	width: 100%;
+}
+
+
+// ************* END CONTENT **********
+.widget-list .coe-w-in-w {
+	// take off extra padding for widget in widgets
+	.c-documents {
+		margin-bottom: 0px;
+		.c-content-box {
+			padding: 0px;
+			margin-bottom: 0px;
+			.widget.lsvr-documents {
+				margin-bottom: 10px;
+				.widget-inner {
+					padding: 0px;
+				}
+			}
+			
+		}
+	}
+}
+
+.coe-services-header ul {
+	list-style: none;
+}
+
+.coe-services-header li {
+	padding-left: 1em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+/********** footer widgets ************/
+#bottom-panel {
+	.mc4wp-form {
+		padding-top: 6px;
+		.mc4wp-form-fields {
+			label > span  {
+				color: white;
+			}
+		}
+	}
+	
+}
+
+@import "partials/media"; // keep at end of of file 

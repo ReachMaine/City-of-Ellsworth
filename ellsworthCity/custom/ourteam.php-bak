@@ -1,0 +1,28 @@
+<?php 
+/* our team customizations
+*/
+//To add a new field to the backend
+add_filter( 'woothemes_our_team_member_fields', 'coe_new_fields' );
+function coe_new_fields( $fields ) {
+	$fields['misc'] = array(
+	    'name' 			=> __( 'Address', 'our-team-by-woothemes' ),
+	    'description' 	=> __( 'Street Address', 'our-team-by-woothemes' ),
+	    'type' 			=> 'text',
+	    'default' 		=> '1 City Hall Plaza Ellsworth, ME 04605',
+	    'section' 		=> 'info'
+	);
+	return $fields;
+}
+
+
+// Then to display the contents of that field on the frontend add the following: 
+add_filter( 'woothemes_our_member_fields_display', 'coe_new_fields_display' );
+function coe_new_fields_display( $member_fields ) {
+	global $post;
+	$misc = esc_attr( get_post_meta( $post->ID, '_misc', true ) );
+	if ( '' != $misc ) {
+		$member_fields .= '<li class="misc">' . $misc . '</li><!--/.misc-->' . "\n";
+	}
+	return $member_fields;
+}
+?>

@@ -1,0 +1,2529 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TownPress\n"
+"POT-Creation-Date: 2016-02-11 10:30+0100\n"
+"PO-Revision-Date: 2016-02-11 10:30+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../404.php:13
+msgid "The page you are looking for is no longer available or has been moved."
+msgstr ""
+
+#: ../archive-lsvrdocument.php:107 ../single-lsvrdocument.php:95
+msgid "Uploaded by:"
+msgstr ""
+
+#: ../archive-lsvrdocument.php:110 ../single-lsvrdocument.php:98
+msgid "Upload date:"
+msgstr ""
+
+#: ../archive-lsvrdocument.php:114 ../single-lsvrdocument.php:102
+msgid "Expiration date:"
+msgstr ""
+
+#: ../archive-lsvrdocument.php:129
+msgid "There are currently no documents"
+msgstr ""
+
+#: ../archive-lsvrdocument.php:140
+msgid "Show Non-Archived Documents"
+msgstr ""
+
+#: ../archive-lsvrdocument.php:142
+msgid "Show Archived Documents"
+msgstr ""
+
+#: ../archive-lsvrevent.php:116
+msgid "Show Upcoming Events"
+msgstr ""
+
+#: ../archive-lsvrevent.php:118
+msgid "Show Past Events"
+msgstr ""
+
+#: ../archive-lsvrgallery.php:61
+msgid "There are currently no galleries"
+msgstr ""
+
+#: ../archive-lsvrnotice.php:105
+msgid "There are currently no notices"
+msgstr ""
+
+#: ../article.php:70
+#, php-format
+msgid "%d comments"
+msgstr ""
+
+#: ../article.php:107
+msgid "Newer Post"
+msgstr ""
+
+#: ../article.php:123
+msgid "Older Post"
+msgstr ""
+
+#: ../article.php:219 ../comments.php:5
+#, php-format
+msgid "Comments (%d)"
+msgstr ""
+
+#: ../comments.php:14
+msgid "Reply"
+msgstr ""
+
+#: ../comments.php:38
+msgid "There are no comments yet."
+msgstr ""
+
+#: ../comments.php:56 ../comments.php:72
+msgid "Leave a Comment"
+msgstr ""
+
+#: ../comments.php:57 ../comments.php:73
+#, php-format
+msgid "Leave a reply to %s"
+msgstr ""
+
+#: ../comments.php:58 ../comments.php:74
+msgid "Cancel"
+msgstr ""
+
+#: ../comments.php:59 ../comments.php:75
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: ../comments.php:60 ../comments.php:76
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: ../comments.php:60 ../comments.php:77
+msgid "Fields with (*) are required!"
+msgstr ""
+
+#: ../comments.php:61 ../comments.php:78
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../comments.php:62 ../comments.php:83
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:63 ../comments.php:84
+msgid "Post Comment"
+msgstr ""
+
+#: ../comments.php:77
+msgid ""
+"Your email address will not be published. Required fields are marked (*)."
+msgstr ""
+
+#: ../comments.php:80
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:81
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:82
+msgid "Website"
+msgstr ""
+
+#: ../components/breadcrumbs.php:8 ../components/breadcrumbs.php:10
+msgid "Home"
+msgstr ""
+
+#: ../components/breadcrumbs.php:21 ../functions.php:641
+msgid "Blog"
+msgstr ""
+
+#: ../components/breadcrumbs.php:36 ../components/breadcrumbs.php:41
+#, php-format
+msgid "Archive for %s"
+msgstr ""
+
+#: ../components/breadcrumbs.php:46
+msgid "Author Archive"
+msgstr ""
+
+#: ../components/breadcrumbs.php:121 ../components/breadcrumbs.php:139
+#: ../components/breadcrumbs.php:158 ../components/breadcrumbs.php:176
+msgid "Archive"
+msgstr ""
+
+#: ../components/breadcrumbs.php:226 ../components/page-header.php:30
+msgid "Page Not Found"
+msgstr ""
+
+#: ../components/breadcrumbs.php:231 ../components/page-header.php:32
+#: ../functions.php:659
+msgid "Search Results"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/bbpress-login-register.php:2
+msgid "#bbPress Login / Register"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/bbpress-lost-password.php:2
+msgid "#bbPress Lost Password"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/front-page-1.php:2
+msgid "#Front Page 1"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/front-page-2.php:2
+msgid "#Front Page 2"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/phone-numbers.php:2
+msgid "#Phone Numbers"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/statistics.php:2
+msgid "#Statistics"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/town-council.php:2
+msgid "#Town Council"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/town-hall.php:2
+msgid "#Town Hall"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/town-history.php:2
+msgid "#Town History"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/virtual-tour.php:2
+msgid "#Virtual Tour"
+msgstr ""
+
+#: ../components/visualcomposer/layouts/write-to-mayor.php:2
+msgid "#Write To Mayor"
+msgstr ""
+
+#: ../footer.php:59
+msgid "Close (Esc)"
+msgstr ""
+
+#: ../footer.php:60
+msgid "Loading..."
+msgstr ""
+
+#: ../footer.php:61
+msgid "Previous (Left arrow key)"
+msgstr ""
+
+#: ../footer.php:62
+msgid "Next (Right arrow key)"
+msgstr ""
+
+#: ../footer.php:63
+msgid "The image could not be loaded."
+msgstr ""
+
+#: ../footer.php:64
+msgid "The content could not be loaded."
+msgstr ""
+
+#: ../footer.php:65
+msgid "Forum"
+msgstr ""
+
+#: ../footer.php:66
+msgid "Topic"
+msgstr ""
+
+#: ../footer.php:67
+msgid "Topics"
+msgstr ""
+
+#: ../footer.php:68
+msgid "Posts"
+msgstr ""
+
+#: ../footer.php:69
+msgid "Freshness"
+msgstr ""
+
+#: ../footer.php:70
+msgid "Voices"
+msgstr ""
+
+#: ../footer.php:71
+msgid "Author"
+msgstr ""
+
+#: ../functions.php:60
+msgid "Main Menu"
+msgstr ""
+
+#: ../functions.php:61
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:72 ../includes/redux/meta-config.php:147
+msgid "Default Left Sidebar"
+msgstr ""
+
+#: ../functions.php:83 ../includes/redux/meta-config.php:150
+msgid "Default Right Sidebar"
+msgstr ""
+
+#: ../functions.php:102
+msgid "Bottom Panel"
+msgstr ""
+
+#: ../functions.php:104
+msgid "A widget area located in the footer of the site."
+msgstr ""
+
+#: ../functions.php:124
+msgid "Custom Sidebar"
+msgstr ""
+
+#: ../functions.php:128
+msgid "You can manage custom sidebars underTheme Options / Custom Sidebars."
+msgstr ""
+
+#: ../functions.php:556
+msgid "Icon Class:"
+msgstr ""
+
+#: ../functions.php:559
+msgid ""
+"For example \"fa fa-heart\". Please refer to the documentation to learn more "
+"about icons."
+msgstr ""
+
+#: ../functions.php:662
+msgid "404 Page Not Found"
+msgstr ""
+
+#: ../header.php:83
+msgid "Menu"
+msgstr ""
+
+#: ../header.php:89 ../header.php:136
+msgid "Show on Map"
+msgstr ""
+
+#: ../header.php:125
+msgid "(edit profile)"
+msgstr ""
+
+#: ../header.php:126
+msgid "Logout"
+msgstr ""
+
+#: ../header.php:128
+msgid "Login"
+msgstr ""
+
+#: ../header.php:138 ../header.php:143
+msgid "Map"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:234 ../includes/redux/meta-config.php:291
+msgid ".zip Archive"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:235
+msgid "Audio File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:236
+msgid "Code File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:237
+msgid "Excel Document"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:238
+msgid "Image File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:239
+msgid "Movie File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:240
+msgid "PDF File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:241
+msgid "PowerPoint Document"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:242
+msgid "Text File"
+msgstr ""
+
+#: ../includes/lsvr-functions.php:243
+msgid "Word Document"
+msgstr ""
+
+#: ../includes/lsvr-walker-comment.class.php:45
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#: ../includes/lsvr-walker-comment.class.php:58
+msgid "Edit"
+msgstr ""
+
+#: ../includes/redux/extensions/datetime/datetime/field_datetime.php:185
+msgid "Date"
+msgstr ""
+
+#: ../includes/redux/extensions/datetime/datetime/field_datetime.php:186
+msgid "Time"
+msgstr ""
+
+#: ../includes/redux/extensions/datetime/datetime/field_datetime.php:188
+msgid "Date / Time"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:930
+msgid "Options"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1083
+msgid "Settings Imported!"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1086
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1090
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1372
+msgid "error(s) were found!"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1093
+msgid "warning(s) were found!"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1097
+msgid "Expand"
+msgstr ""
+
+#: ../includes/redux/extensions/metaboxes/extension_metaboxes.php:1377
+msgid "warnings(s) were found!"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:63
+msgid "Add or Upload File(s)"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:172
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:265
+msgid "Remove Image"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:190
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:267
+msgid "File: "
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:190
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:268
+msgid "Download"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:190
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:266
+msgid "Remove"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:264
+msgid "Select File(s)"
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:270
+#, php-format
+msgid "%s already exists in your file queue."
+msgstr ""
+
+#: ../includes/redux/extensions/multi_media/multi_media/field_multi_media.php:271
+#, php-format
+msgid "Maximum upload limit of %s reached/exceeded."
+msgstr ""
+
+#: ../includes/redux/extensions/repeater/repeater/field_repeater.php:176
+#: ../includes/redux/extensions/repeater/repeater/field_repeater.php:219
+msgid "Delete"
+msgstr ""
+
+#: ../includes/redux/extensions/repeater/repeater/field_repeater.php:241
+msgid "Add"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/extension_wbc_importer.php:274
+#: ../includes/redux/extensions/wbc_importer/extension_wbc_importer.php:276
+msgid "Demo Importer"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:42
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:72
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:84
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:89
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:279
+#: ../includes/redux/extensions/wbc_importer/inc/importer/parsers.php:468
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:256
+msgid "Theme options Import file could not be found. Please try again."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:331
+msgid "Widget Import file could not be found. Please try again."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:405
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:427
+msgid "Site does not support widget"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:450
+msgid "Widget already exists"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:499
+msgid "Imported"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:502
+msgid "Imported to Inactive"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/radium-importer.php:509
+msgid "No Title"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:134
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:143
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:194
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:198
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:199
+#, php-format
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:215
+#, php-format
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:240
+#, php-format
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site. For example, you may want to import all the entries as <code>admin</"
+"code>s entries."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:269
+#, php-format
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:374
+#, php-format
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:425
+#, php-format
+msgid "Failed to import category %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:465
+#, php-format
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:511
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:652
+#, php-format
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:537
+#, php-format
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:559
+#, php-format
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:618
+#, php-format
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:790
+#, php-format
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:910
+msgid "Remote server did not respond"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:916
+#, php-format
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:923
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:928
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:934
+#, php-format
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:1032
+msgid "Import WordPress"
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:1039
+#, php-format
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:1054
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/inc/importer/wordpress-importer.php:1055
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: ../includes/redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:114
+msgid "Import Demo"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:20
+msgid "Header"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:21
+msgid ""
+"Global settings are defined in <strong>Theme Options / Header Settings</"
+"strong>."
+msgstr ""
+
+#: ../includes/redux/meta-config.php:29
+msgid "Header Logo Size"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:30
+msgid ""
+"Both widths can be set under <strong>Theme Options / Header Settings</strong>"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:32 ../includes/redux/meta-config.php:46
+#: ../includes/redux/meta-config.php:60 ../includes/redux/meta-config.php:74
+#: ../includes/redux/meta-config.php:194
+msgid "Global"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:33
+#: ../includes/redux/options-config.php:298
+msgid "Small"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:34
+#: ../includes/redux/options-config.php:299
+msgid "Large"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:43
+msgid "Header Menu"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:44
+msgid "Display Main Menu in header"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:47 ../includes/redux/meta-config.php:61
+#: ../includes/redux/meta-config.php:75 ../includes/redux/meta-config.php:98
+#: ../includes/redux/meta-config.php:118 ../includes/redux/meta-config.php:377
+#: ../includes/redux/meta-config.php:445
+#: ../includes/redux/options-config.php:315
+#: ../includes/redux/options-config.php:339
+#: ../includes/redux/options-config.php:375
+#: ../includes/redux/options-config.php:438
+#: ../includes/redux/options-config.php:453
+#: ../includes/redux/options-config.php:489
+#: ../includes/redux/options-config.php:542
+#: ../includes/redux/options-config.php:594
+#: ../includes/redux/options-config.php:689
+#: ../includes/redux/options-config.php:717
+#: ../includes/redux/options-config.php:728
+#: ../includes/redux/options-config.php:738
+#: ../includes/redux/options-config.php:748
+#: ../includes/redux/options-config.php:758
+#: ../includes/redux/options-config.php:839
+#: ../includes/redux/options-config.php:867
+#: ../includes/redux/options-config.php:878
+#: ../includes/redux/options-config.php:888
+#: ../includes/redux/options-config.php:955
+#: ../includes/redux/options-config.php:965
+#: ../includes/redux/options-config.php:975
+#: ../includes/redux/options-config.php:985
+#: ../includes/redux/options-config.php:995
+#: ../includes/redux/options-config.php:1005
+#: ../includes/redux/options-config.php:1016
+#: ../includes/redux/options-config.php:1083
+#: ../includes/redux/options-config.php:1106
+#: ../includes/redux/options-config.php:1116
+#: ../includes/redux/options-config.php:1140
+#: ../includes/redux/options-config.php:1168
+#: ../includes/redux/options-config.php:1248
+#: ../includes/redux/options-config.php:1259
+#: ../includes/redux/options-config.php:1310
+#: ../includes/redux/options-config.php:1417
+#: ../includes/redux/options-config.php:1432
+#: ../includes/redux/options-config.php:1472
+#: ../includes/redux/options-config.php:1544
+#: ../includes/redux/options-config.php:1638
+#: ../includes/redux/options-config.php:1757
+#: ../includes/redux/options-config.php:1768
+msgid "Enable"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:48 ../includes/redux/meta-config.php:62
+#: ../includes/redux/meta-config.php:76 ../includes/redux/meta-config.php:99
+#: ../includes/redux/meta-config.php:119 ../includes/redux/meta-config.php:145
+#: ../includes/redux/meta-config.php:197 ../includes/redux/meta-config.php:378
+#: ../includes/redux/meta-config.php:446
+#: ../includes/redux/options-config.php:316
+#: ../includes/redux/options-config.php:340
+#: ../includes/redux/options-config.php:376
+#: ../includes/redux/options-config.php:439
+#: ../includes/redux/options-config.php:454
+#: ../includes/redux/options-config.php:490
+#: ../includes/redux/options-config.php:543
+#: ../includes/redux/options-config.php:583
+#: ../includes/redux/options-config.php:595
+#: ../includes/redux/options-config.php:679
+#: ../includes/redux/options-config.php:690
+#: ../includes/redux/options-config.php:707
+#: ../includes/redux/options-config.php:718
+#: ../includes/redux/options-config.php:729
+#: ../includes/redux/options-config.php:739
+#: ../includes/redux/options-config.php:749
+#: ../includes/redux/options-config.php:759
+#: ../includes/redux/options-config.php:829
+#: ../includes/redux/options-config.php:840
+#: ../includes/redux/options-config.php:857
+#: ../includes/redux/options-config.php:868
+#: ../includes/redux/options-config.php:879
+#: ../includes/redux/options-config.php:889
+#: ../includes/redux/options-config.php:956
+#: ../includes/redux/options-config.php:966
+#: ../includes/redux/options-config.php:976
+#: ../includes/redux/options-config.php:986
+#: ../includes/redux/options-config.php:996
+#: ../includes/redux/options-config.php:1006
+#: ../includes/redux/options-config.php:1017
+#: ../includes/redux/options-config.php:1084
+#: ../includes/redux/options-config.php:1096
+#: ../includes/redux/options-config.php:1107
+#: ../includes/redux/options-config.php:1117
+#: ../includes/redux/options-config.php:1129
+#: ../includes/redux/options-config.php:1141
+#: ../includes/redux/options-config.php:1158
+#: ../includes/redux/options-config.php:1169
+#: ../includes/redux/options-config.php:1249
+#: ../includes/redux/options-config.php:1260
+#: ../includes/redux/options-config.php:1277
+#: ../includes/redux/options-config.php:1311
+#: ../includes/redux/options-config.php:1418
+#: ../includes/redux/options-config.php:1433
+#: ../includes/redux/options-config.php:1473
+#: ../includes/redux/options-config.php:1545
+#: ../includes/redux/options-config.php:1639
+#: ../includes/redux/options-config.php:1669
+#: ../includes/redux/options-config.php:1758
+#: ../includes/redux/options-config.php:1769
+msgid "Disable"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:57
+msgid "Enable Header Slideshow"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:58
+msgid ""
+"Slideshow images can be defined under <strong>Theme Options / Header "
+"Settings</strong> with <strong>Slideshow Images</strong> option"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:71
+msgid "Enable Header Google Map"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:72
+msgid ""
+"Map settings can be set under <strong>Theme Options / Header Settings</"
+"strong>"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:89
+msgid "Content"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:97
+msgid "Page Title"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:107
+msgid "Override Page Title"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:108
+msgid ""
+"Leave blank to use default page title. You can use HTML tags here, for "
+"example: &lt;em&gt;<em>italic text</em>&lt;/em&gt;"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:116
+msgid "Breadcrumbs"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:117
+msgid "Will be show under Page Title"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:127
+msgid "Boxed Content"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:128
+msgid ""
+"<strong>Single Box</strong> - whole content will be wrapped in one single "
+"box<br><strong>Separate Boxes</strong> - each element will have its own "
+"box<br><br>This option has no effect if you are using this page as a base "
+"page for Standard Posts, Notices, Documents, Events, Galleries or Forum "
+"pages."
+msgstr ""
+
+#: ../includes/redux/meta-config.php:130
+msgid "Single Box"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:131
+msgid "Separate Boxes"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:132
+msgid "No Box"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:168
+#, php-format
+msgid "Custom Sidebar %s"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:182
+msgid "Sidebars"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:183
+msgid ""
+"Sidebars are managed under <strong>Appearance / Widgets</strong>. You can "
+"assign primary and secondary sidebar to this page. Custom sidebars can be "
+"added under <strong>\"Theme Options / Sidebars\"</strong>. Sidebar must "
+"contain <strong>at least one widget</strong> to be listed here."
+msgstr ""
+
+#: ../includes/redux/meta-config.php:191
+msgid "Side Menu Position "
+msgstr ""
+
+#: ../includes/redux/meta-config.php:192
+msgid ""
+"Global setting for this option can be changed under <strong>Theme Options / "
+"Sidebar Settings</strong>"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:195
+#: ../includes/redux/options-config.php:581
+msgid "Left"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:196
+#: ../includes/redux/options-config.php:582
+msgid "Right"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:206
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:207
+msgid "Choose sidebar for left sidebar area"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:216
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:217
+msgid "Choose sidebar for right sidebar area"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:227
+msgid "Page Settings"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:243 ../includes/redux/meta-config.php:350
+#: ../includes/redux/meta-config.php:472
+msgid "General"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:251
+msgid "File Location"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:253
+msgid "Local (Upload)"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:254
+msgid "External (URL)"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:263
+msgid "Upload File"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:272
+msgid "External File URL"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:273
+msgid "Insert full URL please, for example http://domain.com/my-file.pdf"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:281
+msgid "External File Size"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:282
+msgid ""
+"It is not possible to display file size automatically for externally hosted "
+"files, so if you want to show this file's size, you have to specify it "
+"manually. For example 12kB or 2MB"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:290
+msgid "Document Type"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:291
+msgid "Non-specified"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:292
+msgid "Audio"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:292
+msgid "Code"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:292
+msgid "Excel"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:293
+msgid "Image"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:293
+msgid "Video"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:293
+msgid "PDF"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:294
+msgid "PowerPoint"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:294
+msgid "Text"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:294
+msgid "Word"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:295
+msgid "Custom"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:296
+msgid "Choose \"Custom\" if you want to define your own icon\""
+msgstr ""
+
+#: ../includes/redux/meta-config.php:304
+msgid "Custom Type Label"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:312
+msgid "Custom Type Icon"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:313
+msgid ""
+"For example \"fa fa-file-o\". Please refer to the documentation to learn "
+"more about icons"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:322
+msgid "Expiration Date"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:323
+msgid ""
+"After this date, document will be moved into archive and won't be displayed "
+"in default document list. Leave blank to always show this document in "
+"default document list. You can enable displaying of the archive link under "
+"document list under <strong>Theme Options / Documents</strong> with "
+"<strong>Show Link To Archive</strong> option"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:334
+msgid "Document Settings"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:358
+msgid "Event Date"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:368
+msgid "Event Location"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:369
+msgid ""
+"A brief description of event location. For example \"Town Hall\" or \"Stadium"
+"\""
+msgstr ""
+
+#: ../includes/redux/meta-config.php:376
+msgid "Show Location On Map"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:386
+#: ../includes/redux/options-config.php:384
+msgid "Address"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:387
+#: ../includes/redux/options-config.php:385
+msgid "For example: Main St, Stowe, VT 05672, USA"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:396
+#: ../includes/redux/options-config.php:393
+msgid "Latitude"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:397
+#: ../includes/redux/options-config.php:394
+msgid ""
+"Optional, it can be more precise than using just the address. For example: "
+"44.465446"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:406
+#: ../includes/redux/options-config.php:402
+msgid "Longitude"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:407
+#: ../includes/redux/options-config.php:403
+msgid ""
+"Optional, it can be more precise than using just the address. For example: "
+"-72.687425"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:416
+#: ../includes/redux/options-config.php:411
+msgid "Map Type"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:418
+#: ../includes/redux/options-config.php:413
+msgid "Roadmap"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:419
+#: ../includes/redux/options-config.php:414
+msgid "Satellite"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:420
+#: ../includes/redux/options-config.php:415
+msgid "Terrain"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:421
+#: ../includes/redux/options-config.php:416
+msgid "Hybrid"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:431
+#: ../includes/redux/options-config.php:425
+msgid "Map Zoom Level"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:432
+#: ../includes/redux/options-config.php:426
+msgid ""
+"Higher number means closer view. Not all map types support all zoom levels."
+msgstr ""
+
+#: ../includes/redux/meta-config.php:444
+#: ../includes/redux/options-config.php:437
+msgid "Mouse Scroll on Map"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:456
+msgid "Event Settings"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:480
+msgid "Gallery Images"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:488
+msgid "Gallery Settings"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:510
+msgid "Vertical Align:"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:511
+msgid "Top"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:511
+msgid "Middle"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:511
+msgid "Bottom"
+msgstr ""
+
+#: ../includes/redux/meta-config.php:520
+msgid "Slide Settings"
+msgstr ""
+
+#: ../includes/redux/options-config.php:109
+msgid "Section via hook"
+msgstr ""
+
+#: ../includes/redux/options-config.php:110
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:188
+#, php-format
+msgid "Customize &#8220;%s&#8221;"
+msgstr ""
+
+#: ../includes/redux/options-config.php:205
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: ../includes/redux/options-config.php:206
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: ../includes/redux/options-config.php:207
+msgid "Tags"
+msgstr ""
+
+#: ../includes/redux/options-config.php:212
+#, php-format
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr ""
+
+#: ../includes/redux/options-config.php:212
+msgid "http://codex.wordpress.org/Child_Themes"
+msgstr ""
+
+#: ../includes/redux/options-config.php:248
+msgid "Header Settings"
+msgstr ""
+
+#: ../includes/redux/options-config.php:256
+msgid "Header Logo"
+msgstr ""
+
+#: ../includes/redux/options-config.php:263
+msgid "Header Logo (Retina)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:264
+msgid "Retina (HiDPI) version of header logo (optional)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:271
+msgid "Max Width of Small Header Logo"
+msgstr ""
+
+#: ../includes/redux/options-config.php:272
+msgid ""
+"You can switch between Small and Large sizes below and separately for each "
+"page under its <strong>Page Settings</strong>. Set to 0 to disable any "
+"restriction (not recommended if you are using both standard and Retina "
+"logos). This value will be also used for small screens"
+msgstr ""
+
+#: ../includes/redux/options-config.php:283
+msgid "Max Width of Large Header Logo"
+msgstr ""
+
+#: ../includes/redux/options-config.php:284
+msgid ""
+"You can switch between Small and Large sizes below and separately for each "
+"page under its <strong>Page Settings</strong>. Set to 0 to disable any "
+"restriction (not recommended if you are using both standard and Retina logos)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:295
+msgid "Default Logo Size"
+msgstr ""
+
+#: ../includes/redux/options-config.php:296
+msgid ""
+"You can change this option separately for each page (under <strong>Page "
+"Settings</strong>)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:313
+msgid "Header Menu (global)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:314
+msgid ""
+"Display Main Menu in header. You can change this option separately for each "
+"page (under <strong>Page Settings</strong>)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:329
+msgid "Header Background"
+msgstr ""
+
+#: ../includes/redux/options-config.php:330
+msgid "Optimal resolution is about 2000x1200px"
+msgstr ""
+
+#: ../includes/redux/options-config.php:337
+msgid "Header Slideshow (global)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:338
+msgid ""
+"Image set as <strong>Header Background Image</strong> (above) will be used "
+"as the first image of slideshow. If you define a featured image for a page, "
+"that image will be used as the first one instead. Additional images for "
+"slideshow can be aded below. You can override this setting in <strong>Page "
+"Settings</strong> when editing a specific page."
+msgstr ""
+
+#: ../includes/redux/options-config.php:348
+msgid "Slideshow Images"
+msgstr ""
+
+#: ../includes/redux/options-config.php:349
+msgid ""
+"These images will be used for slideshow (with image set under <strong>Header "
+"Background Image</strong> as a first)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:356
+msgid "Slideshow Speed"
+msgstr ""
+
+#: ../includes/redux/options-config.php:357
+msgid "In seconds"
+msgstr ""
+
+#: ../includes/redux/options-config.php:373
+msgid "Header Google Map (global)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:374
+#: ../includes/redux/options-config.php:579
+msgid ""
+"You can override this setting in <strong>Page Settings</strong> when editing "
+"a specific page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:452
+msgid "Enable Header Login"
+msgstr ""
+
+#: ../includes/redux/options-config.php:462
+msgid "Login Label"
+msgstr ""
+
+#: ../includes/redux/options-config.php:463
+msgid "This text will be displayed when you hover over login button in header"
+msgstr ""
+
+#: ../includes/redux/options-config.php:464
+msgid "Login / Register"
+msgstr ""
+
+#: ../includes/redux/options-config.php:473
+msgid "Login Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:474
+msgid ""
+"Select a page which contains login form (if you are using <strong>bbPress</"
+"strong> plugin, you can create such page using <strong>[bbpress-login]</"
+"strong> and <strong>[bbp-register]</strong> shortcodes)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:487
+msgid "Header Search"
+msgstr ""
+
+#: ../includes/redux/options-config.php:488
+msgid "It will be displayed under main menu"
+msgstr ""
+
+#: ../includes/redux/options-config.php:502
+msgid "Footer Settings"
+msgstr ""
+
+#: ../includes/redux/options-config.php:510
+msgid "Footer Background Image"
+msgstr ""
+
+#: ../includes/redux/options-config.php:511
+msgid "Optimal resolution is about 2000x1200px."
+msgstr ""
+
+#: ../includes/redux/options-config.php:523
+msgid "Bottom Panel Columns"
+msgstr ""
+
+#: ../includes/redux/options-config.php:524
+msgid ""
+"Set number of columns for Bottom Panel. In most cases, the number should be "
+"the same as number of widgets. Widgets can be added under "
+"<strong>Appearance / Widgets</strong>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:540
+msgid "Social Icons"
+msgstr ""
+
+#: ../includes/redux/options-config.php:541
+msgid ""
+"Social icons can be defined under <strong>Social</strong> tab of "
+"<strong>Theme Options</strong>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:556
+msgid "Footer Text"
+msgstr ""
+
+#: ../includes/redux/options-config.php:557
+msgid "Ideal for copyright notice"
+msgstr ""
+
+#: ../includes/redux/options-config.php:570
+msgid "Sidebar Settings"
+msgstr ""
+
+#: ../includes/redux/options-config.php:578
+msgid "Side Menu Position (global)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:592
+msgid "Show Submenus in Side Menu"
+msgstr ""
+
+#: ../includes/redux/options-config.php:593
+msgid "Active item's submenu will be displayed without hovering"
+msgstr ""
+
+#: ../includes/redux/options-config.php:608
+msgid ""
+"Here you can create your custom sidebars. Once created, you can populate "
+"them with widgets under <strong>Appearance / Widgets</strong>. Then you can "
+"assign sidebar as primary (displayed under main menu) or secondary "
+"(displayed on opposing side) to any page under <strong>Page Settings / "
+"Sidebars</strong> when editing a page."
+msgstr ""
+
+#: ../includes/redux/options-config.php:617
+msgid "Custom Sidebars"
+msgstr ""
+
+#: ../includes/redux/options-config.php:618
+msgid ""
+"Each sidebar must have an <strong>unique simple ID</strong> which contains "
+"just letters and digits (for example \"sidebar1\")."
+msgstr ""
+
+#: ../includes/redux/options-config.php:624
+msgid "Sidebar ID"
+msgstr ""
+
+#: ../includes/redux/options-config.php:629
+msgid "Sidebar Title"
+msgstr ""
+
+#: ../includes/redux/options-config.php:646
+msgid "Standard Posts"
+msgstr ""
+
+#: ../includes/redux/options-config.php:654
+msgid ""
+"Don't forget to set your <strong>Posts page</strong> under "
+"<strong>Settings / Reading</strong> first."
+msgstr ""
+
+#: ../includes/redux/options-config.php:662
+msgid "Posts Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:663
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"posts pages (archive, single, category). This option should be set if you "
+"choose <strong>Front page displays</strong> (under <strong>Settings / "
+"Reading</strong>) to <strong>Your latest posts</strong>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:675
+#: ../includes/redux/options-config.php:825
+#: ../includes/redux/options-config.php:1092
+msgid "Show Featured Image (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:677
+#: ../includes/redux/options-config.php:827
+#: ../includes/redux/options-config.php:1094
+msgid "Show Full"
+msgstr ""
+
+#: ../includes/redux/options-config.php:678
+#: ../includes/redux/options-config.php:828
+#: ../includes/redux/options-config.php:1095
+msgid "Show Cropped"
+msgstr ""
+
+#: ../includes/redux/options-config.php:688
+#: ../includes/redux/options-config.php:838
+#: ../includes/redux/options-config.php:1258
+msgid "Show Categories (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:703
+#: ../includes/redux/options-config.php:853
+#: ../includes/redux/options-config.php:1154
+#: ../includes/redux/options-config.php:1274
+msgid "Show Featured Image (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:705
+#: ../includes/redux/options-config.php:855
+#: ../includes/redux/options-config.php:1156
+#: ../includes/redux/options-config.php:1276
+msgid "Show In Header"
+msgstr ""
+
+#: ../includes/redux/options-config.php:706
+#: ../includes/redux/options-config.php:856
+#: ../includes/redux/options-config.php:1157
+msgid "Show On Top"
+msgstr ""
+
+#: ../includes/redux/options-config.php:716
+#: ../includes/redux/options-config.php:866
+#: ../includes/redux/options-config.php:1167
+msgid "Crop Featured Image (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:727
+#: ../includes/redux/options-config.php:877
+msgid "Show Categories (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:737
+#: ../includes/redux/options-config.php:1309
+msgid "Show Previous/Next Post Links (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:747
+#: ../includes/redux/options-config.php:887
+msgid "Show Author (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:757
+msgid "Show Tags (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:774
+msgid "Notices"
+msgstr ""
+
+#: ../includes/redux/options-config.php:783
+msgid "Notices Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:784
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"notices pages (archive, single, category). Remember that slug of this page "
+"<strong>MUST BE DIFFERENT</strong> from <strong>Notices URL Slug</strong> "
+"defined below (for example, you can name base page's slug \"notices-base\"). "
+msgstr ""
+
+#: ../includes/redux/options-config.php:791
+msgid "Notices URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:792
+#, php-format
+msgid ""
+"Slug defines the URL of your default notices page. Your current URL is <a "
+"href=\"%s/%s\">%s/%s</a>.<br><br><strong>IMPORTANT:</strong> After changing "
+"the slug, go to <strong>Settings / Permalinks</strong> and hit Save Changes."
+msgstr ""
+
+#: ../includes/redux/options-config.php:800
+msgid "Notice Category URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:801
+msgid ""
+"This Slug defines the URL of page which shows posts from certain notice "
+"category."
+msgstr ""
+
+#: ../includes/redux/options-config.php:814
+msgid "Number of Notices Per Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:903
+msgid "Documents"
+msgstr ""
+
+#: ../includes/redux/options-config.php:912
+msgid "Documents Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:913
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"documents pages (archive, category). Remember that slug of this page "
+"<strong>MUST BE DIFFERENT</strong> from <strong>Documents URL Slug</strong> "
+"defined below (for example, you can name base page's slug \"documents-base"
+"\"). "
+msgstr ""
+
+#: ../includes/redux/options-config.php:920
+msgid "Documents URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:921
+#, php-format
+msgid ""
+"Slug defines the URL of your default documents page. Your current URL is <a "
+"href=\"%s/%s\">%s/%s</a>.<br><br><strong>IMPORTANT:</strong> After changing "
+"the slug, go to <strong>Settings / Permalinks</strong> and hit Save Changes."
+msgstr ""
+
+#: ../includes/redux/options-config.php:929
+msgid "Document Category URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:930
+msgid ""
+"This Slug defines the URL of page which shows posts from certain document "
+"category."
+msgstr ""
+
+#: ../includes/redux/options-config.php:943
+msgid "Number of Documents Per Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:954
+msgid "Open Documents in New Tab"
+msgstr ""
+
+#: ../includes/redux/options-config.php:964
+msgid "Show File Size"
+msgstr ""
+
+#: ../includes/redux/options-config.php:974
+msgid "Show File Icon"
+msgstr ""
+
+#: ../includes/redux/options-config.php:984
+msgid "Show Uploader"
+msgstr ""
+
+#: ../includes/redux/options-config.php:994
+msgid "Show Upload Date"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1004
+msgid "Show Expiration Date"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1014
+#: ../includes/redux/options-config.php:1138
+msgid "Show Link To Archive"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1015
+msgid ""
+"Link to expired documents will be displayed at the bottom of document list"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1031
+msgid "Events"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1040
+msgid "Events Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1041
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"events pages (archive, category). Remember that slug of this page "
+"<strong>MUST BE DIFFERENT</strong> from <strong>Events URL Slug</strong> "
+"defined below (for example, you can name base page's slug \"events-base\"). "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1048
+msgid "Events URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1049
+#, php-format
+msgid ""
+"Slug defines the URL of your default events page. Your current URL is <a "
+"href=\"%s/%s\">%s/%s</a>.<br><br><strong>IMPORTANT:</strong> After changing "
+"the slug, go to <strong>Settings / Permalinks</strong> and hit Save Changes."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1057
+msgid "Event Category URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1058
+msgid ""
+"This Slug defines the URL of page which shows posts from certain event "
+"category."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1071
+msgid "Number of Events Per Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1082
+msgid "Group Events By Month"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1105
+msgid "Show Event Time (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1115
+msgid "Show Event Location (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1125
+msgid "Show Excerpt (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1127
+msgid "Show Excerpt"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1128
+msgid "Show Full Content"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1139
+msgid "Link to past events will be displayed at the bottom of event list"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1184
+msgid "Galleries"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1193
+msgid "Galleries Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1194
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"galleries pages (archive, category). Remember that slug of this page "
+"<strong>MUST BE DIFFERENT</strong> from <strong>Galleries URL Slug</strong> "
+"defined below (for example, you can name base page's slug \"galleries-base"
+"\"). "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1201
+msgid "Gallery List URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1202
+#, php-format
+msgid ""
+"Slug defines the URL of your default gallery list page. Your current URL is "
+"<a href=\"%s/%s\">%s/%s</a>.<br><br><strong>IMPORTANT:</strong> After "
+"changing the slug, go to <strong>Settings / Permalinks</strong> and hit Save "
+"Changes."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1210
+msgid "Gallery Category URL Slug"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1211
+msgid ""
+"This Slug defines the URL of page which shows posts from certain gallery "
+"category."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1224
+msgid "Number of Galleries Per Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1235
+msgid "Number of Columns (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1247
+msgid "Show Titles (List)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1286
+msgid "Image List Layout (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1288
+msgid "Grid"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1289
+msgid "Masonry"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1298
+msgid "Number of Columns (Detail)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1326
+msgid "Forums (bbPress)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1334
+msgid ""
+"Don't forget to check your forum settings under <strong>Settings / Forums</"
+"strong> first."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1342
+msgid "Forums Base Page"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1343
+msgid ""
+"Page settings of this page (header, sidebars, etc.) will be used for all "
+"forum pages. Remember that slug of this page <strong>MUST BE DIFFERENT</"
+"strong> from <strong>Forums URL Slug</strong> which can be defined under "
+"<strong>Settings / Forums</strong> (for example, you can name base page's "
+"slug \"forums-base\"). "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1360
+msgid "Locale"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1368
+msgid ""
+"The following settings will be used as data for <strong>LSVR Locale Info</"
+"strong> widget which can be added to sidebar of any page. Don't forget to "
+"set your basic locale settings under <strong>Settings / General</strong> "
+"(especially <strong>Timezone</strong> option).<br><strong>IMPORTANT</"
+"strong>: After you make your changes on this page, don't forget to wipe the "
+"weather cache. This can be done by setting \"Weather Data Update Interval\" "
+"option (the last option on this page) to \"0\". Then refresh your page on "
+"front end (until you see your changes have taken effect), and then set this "
+"setting back to some value (e.g. \"120\")."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1375
+msgid "Widget Background"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1376
+msgid "Optimal resolution is about 300x450px."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1390
+msgid "Custom Fields"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1391
+msgid ""
+"Here you can add any text data, for example latitude and longitude values"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1396
+msgid "Field Title"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1401
+msgid "Field Value"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1415
+msgid "Show Local Time"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1416
+msgid ""
+"Change your <strong>Timezone</strong> and <strong>Time Format</strong> under "
+"<strong>Settings / General</strong>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1431
+msgid "Show Local Weather"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1441
+msgid "Location"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1442
+msgid ""
+"For example: \"stowe,vermont,us\". You can search for your location on <a "
+"href=\"http://openweathermap.org/\">openweathermap.org</a> to see if it's in "
+"the database."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1451
+msgid "Location Latitude"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1452
+#: ../includes/redux/options-config.php:1462
+msgid ""
+"Optional. Use <strong>only</strong> if your location is not in <a href="
+"\"http://openweathermap.org/\">openweathermap.org</a> database."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1461
+msgid "Location Longitude"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1471
+msgid "Current Weather"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1482
+msgid "Forecast Length"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1483
+msgid ""
+"How many days of forecast will be displayed. Set to 0 to disable forecast"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1495
+msgid "Units Format"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1497
+msgid "Metric"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1498
+msgid "Imperial"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1508
+msgid "Openweathermap.org API key"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1509
+msgid ""
+"Optional, but recommended. Weather functionality may not work properly "
+"without inserting your own API key. You have to <a href=\"http://"
+"openweathermap.org/register\">register on openweathermap.org</a> to obtain it"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1518
+msgid "Weather Data Update Interval"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1519
+msgid "In minutes. Set to 0 to disable cache (not recommended)"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1535
+msgid "Typography"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1543
+msgid "Google Fonts"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1553
+msgid "Theme Font"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1554
+msgid "Default font family is \"Source Sans Pro\"."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1579
+msgid "Social"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1587
+msgid "Social Links"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1588
+msgid ""
+"Fill in the respective field with a full URL (starting with http:// or "
+"https:// respectively)."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1637
+msgid "Open Social Links in New Tab"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1651
+msgid "Localization"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1659
+msgid "You need WPML plugin to use this feature"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1666
+msgid "Language Switcher"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1667
+msgid "It will be shown in top right corner of header"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1670
+msgid "WPML Generated"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1684
+msgid "Styling"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1692
+msgid "Theme Color Scheme"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1694
+msgid "Red"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1695
+msgid "Blue"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1696
+msgid "Green"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1697
+msgid "Orange"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1698
+msgid "Blue Grey"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1708
+msgid "Enable Custom Color Scheme"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1709
+msgid ""
+"Please refer to the documentation on how to generate a correct code for your "
+"custom color scheme. If you already have the code, enable this option and "
+"insert it either to <strong>customskin.css</strong> file located in "
+"<strong>Child Theme / library / css</strong> folder (recommended), or into "
+"text field below."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1717
+msgid "Custom Scheme Code"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1718
+msgid "Please refer to the documentation to learn how to generate it"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1730
+msgid "Misc"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1738
+msgid "Favicon"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1739
+msgid "64px x 64px .PNG file."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1747
+msgid "Page 404 Text"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1755
+msgid "Default Pagination"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1756
+msgid ""
+"Useful if you are using plugin which is not compatible with theme's custom "
+"pagination"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1766
+msgid "Redirect After Login"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1767
+msgid "Will redirect users to home page after they log in"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1785
+msgid "Custom CSS/JS"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1793
+msgid "CSS Code"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1794
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1803
+msgid "JS Code"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1804
+msgid "Paste your JS code here."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1813
+msgid "Any Custom Code"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1814
+msgid ""
+"This field can be used for adding any code which contains &lt;script&gt;&lt;/"
+"script&gt; tags. For example Google Analytics code."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1823
+msgid "<strong>Theme URL:</strong> "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1824
+msgid "<strong>Author:</strong> "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1825
+msgid "<strong>Version:</strong> "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1829
+msgid "<strong>Tags:</strong> "
+msgstr ""
+
+#: ../includes/redux/options-config.php:1836
+#: ../includes/redux/options-config.php:1883
+msgid "Documentation"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1849
+msgid "Import / Export"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1850
+msgid "Import and Export your Redux Framework settings from file, text or URL."
+msgstr ""
+
+#: ../includes/redux/options-config.php:1869
+msgid "Theme Information"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1894
+msgid "Theme Information 1"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1895
+#: ../includes/redux/options-config.php:1901
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1900
+msgid "Theme Information 2"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1905
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: ../includes/redux/options-config.php:1925
+#: ../includes/redux/options-config.php:1926
+msgid "Theme Options"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:333
+#: ../includes/tgm-plugin-settings.php:95
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:334
+#: ../includes/tgm-plugin-settings.php:96
+msgid "Install Plugins"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:335
+#: ../includes/tgm-plugin-settings.php:97
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:336
+#: ../includes/tgm-plugin-settings.php:98
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:397
+#: ../includes/tgm-plugin-settings.php:109
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:398
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:399
+#: ../includes/tgm-plugin-activation.class.php:3034
+#: ../includes/tgm-plugin-settings.php:110
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:400
+#: ../includes/tgm-plugin-activation.class.php:2837
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:401
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:402
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:403
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:404
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2172
+msgid "Required"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2175
+msgid "Recommended"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2191
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2194
+msgid "External Source"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2197
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2214
+msgid "Not Installed"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2218
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2220
+msgid "Active"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2226
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2229
+msgid "Requires Update"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2232
+msgid "Update recommended"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2288
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2291
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2294
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2384
+msgid "Installed version:"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2392
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2404
+msgid "Available version:"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2427
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2441
+msgid "Plugin"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2442
+msgid "Source"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2443
+msgid "Type"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2447
+msgid "Version"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2448
+msgid "Status"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2608
+msgid "Install"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2614
+msgid "Update"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2617
+msgid "Activate"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2648
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2650
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2686
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:2688
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3033
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3367
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3369
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3370
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3374
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3375
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3376
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3377
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3380
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3382
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../includes/tgm-plugin-activation.class.php:3383
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/tgm-plugin-settings.php:111
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../index.php:54
+msgid "There are currently no posts"
+msgstr ""
+
+#: ../search.php:26
+#, php-format
+msgid "%d Results for <strong>\"%s\"</strong>"
+msgstr ""
+
+#: ../search.php:47
+msgid "No results found."
+msgstr ""
+
+#: ../searchform.php:6
+msgid "Search forums..."
+msgstr ""
+
+#: ../searchform.php:17
+msgid "Search this site..."
+msgstr ""
+
+#: ../single-lsvrgallery.php:114
+msgid "Newer Gallery"
+msgstr ""
+
+#: ../single-lsvrgallery.php:130
+msgid "Older Gallery"
+msgstr ""

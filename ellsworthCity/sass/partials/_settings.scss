@@ -1,0 +1,30 @@
+/* Colors ---------------------------------------------- */
+// more colors in townpress.scss
+// Font Colors
+$linkcolor: #a62425;
+$titleFontColor: #a62425;
+
+// Background colors: 
+
+$bkgoundContent: #FFFFFF; // 
+$menuBarbkg: #D14719; //
+$inactive-background: #d2d2d2; 
+
+/* Typography ------------------------------------------ */
+/* General */
+/* responsive video embed */
+.ea-responsive-container {
+	position: relative;
+	padding-bottom: 50.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 1em;
+	iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	}
+}

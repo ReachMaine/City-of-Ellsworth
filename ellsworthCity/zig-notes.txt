@@ -1,0 +1,5 @@
+zig notes
+  
+  - post_name__in order (V4.6 in future) for Documents list widget.  else need to use post__in, since can order by that
+
+  - [lsvr_document slug="permits-issued-last-30-days" title="" show_icons="no" show_filesize="no" ] 
