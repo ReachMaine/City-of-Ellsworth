@@ -157,6 +157,11 @@ div.ells-accordion-title h4.accordion-title {
 }
 // ************* CONTENT **********
 
+ol li ol li {
+	list-style-type: lower-alpha;
+}
+
+
 // Team members display
 
 .team-member {
@@ -225,42 +230,22 @@ div.ells-accordion-title h4.accordion-title {
 	margin-bottom: 0px;
 }
 
-.services-header-link h4 {
+.services-header-link h4, .services-header-link-two h4 {
 	font-size: 1em;
 	padding-left: 1em;
 }
 
-.services-header-link-two h4 {
-	font-size: 1em;
-	padding-left: 1em;
-}
-
-.services-header-link h4 a {
+.services-header-link h4 a, .services-header-link-two h4 a {
 	color: #333;
 }
 
-.services-header-link-two h4 a {
-	color: #333;
-}
-
-.wpb_text_column.wpb_content_element.services-header-link {
+.wpb_text_column.wpb_content_element.services-header-link, .wpb_text_column.wpb_content_element.services-header-link-two {
 	border-bottom: 1px solid #e5e5e5;
 	margin-bottom: 12px;
 	padding-bottom: 12px;
 }
 
-.wpb_text_column.wpb_content_element.services-header-link-two {
-	border-bottom: 1px solid #e5e5e5;
-	margin-bottom: 12px;
-	padding-bottom: 12px;
-}
-
-
-.wpb_text_column.wpb_content_element.services-header-link a:hover {
-	text-decoration: none;
-}
-
-.wpb_text_column.wpb_content_element.services-header-link-two a:hover {
+.wpb_text_column.wpb_content_element.services-header-link a:hover, .wpb_text_column.wpb_content_element.services-header-link-two a:hover {
 	text-decoration: none;
 }
 
