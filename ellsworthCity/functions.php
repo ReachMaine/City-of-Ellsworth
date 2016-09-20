@@ -54,7 +54,18 @@ function reach_custom_widgets() {
 	}
 	/* add widget area for above the content*/
 	if ( function_exists('register_sidebar') ){
-		// Banner Ad
+
+		 // alerts box at top of site 
+		register_sidebar(array(
+			'name' => 'Below Header',
+			'id' => 'coe_below_header',
+			'description' => 'Widget under header (for alerts)',
+			'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="widget-inner">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)); 
+
 		 register_sidebar(array(
 			'name' => 'Above Content',
 			'id' => 'coe_above_content',
@@ -68,12 +79,14 @@ function reach_custom_widgets() {
 		 register_sidebar(array(
 			'name' => 'Home Top',
 			'id' => 'coe_home_banner',
-			'description' => 'Widget abover homepage content - for alerts/public notices',
+			'description' => 'Widget above homepage content - for special notices',
 			'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="widget-inner">',
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>'
 		)); 
+
+		
 	} //function_exists('register_sidebar')	
 
 

@@ -282,4 +282,13 @@ $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : 
 
 	<!-- CORE : begin -->
 	<div id="core" <?php post_class(); ?>>
+		<?php if ( is_active_sidebar( 'coe_below_header') ) { // zig
+				echo '<div class="c-container">';
+					echo '<div class="row">';
+						echo '<div id="coe_below_header" class="c-content-box">';
+							dynamic_sidebar( 'coe_below_header' );
+						echo '</div>';
+					echo '</div>'; // end row
+				echo '</div>'; // end container
+		} ?>
 		<div class="c-container">

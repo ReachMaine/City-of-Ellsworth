@@ -24,6 +24,11 @@ Version:        1.0.0
 		padding-bottom: 8px;
 	}
 }
+#coe_below_header:empty { // alerts widget
+	margin: 0px;
+	padding: 0px;
+}
+
 #page-header {
 	margin-bottom: 10px;
 }
