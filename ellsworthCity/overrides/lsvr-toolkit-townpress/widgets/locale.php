@@ -5,7 +5,9 @@
     LOCALE INFO WIDGET
 
 ----------------------------------------------------------------------------- */
-
+/* mods
+*   zig - dont display date 
+*/
 if ( ! class_exists( 'Lsvr_Locale_Info_Widget' ) ) {
 class Lsvr_Locale_Info_Widget extends WP_Widget {
 

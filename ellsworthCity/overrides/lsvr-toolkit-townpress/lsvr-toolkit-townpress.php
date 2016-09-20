@@ -2,7 +2,7 @@
 /*
 Plugin Name: LSVR Toolkit (TownPress)
 Description: Adds theme-specific functionality.
-Version: 1.2.0
+Version: 1.2.2
 Author: LSVRthemes
 Author URI: http://themeforest.net/user/LSVRthemes/portfolio
 License: GPLv2
