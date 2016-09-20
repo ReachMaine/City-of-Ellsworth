@@ -170,4 +170,12 @@ add_action( 'widgets_init', 'reach_custom_widgets' );
 		echo $outstring;
 	}
 
+
+	// custom post types installed by 
+	function coe_custom_posts_supports() {
+		add_post_type_support('lsvrdocument', array( 'page-attributes')); // allow as type attributes for ordering documents
+		
+	}
+	add_action('init', 'coe_custom_posts_supports');
+	
 ?>
