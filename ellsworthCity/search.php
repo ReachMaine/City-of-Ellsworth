@@ -27,15 +27,17 @@ get_template_part( 'components/page-content-before' ); ?>
 				<div class="c-content-box">
 					<?php $cpt = get_post_type(); 
 					$extra_html = "";
-					$extra_html .= $cpt; 
+					//$extra_html .= $cpt; 
 					switch ($cpt) {
 						case 'lsvrdocument':
+							$extra_html .= " - (external document)";
+							break;
 						case 'attachment':
-							$extra_html .= " - special";
-						break;
+							$extra_html .= " - (attachment)";
+							break;
 						
-					}  echo '<!--'.$extra_html.'-->';  ?>
-					<h3 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					}  /* echo '<!--'.$extra_html.'-->'; */  ?>
+					<h3 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php /* echo $extra_html; */ ?> </h3>
 							<?php /* zig xout <p class="item-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p> */ ?>
 							<div class="item-text">
 								<?php echo wpautop( do_shortcode( get_the_excerpt() ) ); ?>
