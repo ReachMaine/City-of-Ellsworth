@@ -43,6 +43,7 @@ require_once(get_stylesheet_directory().'/custom/language.php');
 require_once(get_stylesheet_directory().'/custom/custom.php'); 
 require_once(get_stylesheet_directory().'/custom/tribe-events.php'); 
 require_once(get_stylesheet_directory().'/custom/wp-job-manager.php'); 
+require_once(get_stylesheet_directory().'/custom/searchwp.php'); 
 
 add_filter('widget_text', 'do_shortcode'); // make text widget do shortcodes....
 
