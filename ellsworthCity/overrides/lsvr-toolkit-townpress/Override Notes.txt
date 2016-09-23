@@ -1,0 +1,6 @@
+Changes we've made:
+	1.  make document show in menu_order
+		- shortcodes/documents.php
+		- widgets/documents.php
+		- vc-elements/documents.php
+		
