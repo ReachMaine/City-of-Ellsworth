@@ -44,6 +44,13 @@
 			display: inline-block;
 		} moved to our_team.scss */
 	}
+
+	@media (min-width: 800px) {
+		#coe_below_header:not(:empty) h3.widget-title {
+			float: left;
+			padding-right: 20px;
+		}
+	}
 	/* -------------------------------------------------------------------------
         SMALL DEVICES
 		devices with width between 481px and 767px

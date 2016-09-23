@@ -1360,6 +1360,31 @@ div.bbp-template-notice a:hover {
   padding-top: 8px;
   padding-bottom: 8px; }
 
+#coe_below_header:not(:empty) {
+  border: 6px solid #fbc22c;
+  padding: 0px 30px 0px 30px; }
+  #coe_below_header:not(:empty) ul {
+    list-style: none; }
+  #coe_below_header:not(:empty) h3 {
+    font-size: 1.7em;
+    margin-top: 8px;
+    margin-bottom: 0px; }
+  #coe_below_header:not(:empty) h3.widget-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fbc22c;
+    padding-bottom: 15px; }
+    #coe_below_header:not(:empty) h3.widget-title a {
+      display: block; }
+  #coe_below_header:not(:empty) i {
+    padding-right: 10px;
+    color: #fbc22c;
+    font-size: 80px; }
+  #coe_below_header:not(:empty) * {
+    text-align: center; }
+  #coe_below_header:not(:empty) time {
+    font-weight: bold; }
+
 #coe_below_header:empty {
   margin: 0px;
   padding: 0px; }
@@ -1595,6 +1620,10 @@ ol li ol li {
   	//float: left;
   	display: inline-block;
   } moved to our_team.scss */ }
+@media (min-width: 800px) {
+  #coe_below_header:not(:empty) h3.widget-title {
+    float: left;
+    padding-right: 20px; } }
 	/* -------------------------------------------------------------------------
         SMALL DEVICES
 		devices with width between 481px and 767px
