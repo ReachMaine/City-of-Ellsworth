@@ -108,7 +108,7 @@ get_template_part( 'components/page-content-before' ); ?>
 					}  
 					echo '<!--'.$extra_html.'-->'; 
 					if ($scontent) {
-						$blerb .= find_searchstring_surround($search_query, $scontent, 25, 'zig');
+						$blerb .= find_searchstring_surround($search_query, do_shortcode($scontent), 25, 'zig');
 					}
 					/* Displaying.... title(+/- link), short_desc, search_blurb, open_link */ ?>
 					<h3 class="item-title">
