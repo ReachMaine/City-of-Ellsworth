@@ -90,3 +90,34 @@ function get_lrsvdoc_pretty_title($docid) {
 	$return_html = "";
 	return ($return_html);
 }
+
+/* function to find 1st instance of searchstring in text and return some characters around it
+ * surrounded by <span> with given class
+ */
+function find_searchstring_surround($needle, $haystack, $space, $str_class) {
+	$return_str = "";
+	$haystack_len = strlen($haystack);
+	$needle_len = strlen($needle);
+	$spot = stripos ( $haystack ,  $needle );
+	//$return_str .= 'spot: '.$spot.' needle_len'.$needle_len.'';
+	if ($spot !== FALSE) {
+		/* it's in there */
+		/* find the before part */
+		if ($spot >= $space) {
+			$return_str_start = substr($haystack, $spot-$space, $space); 
+		} else {
+			$return_str_start = substr($haystack, 0, $spot);
+		}
+		/* find the after part */
+		$haystack_after_len = $haystack_len - ($spot + $needle_len);
+		if ( $haystack_after_len > $space ) {
+			$return_str_after = substr($haystack, $spot+$needle_len, $space );
+		} else {
+			$return_str_after = substr($haystack, $spot+$needle_len, $haystack_after_len);
+		}
+		$return_str .= $return_str_start.'<span class="'.str_class.'">'.$needle.'</span>'.$return_str_after;
+	} else {
+		
+	}
+	return $return_str;
+}

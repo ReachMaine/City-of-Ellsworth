@@ -34,6 +34,7 @@ get_template_part( 'components/page-content-before' ); ?>
 					$ext_link = "";
 					$link_title = true;
 					$short_desc = "";
+					$scontent = "";
 					switch ($cpt) {
 						case 'lsvrdocument':
 							$link_title = false; // dont link title (since it's a PDF/document)
@@ -60,6 +61,7 @@ get_template_part( 'components/page-content-before' ); ?>
 							switch($post->post_mime_type){
 								case 'application/pdf':
 									$extra_html .= " attachment title [".get_the_title().']';
+									$scontent .= get_post_meta($post->ID, 'searchwp_content', true);
 									$linked_docID = get_attachment_lsrvdoc($post->ID);
 									$extra_html .= " linked id is: (".$linked_docID.")";
 
@@ -78,7 +80,10 @@ get_template_part( 'components/page-content-before' ); ?>
 									$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">Download attachment</a>.';
 									$title_extra_end = " (spreadsheet)";
 									break;
-
+								case "image/jpeg":
+								case "image/png":
+									$title_extra_end = "(image)";
+									// allow to fall through									
 								default: 
 									$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">View attachment</a>.';
 								break;
@@ -89,22 +94,28 @@ get_template_part( 'components/page-content-before' ); ?>
 							$title_extra_end = " (event)";
 							$short_desc .= 'Date: '.tribe_get_start_date($post->ID, true);
 							$short_desc .= wp_trim_words( do_shortcode( get_the_excerpt() ), 20);
+							$scontent .= get_the_content();
 							break;
 
 						case 'page':
 							$short_desc .= wp_trim_words(do_shortcode(get_the_content()), 20);
+							$scontent = get_the_content();
 							break;
 
 						default:
-							$blerb .= do_shortcode( get_the_excerpt() );
+							$short_desc .= do_shortcode( get_the_excerpt() );
+							$scontent = get_the_content();
 					}  
-					echo '<!--'.$extra_html.'-->';  ?>
-					<?php /* Displaying.... title(+/- link), short_desc, search_blurb, open_link */ ?>
+					echo '<!--'.$extra_html.'-->'; 
+					if ($scontent) {
+						$blerb .= find_searchstring_surround($search_query, $scontent, 25, 'zig');
+					}
+					/* Displaying.... title(+/- link), short_desc, search_blurb, open_link */ ?>
 					<h3 class="item-title">
 						<?php if ($link_title) { ?>
-							<a href="<?php the_permalink(); ?>"><?php the_title(); echo $title_extra_end; ?></a>
+							<a href="<?php the_permalink(); ?>"><?php the_title(); /* echo '<span class="search-title-extra">'.$title_extra_end.'</span>'; */ ?></a>
 						<?php  } else { 
-							the_title(); echo $title_extra_end;
+							the_title(); /*  echo '<span class="search-title-extra">'.$title_extra_end.'</span>'; */
 						} ?>
 					</h3>
 					<?php /* zig xout <p class="item-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p> */ ?>		
@@ -117,11 +128,13 @@ get_template_part( 'components/page-content-before' ); ?>
 						}
 						if ($blerb) {
 							echo '<div class="item-blerb">';
-							echo $blerb;
+							echo '....'.$blerb.'....';
 							echo '</div>';
 						}
 						if ($ext_link) {
-							echo '<div class="item-blerb">'.$ext_link.'</div>'; 
+							echo '<div class="item-link">'.$ext_link; 
+							echo '<span class="search-title-extra">'.$title_extra_end.'</span>'; 
+							echo '</div>';
 						}	
 					echo '</div>'; // end item-text
 					?>
