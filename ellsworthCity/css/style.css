@@ -1306,6 +1306,17 @@ div.bbp-template-notice a:hover {
   clear: both;
   content: " "; }
 
+.gov-mgmt-team .widget_woothemes_our_team {
+  min-width: 49%;
+  padding-bottom: 10px;
+  margin: auto; }
+.gov-mgmt-team .wpb_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+.gov-mgmt-team li.street, .gov-mgmt-team li.city {
+  display: none; }
+
 @media (min-width: 768px) {
   .team-members.columns-2 .team-member {
     width: 49%;
@@ -1524,6 +1535,9 @@ ol li ol li {
 
 .wpcf7 .wpcf7-form dl dd {
   width: 100%; }
+
+.search-results-page h3.item-title {
+  margin-bottom: 10px; }
 
 .widget-list .coe-w-in-w .c-documents {
   margin-bottom: 0px; }
