@@ -26,23 +26,106 @@ get_template_part( 'components/page-content-before' ); ?>
 
 				<div class="c-content-box">
 					<?php $cpt = get_post_type(); 
-					$extra_html = "";
-					//$extra_html .= $cpt; 
+					$title_extra_end = "";
+					$extra_html = ""; // for debuging
+					$extra_html .= $cpt;
+					$extra_html .= " id: ".$post->ID." ";
+					$blerb = "";
+					$ext_link = "";
+					$link_title = true;
+					$short_desc = "";
 					switch ($cpt) {
 						case 'lsvrdocument':
-							$extra_html .= " - (external document)";
+							$link_title = false; // dont link title (since it's a PDF/document)
+							$doctype = get_post_meta($post->ID, 'meta_document_type', true);
+							switch($doctype) {
+								case 'pdf':
+									$title_extra_end = " (pdf)";
+									break;
+								default:
+									$extra_html .= " nope ";
+									break;
+							}
+							if (has_excerpt()) {
+								$short_desc .= wp_trim_words( do_shortcode($post->post_excerpt), 20);
+							} 
+							$extra_html .= " (".$doctype.")";
+							//echo "<pre>"; var_dump(get_lsrvdoc_link( $post->ID )); echo "</pre>";
+							$ext_link .= '<a target="_blank" href="'.get_lsrvdoc_link( $post->ID ).'">Open pdf document</a>.';
 							break;
+
 						case 'attachment':
-							$extra_html .= " - (attachment)";
+							$extra_html .= " - (".$post->post_mime_type.")";
+							$link_title = false;
+							switch($post->post_mime_type){
+								case 'application/pdf':
+									$extra_html .= " attachment title [".get_the_title().']';
+									$linked_docID = get_attachment_lsrvdoc($post->ID);
+									$extra_html .= " linked id is: (".$linked_docID.")";
+
+									if ($linked_docID) {
+										$ext_link .= '<a target="_blank" href="'.get_lsrvdoc_link( $post->ID ).'">Open pdf document</a>.';
+										if ($post->post_excerpt) {
+											$short_desc = wp_trim_words( do_shortcode( $post->post_excerpt ), 20);
+										}
+									} else {
+										$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">Open pdf document</a>.';
+									}
+									$title_extra_end = " (pdf)";
+									break;
+								case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+								case "application/vnd.ms-excel":
+									$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">Download attachment</a>.';
+									$title_extra_end = " (spreadsheet)";
+									break;
+
+								default: 
+									$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">View attachment</a>.';
+								break;
+							} // end post_mime_type switch
 							break;
-						
-					}  /* echo '<!--'.$extra_html.'-->'; */  ?>
-					<h3 class="item-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><?php /* echo $extra_html; */ ?> </h3>
-							<?php /* zig xout <p class="item-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p> */ ?>
-							<div class="item-text">
-								<?php echo wpautop( do_shortcode( get_the_excerpt() ) ); ?>
-							</div>
-				</div>
+
+						case 'tribe_events':
+							$title_extra_end = " (event)";
+							$short_desc .= 'Date: '.tribe_get_start_date($post->ID, true);
+							$short_desc .= wp_trim_words( do_shortcode( get_the_excerpt() ), 20);
+							break;
+
+						case 'page':
+							$short_desc .= wp_trim_words(do_shortcode(get_the_content()), 20);
+							break;
+
+						default:
+							$blerb .= do_shortcode( get_the_excerpt() );
+					}  
+					echo '<!--'.$extra_html.'-->';  ?>
+					<?php /* Displaying.... title(+/- link), short_desc, search_blurb, open_link */ ?>
+					<h3 class="item-title">
+						<?php if ($link_title) { ?>
+							<a href="<?php the_permalink(); ?>"><?php the_title(); echo $title_extra_end; ?></a>
+						<?php  } else { 
+							the_title(); echo $title_extra_end;
+						} ?>
+					</h3>
+					<?php /* zig xout <p class="item-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p> */ ?>		
+					<?php 
+					echo '<div class="item-text">';
+						if ($short_desc) {
+							echo '<div class="item-excerpt">';
+							echo $short_desc;
+							echo '</div>';
+						}
+						if ($blerb) {
+							echo '<div class="item-blerb">';
+							echo $blerb;
+							echo '</div>';
+						}
+						if ($ext_link) {
+							echo '<div class="item-blerb">'.$ext_link.'</div>'; 
+						}	
+					echo '</div>'; // end item-text
+					?>
+				</div> <!-- end content box -->
 
 			<?php endwhile; ?>
 
