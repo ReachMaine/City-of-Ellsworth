@@ -33,6 +33,7 @@ get_template_part( 'components/page-content-before' ); ?>
 					$blerb = "";
 					$ext_link = "";
 					$link_title = true;
+					$short_desc_len = 20;
 					$short_desc = "";
 					$scontent = "";
 					switch ($cpt) {
@@ -48,7 +49,7 @@ get_template_part( 'components/page-content-before' ); ?>
 									break;
 							}
 							if (has_excerpt()) {
-								$short_desc .= wp_trim_words( do_shortcode($post->post_excerpt), 20);
+								$short_desc .= $post->post_excerpt;
 							} 
 							$extra_html .= " (".$doctype.")";
 							//echo "<pre>"; var_dump(get_lsrvdoc_link( $post->ID )); echo "</pre>";
@@ -68,7 +69,7 @@ get_template_part( 'components/page-content-before' ); ?>
 									if ($linked_docID) {
 										$ext_link .= '<a target="_blank" href="'.get_lsrvdoc_link( $post->ID ).'">Open pdf document</a>.';
 										if ($post->post_excerpt) {
-											$short_desc = wp_trim_words( do_shortcode( $post->post_excerpt ), 20);
+											$short_desc = $post->post_excerpt;
 										}
 									} else {
 										$ext_link .= '<a target="_blank" href="'.wp_get_attachment_url( $post->ID ).'">Open pdf document</a>.';
@@ -93,24 +94,26 @@ get_template_part( 'components/page-content-before' ); ?>
 						case 'tribe_events':
 							$title_extra_end = " (event)";
 							$short_desc .= 'Date: '.tribe_get_start_date($post->ID, true);
-							$short_desc .= wp_trim_words( do_shortcode( get_the_excerpt() ), 20);
+							$short_desc .= get_the_excerpt();
 							$scontent .= get_the_content();
 							break;
 
 						case 'page':
-							$short_desc .= wp_trim_words(do_shortcode(get_the_content()), 20);
+							$short_desc .= wp_trim_words(wp_strip_all_tags( do_shortcode(get_the_content()) ), 20);
 							$scontent = get_the_content();
 							break;
 
 						default:
-							$short_desc .= do_shortcode( get_the_excerpt() );
+							$short_desc .= get_the_excerpt();
 							$scontent = get_the_content();
 					}  
 					echo '<!--'.$extra_html.'-->'; 
-					if ($scontent) {
-						$blerb .= find_searchstring_surround($search_query, do_shortcode($scontent), 25, 'zig');
+					$scontent = wp_strip_all_tags( do_shortcode($scontent) );
+					$short_desc = wp_trim_words( wp_strip_all_tags( do_shortcode($short_desc) ), $short_desc_len);
+					if ($scontent) { 
+						$blerb .= find_searchstring_surround($search_query, $scontent, 25, 'item-blerb-searchq');
 					}
-					/* Displaying.... title(+/- link), short_desc, search_blurb, open_link */ ?>
+					/* Displaying.... title(+/- link), short_desc, search_blurb, external_link */ ?>
 					<h3 class="item-title">
 						<?php if ($link_title) { ?>
 							<a href="<?php the_permalink(); ?>"><?php the_title(); /* echo '<span class="search-title-extra">'.$title_extra_end.'</span>'; */ ?></a>
@@ -120,6 +123,7 @@ get_template_part( 'components/page-content-before' ); ?>
 					</h3>
 					<?php /* zig xout <p class="item-link"><a href="<?php the_permalink(); ?>"><?php the_permalink(); ?></a></p> */ ?>		
 					<?php 
+
 					echo '<div class="item-text">';
 						if ($short_desc) {
 							echo '<div class="item-excerpt">';

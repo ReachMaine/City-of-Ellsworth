@@ -314,8 +314,29 @@ ol li ol li {
 	width: 100%;
 }
 // /**** search page *****/
-.search-results-page h3.item-title {
-	margin-bottom: 10px;
+.search-results-page {
+	.c-content-box {
+		padding-bottom: 10px;
+		padding-top: 5px;
+		h3.item-title {
+			margin-bottom: 10px;
+		}
+		.item-excerpt {
+			border-bottom: 1px solid lightgrey;
+			padding-bottom: 5px;
+		}
+		.item-blerb {
+			padding-left: 10px;
+			padding-top: 5px;
+			font-style: italics;
+			.item-blerb-searchq {
+				font-weight: bold;
+			}
+		}
+		.item-link {
+			padding-top: 10px;
+		}
+	}
 }
 
 

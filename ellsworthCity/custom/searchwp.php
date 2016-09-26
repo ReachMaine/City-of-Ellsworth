@@ -99,7 +99,6 @@ function find_searchstring_surround($needle, $haystack, $space, $str_class) {
 	$haystack_len = strlen($haystack);
 	$needle_len = strlen($needle);
 	$spot = stripos ( $haystack ,  $needle );
-	//$return_str .= 'spot: '.$spot.' needle_len'.$needle_len.'';
 	if ($spot !== FALSE) {
 		/* it's in there */
 		/* find the before part */
@@ -115,7 +114,8 @@ function find_searchstring_surround($needle, $haystack, $space, $str_class) {
 		} else {
 			$return_str_after = substr($haystack, $spot+$needle_len, $haystack_after_len);
 		}
-		$return_str .= $return_str_start.'<span class="'.str_class.'">'.$needle.'</span>'.$return_str_after;
+		$needle_in_content = substr($haystack, $spot, $needle_len);
+		$return_str .= $return_str_start.'<span class="'.$str_class.'">'.$needle_in_content.'</span>'.$return_str_after;
 	} else {
 		
 	}
