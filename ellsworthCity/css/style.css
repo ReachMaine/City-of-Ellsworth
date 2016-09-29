@@ -1365,7 +1365,9 @@ div.bbp-template-notice a:hover {
   padding: 0px 30px 0px 30px; }
   #coe_below_header:not(:empty) ul {
     list-style: none; }
-  #coe_below_header:not(:empty) h3 {
+  #coe_below_header:not(:empty) article {
+    padding-top: 20px; }
+  #coe_below_header:not(:empty) h3, #coe_below_header:not(:empty) h4.entry-title {
     font-size: 1.7em;
     margin-top: 8px;
     margin-bottom: 0px; }
@@ -1442,13 +1444,17 @@ div.bbp-template-notice a:hover {
   		padding: 10px 0 10px 10px;
   	}*/ }
 
-#coe_home_banner {
+#coe_home_banner:empty {
+  margin: 0px;
+  padding: 0px; }
+
+#coe_home_banner:not(:empty) {
   border: 6px solid #781514;
   padding-bottom: 24px;
   box-shadow: 2px 2px #c7c5c5; }
-  #coe_home_banner .widget .widget-title {
+  #coe_home_banner:not(:empty) .widget .widget-title {
     font-size: 1.5em; }
-    #coe_home_banner .widget .widget-title .widget-ico {
+    #coe_home_banner:not(:empty) .widget .widget-title .widget-ico {
       color: #781514;
       font-size: 32px;
       padding-right: 5px;

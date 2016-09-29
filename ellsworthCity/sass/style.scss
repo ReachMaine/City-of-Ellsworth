@@ -24,19 +24,22 @@ Version:        1.0.0
 		padding-bottom: 8px;
 	}
 }
-
+// Alerts box.
 #coe_below_header:not(:empty) {
 	border: 6px solid #fbc22c;
 	padding: 0px 30px 0px 30px;
 	ul {
 		list-style: none;
 	}
-	h3 {
+	article {
+		padding-top: 20px;
+	}
+	h3, h4.entry-title {
 		font-size: 1.7em;
 		margin-top: 8px;
 		margin-bottom: 0px;
 	}
-	h3.widget-title{
+	h3.widget-title {
 		text-align: center;
 		font-size: 2.5em;
 		color: #fbc22c;
@@ -122,7 +125,11 @@ Version:        1.0.0
 }
 
 // alerts box on home page at top of content
-#coe_home_banner {
+#coe_home_banner:empty {
+	margin: 0px;
+	padding: 0px;
+}
+#coe_home_banner:not(:empty) {
 	border: 6px solid $accent;
 	padding-bottom: 24px;
 	box-shadow: 2px 2px #c7c5c5;
