@@ -9,6 +9,9 @@ Author URI: http://pomelodesign.com
 Text Domain: upw
 Domain Path: /languages/
 License: MIT
+*
+* Override mods
+*  29Sept16 zig - dont show anything if no posts 
 */
 
 if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
