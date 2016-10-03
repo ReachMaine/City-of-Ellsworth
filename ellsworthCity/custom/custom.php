@@ -225,3 +225,12 @@ if (!function_exists('est_excise_tax')) {
 		return $htmlout;
 
 	 } /* end lsvr_document_shortcode */
+
+function alpha_order_docs( $query ) {
+    if ( ! is_admin()  /* && $query->is_post_type_archive('lvsrdocument') */ && $query->is_main_query() && is_tax( 'lsvrdocumentcat' ) ) {
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+
+add_action( 'pre_get_posts', 'alpha_order_docs' );
