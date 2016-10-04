@@ -1504,6 +1504,16 @@ div.ells-accordion-title h4.accordion-title {
 ol li ol li {
   list-style-type: lower-alpha; }
 
+.c-article-list .article-image,
+.article-page .article-image {
+  width: 30%;
+  max-width: 300px;
+  float: left;
+  padding-right: 20px; }
+
+.article-list-content article {
+  width: 100%; }
+
 .team-member {
   text-align: center; }
 
@@ -1658,4 +1668,8 @@ ol li ol li {
 		devices with width up to 480px
     ------------------------------------------------------------------------- */
 @media (max-width: 480px) {
-  /* your CSS here */ }
+  /* your CSS here */
+  .c-article-list .article-image,
+  .article-page .article-image {
+    width: 100%;
+    max-width: initial; } }

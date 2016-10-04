@@ -70,5 +70,10 @@
 	@media ( max-width: 480px ) {
 
 		/* your CSS here */
+		.c-article-list .article-image,
+		.article-page .article-image {
+			width: 100%;
+			max-width: initial;
+		}
 
 	}

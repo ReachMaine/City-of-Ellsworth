@@ -1,29 +1,33 @@
 <?php // SINGLE POST
-/* 6jul16 zig - use exceprt for archive */ 
+/* 6jul16 zig - use exceprt for archive 
+ *  4Oct16 zig - single put image inside article s.t. text will wrap around.
+ */ 
 
 if ( is_single() ) : ?>
 
     <article <?php post_class( 'article' ); ?>>
 		<div class="c-content-box m-no-padding article-inner">
 
-			<?php if ( has_post_thumbnail() && lsvr_get_field( 'article_detail_thumb', 'header' ) === 'top' ) : ?>
-			<!-- ARTICLE IMAGE : begin -->
-			<div class="article-image">
-				<?php $thumb_data = lsvr_get_image_data( get_post_thumbnail_id() ); ?>
-				<?php if ( lsvr_get_field( 'article_detail_thumb_crop', true, true ) ) : ?>
-					<span class="article-image-inner" style="background-image: url('<?php echo esc_url( $thumb_data['large'] ); ?>');"></span>
-				<?php else: ?>
-					<img src="<?php echo esc_url( $thumb_data['large'] ); ?>" alt="<?php echo esc_attr( $thumb_data['alt'] ); ?>">
-				<?php endif; ?>
-			</div>
-			<!-- ARTICLE IMAGE : end -->
-			<?php endif; ?>
+			<?php /* zxout moved image stuff. */ ?>
 
 			<!-- ARTICLE CORE : begin -->
 			<div class="article-core">
-
+				
+			
 				<!-- ARTICLE CONTENT : begin -->
 				<div class="article-content">
+					<?php if ( has_post_thumbnail() && lsvr_get_field( 'article_detail_thumb', 'header' ) === 'top' ) : ?>
+						<!-- ARTICLE IMAGE : begin -->
+						<div class="article-image">
+							<?php $thumb_data = lsvr_get_image_data( get_post_thumbnail_id() ); ?>
+							<?php if ( lsvr_get_field( 'article_detail_thumb_crop', true, true ) ) : ?>
+								<span class="article-image-inner" style="background-image: url('<?php echo esc_url( $thumb_data['large'] ); ?>');"></span>
+							<?php else: ?>
+								<img src="<?php echo esc_url( $thumb_data['large'] ); ?>" alt="<?php echo esc_attr( $thumb_data['alt'] ); ?>">
+							<?php endif; ?>
+						</div>
+					<?php endif; ?>
+					<!-- ARTICLE IMAGE : end -->
 					<div class="article-content-inner">
 						<?php the_content(); ?>
 						<?php wp_link_pages(); ?>
