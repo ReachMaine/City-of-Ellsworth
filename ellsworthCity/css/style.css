@@ -1512,7 +1512,8 @@ ol li ol li {
   padding-right: 20px; }
 
 .article-list-content article {
-  width: 100%; }
+  width: 100%;
+  clear: both; }
 
 .team-member {
   text-align: center; }
