@@ -1672,4 +1672,4 @@ ol li ol li {
   .c-article-list .article-image,
   .article-page .article-image {
     width: 100%;
-    max-width: initial; } }
+    max-width: 100%; } }
