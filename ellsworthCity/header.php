@@ -1,3 +1,8 @@
+<?php /* mods 
+    Sept16 zig - add coe_below_header widget area 
+	4Oct16 zig - add gtm function call.
+*/ ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head data-template-uri="<?php echo get_template_directory_uri() ?>">
@@ -16,7 +21,7 @@ $body_class = defined( 'enable_style_switcher' ) && enable_style_switcher ? 'm-s
 $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : ''; ?>
 
 <body <?php body_class( $body_class ); ?>>
-
+	<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 	<?php if ( $page_id && get_post_meta( $page_id, 'meta_header_menu_enable', true ) === 'enable' ) {
 		$enable_header_menu = true;
 	} elseif ( $page_id && get_post_meta( $page_id, 'meta_header_menu_enable', true ) === 'disable' ) {
