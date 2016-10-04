@@ -71,7 +71,7 @@ pre {
   border-color: #e5e5e5; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #333333; }
+  color: #333; }
 
 table thead th {
   color: #FFF;
@@ -87,7 +87,7 @@ table tbody > tr:nth-child(even) > td {
 	FORMS
 ------------------------------------------------------------------------- */
 label {
-  color: #333333; }
+  color: #333; }
 
 label > span {
   color: #781514; }
@@ -134,7 +134,7 @@ input[type="file"] {
 .accordion-items > li {
   border-color: #e5e5e5; }
 .accordion-items .accordion-title {
-  color: #333333; }
+  color: #333; }
 .accordion-items .accordion-title:after {
   color: #781514; }
 .accordion-items .accordion-title .ico {
@@ -156,7 +156,7 @@ input[type="file"] {
     color: #c88435;
     background-color: #fff4cf; }
   .c-alert-message .alert-close {
-    color: #333333; }
+    color: #333; }
 
 /* -------------------------------------------------------------------------
 	ARTICLE LIST
@@ -164,7 +164,7 @@ input[type="file"] {
 .c-article-list .article-list-title .ico {
   color: #781514; }
 .c-article-list .article-list-title a {
-  color: #333333; }
+  color: #333; }
 .c-article-list .brief-article {
   border-color: #f0f0f0; }
 .c-article-list .article-date {
@@ -201,7 +201,7 @@ input[type="file"] {
 	CONTENT BOX
 ------------------------------------------------------------------------- */
 .c-content-box {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
@@ -214,7 +214,7 @@ input[type="file"] {
   box-shadow: none; }
 
 .m-no-boxes .c-content-box.m-forced {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
@@ -235,7 +235,7 @@ input[type="file"] {
 	DEFINITION LIST
 ------------------------------------------------------------------------- */
 .c-definition-list dl > dt {
-  color: #333333; }
+  color: #333; }
 .c-definition-list dl > dt,
 .c-definition-list dl > dd {
   border-color: #e5e5e5; }
@@ -246,14 +246,14 @@ input[type="file"] {
 .c-directory .directory-title .ico {
   color: #781514; }
 .c-directory .directory-menu > li > a {
-  color: #333333; }
+  color: #333; }
 
 /* -------------------------------------------------------------------------
 	DOCUMENTS
 	This component is using LSVR Documents widget
 ------------------------------------------------------------------------- */
 .c-documents .widget-title {
-  color: #333333; }
+  color: #333; }
 .c-documents .widget-ico {
   color: #781514; }
 .c-documents .show-all-btn {
@@ -268,7 +268,7 @@ input[type="file"] {
 	This component is using LSVR Events widget
 ------------------------------------------------------------------------- */
 .c-events .widget-title {
-  color: #333333; }
+  color: #333; }
 .c-events .widget-ico {
   color: #781514; }
 .c-events .show-all-btn {
@@ -279,7 +279,7 @@ input[type="file"] {
   color: #FFF;
   background-color: #781514; }
 .c-events .widget.lsvr-events .event-day {
-  color: #333333;
+  color: #333;
   background-color: #e5e5e5; }
 
 /* -------------------------------------------------------------------------
@@ -293,7 +293,7 @@ input[type="file"] {
 	This component is using LSVR Notices widget
 ------------------------------------------------------------------------- */
 .c-notices .widget-title {
-  color: #333333; }
+  color: #333; }
 .c-notices .widget-ico {
   color: #781514; }
 .c-notices .show-all-btn {
@@ -450,12 +450,12 @@ input[type="file"] {
 .c-tabs .tab-list {
   background-color: #d2d2d2; }
 .c-tabs .tab-list > li {
-  color: #333333;
+  color: #333;
   padding: 10px 15px 12px 15px;
   margin: 0px;
   border-bottom: 0px; }
 .c-tabs .tab-list > li.m-active {
-  background-color: white;
+  background-color: #FFFFFF;
   border-top: 2px solid #781514;
   border-bottom: 0px; }
 
@@ -605,11 +605,11 @@ input[type="file"] {
     ------------------------------------------------------------------------- */
 #page-header {
   color: #FFF;
-  background-color: #333333;
+  background-color: #333;
   background-color: rgba(120, 21, 20, 0.8); }
 
 #page-header:after {
-  border-top-color: #333333;
+  border-top-color: #333;
   border-top-color: rgba(0, 0, 0, 0.8); }
 
 .page-title h1 {
@@ -645,10 +645,10 @@ input[type="file"] {
 
 .article-navigation h5,
 .article-navigation h5 a {
-  color: #333333; }
+  color: #333; }
 
 .article-comments .comment-list .comment-author {
-  color: #333333; }
+  color: #333; }
 .article-comments .comment-list .comment-info {
   border-color: #f0f0f0; }
 .article-comments .comment-list .comment-date:before,
@@ -803,12 +803,12 @@ input[type="file"] {
 	WIDGETS
 ------------------------------------------------------------------------- */
 .sidebar .widget {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
 .sidebar .widget-title {
-  color: #333333; }
+  color: #333; }
 .sidebar .widget-ico {
   color: #781514; }
 .sidebar .show-all-btn {
@@ -825,7 +825,7 @@ input[type="file"] {
     padding-left: 20px;
     padding-right: 20px; }
 .sidebar .widget.lsvr-definition-list dl > dt {
-  color: #333333; }
+  color: #333; }
 .sidebar .widget.lsvr-definition-list dl > dt,
 .sidebar .widget.lsvr-definition-list dl > dd {
   border-color: #f0f0f0; }
@@ -839,7 +839,7 @@ input[type="file"] {
   color: #FFF;
   background-color: #781514; }
 .sidebar .widget.lsvr-events .event-day {
-  color: #333333;
+  color: #333;
   background-color: #e5e5e5; }
 .sidebar .widget.lsvr-galleries ul > li {
   border-color: #f0f0f0; }
@@ -877,7 +877,7 @@ input[type="file"] {
 .sidebar .widget.widget_calendar caption {
   border-color: #f0f0f0; }
 .sidebar .widget.widget_calendar thead th {
-  color: #333333;
+  color: #333;
   border-color: #f0f0f0; }
 .sidebar .widget.widget_calendar tfoot td {
   border-color: #f0f0f0; }
@@ -917,7 +917,7 @@ input[type="file"] {
 .sidebar .widget.widget_display_views ul > li {
   border-color: #f0f0f0; }
 .sidebar .widget.widget_display_stats dl > dt {
-  color: #333333; }
+  color: #333; }
 .sidebar .widget.widget_display_stats dl > dt,
 .sidebar .widget.widget_display_stats dl > dd {
   border-color: #f0f0f0; }
@@ -988,7 +988,7 @@ input[type="file"] {
   color: #FFF;
   background-color: #781514; }
 #bottom-panel .widget.lsvr-events .event-day {
-  color: #333333;
+  color: #333;
   background-color: #e5e5e5; }
 #bottom-panel .widget.lsvr-galleries ul > li {
   border-color: rgba(255, 255, 255, 0.1); }
@@ -1111,7 +1111,7 @@ div.bbp-template-notice a:hover {
   color: #781514; }
 
 #bbpress-forums #subscription-toggle > span {
-  background-color: #333333;
+  background-color: #333;
   background-color: rgba(0, 0, 0, 0.2); }
 #bbpress-forums #subscription-toggle a {
   color: #FFF; }
@@ -1123,12 +1123,12 @@ div.bbp-template-notice a:hover {
   color: #781514; }
 #bbpress-forums .bbp-topic-tags {
   color: #FFF;
-  background-color: #333333;
+  background-color: #333;
   background-color: rgba(0, 0, 0, 0.2); }
 #bbpress-forums .bbp-topic-tags a {
   color: #FFF; }
 #bbpress-forums .bbp-pagination-count {
-  color: #333333; }
+  color: #333; }
 #bbpress-forums .bbp-pagination-links .page-numbers:hover {
   background-color: #FFF; }
 #bbpress-forums .bbp-pagination-links .page-numbers.current {
@@ -1137,7 +1137,7 @@ div.bbp-template-notice a:hover {
 #bbpress-forums .bbp-forums,
 #bbpress-forums .bbp-topics,
 #bbpress-forums .bbp-replies {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
@@ -1145,7 +1145,7 @@ div.bbp-template-notice a:hover {
   background-color: #FFF;
   border-color: #f0f0f0; }
 #bbpress-forums .forum-titles {
-  color: #333333; }
+  color: #333; }
 #bbpress-forums div.bbp-topic-header {
   border-color: #f0f0f0;
   background-color: transparent; }
@@ -1162,13 +1162,13 @@ div.bbp-template-notice a:hover {
   background-color: transparent; }
 #bbpress-forums .bbp-reply-form,
 #bbpress-forums .bbp-topic-form {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
 #bbpress-forums form > fieldset.bbp-form > legend,
 #bbpress-forums fieldset.bbp-form fieldset.bbp-form > legend {
-  color: #333333; }
+  color: #333; }
 #bbpress-forums .quicktags-toolbar {
   background-color: #FFF;
   border-color: #f0f0f0; }
@@ -1176,7 +1176,7 @@ div.bbp-template-notice a:hover {
   background-color: #FFF;
   border-color: #f0f0f0; }
 #bbpress-forums #bbp-user-wrapper {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
@@ -1216,7 +1216,7 @@ div.bbp-template-notice a:hover {
         CONTACT FORM 7
     ------------------------------------------------------------------------- */
 .wpcf7 {
-  background-color: white;
+  background-color: #FFF;
   -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.05); }
@@ -1405,6 +1405,9 @@ div.bbp-template-notice a:hover {
 .col-md-7.middle-column {
   padding-right: 5px; }
 
+p a, #page-content li a {
+  font-weight: bold; }
+
 #coe_above_content {
   margin-top: -10px;
   /*	h4 {
@@ -1492,7 +1495,7 @@ div.ells-accordion-title h4.accordion-title {
     .ffs-tabbed-nav.resp-vtabs .resp-tabs-container h2.resp-accordion {
       background-color: #d2d2d2; }
     .ffs-tabbed-nav.resp-vtabs .resp-tabs-container h2.resp-accordion.resp-tab-active {
-      background-color: white; }
+      background-color: #FFFFFF; }
 
 .page-content-inner .ffs-tabbed-nav .resp-tabs-list li {
   font-size: 16px;

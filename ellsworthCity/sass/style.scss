@@ -83,6 +83,11 @@ Version:        1.0.0
 .col-md-7.middle-column {
 	padding-right: 5px;
 }
+
+p a, #page-content li a {
+	font-weight: bold;
+}
+
 // widget under page header 
 #coe_above_content {
 	margin-top: -10px;
