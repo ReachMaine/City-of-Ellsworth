@@ -1598,6 +1598,20 @@ ol li ol li {
   .search-results-page .c-content-box .item-link {
     padding-top: 10px; }
 
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .widget-list .coe-w-in-w .c-documents {
   margin-bottom: 0px; }
   .widget-list .coe-w-in-w .c-documents .c-content-box {
