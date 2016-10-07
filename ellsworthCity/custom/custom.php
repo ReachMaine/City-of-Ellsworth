@@ -234,3 +234,8 @@ function alpha_order_docs( $query ) {
 }
 
 add_action( 'pre_get_posts', 'alpha_order_docs' );
+
+function theme_excerpt_length( $length ) {
+    return 45;
+}
+add_filter( 'excerpt_length', 'theme_excerpt_length', 1999 );
