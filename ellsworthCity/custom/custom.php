@@ -228,8 +228,17 @@ if (!function_exists('est_excise_tax')) {
 
 function alpha_order_docs( $query ) {
     if ( ! is_admin()  /* && $query->is_post_type_archive('lvsrdocument') */ && $query->is_main_query() && is_tax( 'lsvrdocumentcat' ) ) {
-        $query->set( 'orderby', 'title' );
-        $query->set( 'order', 'ASC' );
+         $term = get_queried_object()->term_id;
+	    if ($term) {
+	    	$MetaValue = "";
+	    	if (function_exists('wp_get_terms_meta')) { 
+			  $MetaValue = wp_get_terms_meta($term, 'sort_by_date' ,true); 
+			} 
+			if (!$MetaValue) {
+				$query->set( 'orderby', 'title' );
+	    		$query->set( 'order', 'ASC' );
+			}
+	    }
     }
 }
 
