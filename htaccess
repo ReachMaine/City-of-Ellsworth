@@ -1,0 +1,45 @@
+RewriteCond %{HTTP_HOST} ^knowltonpark\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.knowltonpark\.org$
+RewriteRule ^/?$ "http\:\/\/www\.ellsworthmaine\.gov\/residents\/recreation\/" [R=301,L]
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+<FilesMatch ".*">
+    Order deny,allow
+    Deny from all
+    Allow from 192.88.134.0/23
+    Allow from 185.93.228.0/22
+    Allow from 2a02:fe80::/29
+    Allow from 66.248.200.0/22
+</FilesMatch>
+
+RewriteCond %{HTTP_HOST} ^ellsworthschools\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.ellsworthschools\.org$
+RewriteRule ^/?$ "http\:\/\/www\.ellsworthmaine\.gov\/index\.php\?option\=com_k2\&view\=item\&layout\=item\&id\=1037\&Itemid\=610" [R=301,L]
+
+# Yoast SEO - XML Sitemap Rewrite Fix
+RewriteEngine On
+RewriteBase /
+RewriteRule ^sitemap_index.xml$ /index.php?sitemap=1 [L]
+RewriteRule ^locations.kml$ /index.php?sitemap=wpseo_local_kml [L]
+RewriteRule ^geo_sitemap.xml$ /index.php?sitemap=geo [L]
+RewriteRule ^([^/]+?)-sitemap([0-9]+)?.xml$ /index.php?sitemap=$1&sitemap_n=$2 [L]
+RewriteRule ^([a-z]+)?-?sitemap.xsl$ /index.php?xsl=$1 [L]
+# END Yoast SEO - XML Sitemap Rewrite Fix
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+AddHandler application/x-httpd-php56 .php .php5 .php4 .php3
+
