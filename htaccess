@@ -15,9 +15,47 @@ allow from all
     Allow from 66.248.200.0/22
 </FilesMatch>
 
-RewriteCond %{HTTP_HOST} ^ellsworthschools\.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.ellsworthschools\.org$
-RewriteRule ^/?$ "http\:\/\/www\.ellsworthmaine\.gov\/index\.php\?option\=com_k2\&view\=item\&layout\=item\&id\=1037\&Itemid\=610" [R=301,L]
+
+#contact
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=item&layout=item&id=594&Itemid=209$
+RewriteRule ^/?$ /contact/? [L,R=301]
+
+#online services
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=item&layout=item&id=1229&Itemid=651$
+RewriteRule ^/?$ /online-services/? [L,R=301]
+
+#code enforcement
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&Itemid=242$
+RewriteRule ^/?$ /government/government-departments/code-enforcement/? [L,R=301]
+
+#Acessor
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&task=tag&tag=Assessor&Itemid=430$
+RewriteRule ^/?$ /government/government-departments/assessing/? [L,R=301]
+
+#Vital records
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&task=category&id=46&Itemid=237$
+RewriteRule ^/?$ /services/vital-records/? [L,R=301]
+
+#Finance
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&task=category&id=26&Itemid=243$
+RewriteRule ^/?$ /government/government-departments/finance/? [L,R=301]
+
+#Econ Dev
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&Itemid=241$
+RewriteRule ^/?$ /business/economic-development/? [L,R=301]
+
+#Water
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=item&id=158(.*)$
+RewriteRule ^/?$ /government/government-departments/water/? [L,R=301]
+
+#Tax Info
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=item&id=656(.*)$
+RewriteRule ^/?$ /how-do-i/? [L,R=301]
+
+#City hall
+#RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&task=tag&tag=City+Hall&Itemid=331$
+#RewriteRule ^/?$ /government/city-manager/? [L,R=301]
+
 
 # Yoast SEO - XML Sitemap Rewrite Fix
 RewriteEngine On
