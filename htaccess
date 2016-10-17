@@ -28,13 +28,13 @@ RewriteRule ^/?$ /online-services/? [L,R=301]
 RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&Itemid=242$
 RewriteRule ^/?$ /government/government-departments/code-enforcement/? [L,R=301]
 
-#Acessor
-RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&task=tag&tag=Assessor&Itemid=430$
-RewriteRule ^/?$ /government/government-departments/assessing/? [L,R=301]
-
 #Vital records
 RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&task=category&id=46&Itemid=237$
 RewriteRule ^/?$ /services/vital-records/? [L,R=301]
+
+#Employment
+RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=generic&tag=Employment&task=tag&Itemid=539$
+RewriteRule ^/?$ /employment/? [L,R=301]
 
 #Finance
 RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&layout=category&task=category&id=26&Itemid=243$
@@ -55,6 +55,66 @@ RewriteRule ^/?$ /how-do-i/? [L,R=301]
 #City hall
 #RewriteCond %{QUERY_STRING} ^option=com_k2&view=itemlist&task=tag&tag=City+Hall&Itemid=331$
 #RewriteRule ^/?$ /government/city-manager/? [L,R=301]
+
+#HowDoI?
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=201(.*)$
+RewriteRule ^(.*)$ /how-do-i/? [L,R=301]
+
+#Police
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=230(.*)$
+RewriteRule ^(.*)$ /government/government-departments/police/? [L,R=301]
+
+#Assessing
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=(241|436|440)(.*)$
+RewriteRule ^(.*)$ /services/property-assessment-taxes/? [L,R=301]
+
+#News
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=(200|534|524|535|226|527|546|522|346|329|451|153)(.*)$
+RewriteRule ^(.*)$ /category/news/? [L,R=301]
+
+#Excise Tax Estimator
+RewriteCond %{QUERY_STRING} ^(.+)id=739(.*)$
+RewriteRule ^(.*)$ /excise-tax-estimator/? [L,R=301]
+
+#TransferANDRecycling
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=(173|252|226)(.*)$
+RewriteRule ^(.*)$ /services/trash-collection-recycling/? [L,R=301]
+
+#CityDirectory
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=209(.*)$
+RewriteRule ^(.*)$ /services/trash-collection-recycling/? [L,R=301]
+
+#EconomicDevelopment
+RewriteCond %{QUERY_STRING} ^(.+)tag\=Economic\+Development(.*)$
+RewriteRule ^(.*)$ /business/economic-development/? [L,R=301]
+
+#Ordinances
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=373(.*)$
+RewriteRule ^(.*)$ /government/city-ordinances-codes/? [L,R=301]
+
+#Vehicle Registration
+RewriteCond %{QUERY_STRING} ^(.+)id=736(.*)$
+RewriteRule ^(.*)$ /services/vehicle-registration/? [L,R=301]
+
+#CodeEnforcement
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=(279|280|242|403)(.*)$
+RewriteRule ^(.*)$ /government/government-departments/code-enforcement/? [L,R=301]
+
+#CityDirectory
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=232(.*)$
+RewriteRule ^(.*)$ /government/government-departments/city-clerk/? [L,R=301]
+
+#CityDirectory
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=185(.*)$
+RewriteRule ^(.*)$ /about-ellsworth-maine/? [L,R=301]
+
+#Harbor
+RewriteCond %{QUERY_STRING} ^(.+)Itemid=229(.*)$
+RewriteRule ^(.*)$ /business/economic-development/leisure/harbor-park-marina//? [L,R=301]
+
+
+
+
 
 
 # Yoast SEO - XML Sitemap Rewrite Fix
