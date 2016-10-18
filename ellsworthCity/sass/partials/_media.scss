@@ -56,9 +56,29 @@
 		devices with width between 481px and 767px
     ------------------------------------------------------------------------- */
 
-    @media ( max-width: 767px ) {
+    @media ( max-width: 768px ) {
 
-		/* your CSS here */
+		#coe_below_header:not(:empty) {
+      h3.widget-title {
+      font-size: 1.2em;
+      padding-bottom: 0px;
+      a {
+        display: inline;
+      }
+      }
+      i {
+        font-size: 20px;
+      }
+      h4.entry-title {
+        font-size: 1em;
+      }
+      p {
+        font-size: .8em;
+      }
+      article {
+        padding-top: 0px;
+      }
+    }
 
 	}
 
