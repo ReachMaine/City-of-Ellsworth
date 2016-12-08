@@ -111,7 +111,7 @@ get_template_part( 'components/page-content-before' ); ?>
 					$scontent = wp_strip_all_tags( do_shortcode($scontent) );
 					$short_desc = wp_trim_words( wp_strip_all_tags( do_shortcode($short_desc) ), $short_desc_len);
 					if ($scontent) { 
-						$blerb .= find_searchstring_surround($search_query, $scontent, 25, 'item-blerb-searchq');
+						$blerb .= find_searchstring_surround($search_query, $scontent, 40, 'item-blerb-searchq');
 					}
 					/* Displaying.... title(+/- link), short_desc, search_blurb, external_link */ ?>
 					<h3 class="item-title">
