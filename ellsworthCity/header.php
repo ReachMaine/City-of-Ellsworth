@@ -1,6 +1,7 @@
-<?php /* mods 
-    Sept16 zig - add coe_below_header widget area 
+<?php /* mods
+    Sept16 zig - add coe_below_header widget area
 	4Oct16 zig - add gtm function call.
+    13Dec16 zig - add google custom search to header search.
 */ ?>
 
 <!DOCTYPE html>
@@ -116,8 +117,24 @@ $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : 
 
 							<?php if ( $enable_header_search ) : ?>
 							<!-- HEADER SEARCH : begin -->
-							<div class="header-search">
-								<?php get_search_form() ?>
+							<div class="header-search coe-gsces">
+
+                                <?php /* google custom search */ ?>
+                                <?php if (is_page('search-results')) { ?>
+                                    <script>
+                                      (function() {
+                                        var cx = '015839424189047853552:jvd_hoouktu';
+                                        var gcse = document.createElement('script');
+                                        gcse.type = 'text/javascript';
+                                        gcse.async = true;
+                                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(gcse, s);
+                                      })();
+                                    </script>
+                                    <gcse:searchbox></gcse:searchbox>
+                                <?php } else { get_search_form(); } ?>
+
 							</div>
 							<!-- HEADER SEARCH : end -->
 							<?php endif; ?>
