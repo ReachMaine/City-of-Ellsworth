@@ -120,7 +120,6 @@ $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : 
 							<div class="header-search coe-gsces">
 
                                 <?php /* google custom search */ ?>
-                                <?php if (is_page('search-results')) { ?>
                                     <script>
                                       (function() {
                                         var cx = '015839424189047853552:jvd_hoouktu';
@@ -132,9 +131,7 @@ $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : 
                                         s.parentNode.insertBefore(gcse, s);
                                       })();
                                     </script>
-                                    <gcse:searchbox></gcse:searchbox>
-                                <?php } else { get_search_form(); } ?>
-
+                                    <gcse:searchbox-only></gcse:searchbox-only>
 							</div>
 							<!-- HEADER SEARCH : end -->
 							<?php endif; ?>
