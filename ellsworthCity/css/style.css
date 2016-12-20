@@ -23,6 +23,10 @@ Version:        1.0.0
     width: 100%;
     height: 100%; }
 
+.coe-boxed {
+  border: 1px solid #781514;
+  padding-top: 10px; }
+
 /* -----------------------------------------------------------------------------
 
 	TABLE OF CONTENTS
