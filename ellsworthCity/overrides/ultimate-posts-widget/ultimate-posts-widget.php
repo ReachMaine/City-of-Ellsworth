@@ -3,7 +3,7 @@
 Plugin Name: Ultimate Posts Widget
 Plugin URI: http://wordpress.org/plugins/ultimate-posts-widget/
 Description: The ultimate widget for displaying posts, custom post types or sticky posts with an array of options.
-Version: 2.0.5
+Version: 2.0.6
 Author: Boston Dell-Vandenberg
 Author URI: http://pomelodesign.com
 Text Domain: upw
@@ -11,7 +11,7 @@ Domain Path: /languages/
 License: MIT
 *
 * Override mods
-*  29Sept16 zig - dont show anything if no posts 
+*  29Sept16 zig - dont show anything if no posts
 */
 
 if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
@@ -67,7 +67,12 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
     function widget( $args, $instance ) {
 
       global $post;
-      $current_post_id =  $post->ID;
+
+      if ( is_object( $post ) ) {
+        $current_post_id = $post->ID;
+      } else {
+        $current_post_id = 0;
+      }
 
       $cache = wp_cache_get( 'widget_ultimate_posts', 'widget' );
 
@@ -151,7 +156,8 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       if( $class ) {
         $before_widget = str_replace('class="', 'class="'. $class . ' ', $before_widget);
       }
-/* moved zig 
+
+/* moved zig
       echo $before_widget;
 
       if ( $title ) {
@@ -182,22 +188,21 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       $args = apply_filters('upw_wp_query_args', $args, $instance, $this->id_base);
 
       $upw_query = new WP_Query($args);
-      if ($upw_query->have_posts()) { 
-        echo $before_widget;
+      if ($upw_query->have_posts()) {
+          echo $before_widget;
 
-        if ( $title ) {
-          echo $before_title;
-          if ( $title_link ) echo "<a href='$title_link'>";
-          echo $title;
-          if ( $title_link ) echo '</a>';
-          echo $after_title;
-        }
+          if ( $title ) {
+            echo $before_title;
+            if ( $title_link ) echo "<a href='$title_link'>";
+            echo $title;
+            if ( $title_link ) echo '</a>';
+            echo $after_title;
+          }
       }
-
       if ($instance['template'] === 'custom') {
         $custom_template_path = apply_filters('upw_custom_template_path',  '/upw/' . $instance['template_custom'] . '.php', $instance, $this->id_base);
-        if (locate_template($custom_template_path)) {
-          include get_stylesheet_directory() . $custom_template_path;
+        if ( $template = locate_template($custom_template_path) ) {
+          include $template;
         } else {
           include 'templates/standard.php';
         }
@@ -207,14 +212,13 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
         include 'templates/legacy.php';
       }
 
-    if ($upw_query->have_posts()) { 
-            echo $after_widget;
-    }
       // Reset the global $the_post as this query will have stomped on it
+
+
+      if ($upw_query->have_posts()) {
+          echo $after_widget;
+      } 
       wp_reset_postdata();
-
-
-
       if ($cache) {
         $cache[$args['widget_id']] = ob_get_flush();
       }
