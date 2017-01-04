@@ -1,25 +1,25 @@
-<?php 
+<?php
 /* custom functions & shortcodes
 
 /* excise tax calculator */
 /* these work with a CF7 form with known ids of field */
 function est_tax_fill_vechicle_year($choices, $args=array()) {
-	// this function returns an array of 
+	// this function returns an array of
     // label => value pairs to be used in
     // a the select field
     $choices = array(
-        '2016' => '0.024',
-        '2015' => '0.0175',
-        '2014' => '.0135',
-        '2013' => '0.010',
-        '2012' => '0.0065',
-        '2011 and older' => '0.004'
+        '2017' => '0.024', // year -1
+        '2016' => '0.0175', // year -2
+        '2015' => '.0135', // year -3
+        '2014' => '0.010', // year -4
+        '2013' => '0.0065', // year - 5
+        '2012 and older' => '0.004'
     );
     return $choices;
 }
 add_filter('ext_tax_vehicle_year', 'est_tax_fill_vechicle_year', 10, 2);
 function est_tax_fill_vanity_plate($choices, $args=array()) {
-	// this function returns an array of 
+	// this function returns an array of
     // label => value pairs to be used in
     // a the select field
     $choices = array(
@@ -62,7 +62,7 @@ if (!function_exists('est_excise_tax')) {
 		/* $js_out .= "  console.log (document.getElementById('MSRP').value);"; */
 		$js_out .= " clear_tax(); ";
 		$js_out .= " if ( document.getElementById('MSRP').value > 0) {";
-		$js_out .= "  var etax = ( (document.getElementById('MSRP').value) * (document.getElementById('vehicle-year').value) ); "; 
+		$js_out .= "  var etax = ( (document.getElementById('MSRP').value) * (document.getElementById('vehicle-year').value) ); ";
 		$js_out .= "  var reg = ( parseInt(document.getElementById('plate-type').value) + parseInt(document.getElementById('vanity-plate').value) );";
 		$js_out .= "  var tot = etax + reg;";
 		$js_out .= "  document.getElementById('ExciseTaxResults').style.display = 'block'; ";
@@ -76,7 +76,7 @@ if (!function_exists('est_excise_tax')) {
 		$js_out .= " } ";
 
 		$js_out .= '  return false; }';
-		$js_out .= '</script>'; 
+		$js_out .= '</script>';
 
 		// html for the button.
 		$html_out .= '<a class="c-button m-has-icon"  onClick="estimate_tax()">';
@@ -99,16 +99,16 @@ if (!function_exists('est_excise_tax')) {
 		$js_out .= "  document.getElementById('TotalTax').innerHTML = ''; ";
 
 		$js_out .= '  return false; }';
-		$js_out .= '</script>'; 
+		$js_out .= '</script>';
 		// html for the button.
 		$html_out .= '<a class="c-button m-has-icon" onClick="clear_tax()">';
 		$html_out .= '<i class="ico fa fa-eraser"></i>';
 		$html_out .= 'Clear</a>';
 		return $js_out.$html_out;
-	} 
+	}
 
 
-/*  lsvrdocumentlist shortcode */ 
+/*  lsvrdocumentlist shortcode */
 
 	 add_shortcode( 'lsvr_document', 'lsvr_document_shortcode' );
 	 function lsvr_document_shortcode($atts) {
@@ -152,42 +152,42 @@ if (!function_exists('est_excise_tax')) {
 		if ( !empty( $documents ) ) {
 			// should only be one, but JIC
 			foreach ( $documents as $document ) {
-				
+
 				$htmlout .= "";
 				$doc_title = $document->post_title; // defaults to document title.
 				if ($title != "") {
 					$doc_title = $title;
 				}
 
-				$document_file_location = get_post_meta( $document->ID, 'meta_document_file_location', true ) === '' ? 'local' : get_post_meta( $document->ID, 'meta_document_file_location', true ); 
+				$document_file_location = get_post_meta( $document->ID, 'meta_document_file_location', true ) === '' ? 'local' : get_post_meta( $document->ID, 'meta_document_file_location', true );
 				if ( $document_file_location === 'external' ) {
 					$document_file = get_post_meta( $document->ID, 'meta_document_external_file_url', true );
 				} else {
 					$document_file = get_post_meta( $document->ID, 'meta_document_file', true );
-				} 
+				}
 				//$htmlout .= "document file = {".$document_file."}";
-				if ( ( $document_file_location === 'local' && is_array( $document_file ) ) || ( $document_file !== '' ) ) {	
+				if ( ( $document_file_location === 'local' && is_array( $document_file ) ) || ( $document_file !== '' ) ) {
 
-					$link_target = lsvr_get_field( 'document_new_tab_enable', true, true ) ? ' target="_blank"' : ''; 
-					$document_file_location = get_post_meta( $document->ID, 'meta_document_file_location', true ) === '' ? 'local' : get_post_meta( $document->ID, 'meta_document_file_location', true ); 
+					$link_target = lsvr_get_field( 'document_new_tab_enable', true, true ) ? ' target="_blank"' : '';
+					$document_file_location = get_post_meta( $document->ID, 'meta_document_file_location', true ) === '' ? 'local' : get_post_meta( $document->ID, 'meta_document_file_location', true );
 
 					if ( $show_icons ) {
 						//$htmlout .= "show icons";
-						$document_type = get_post_meta( $document->ID, 'meta_document_type', true ); 
-						$document_type = $document_type === '' ? 'default' : $document_type; 
-						$document_type_icon = ''; 
-						$document_type_label = ''; 
+						$document_type = get_post_meta( $document->ID, 'meta_document_type', true );
+						$document_type = $document_type === '' ? 'default' : $document_type;
+						$document_type_icon = '';
+						$document_type_label = '';
 						if ( $document_type === 'custom' ) {
-							$document_type_icon = get_post_meta( $document->ID, 'meta_document_custom_icon', true ); 
-							$document_type_label = get_post_meta( $document->ID, 'meta_document_custom_label', true ); 
-						} else { 
-							$document_type = function_exists( 'lsvr_get_document_type' ) ? lsvr_get_document_type( $document_type ) : ''; 
+							$document_type_icon = get_post_meta( $document->ID, 'meta_document_custom_icon', true );
+							$document_type_label = get_post_meta( $document->ID, 'meta_document_custom_label', true );
+						} else {
+							$document_type = function_exists( 'lsvr_get_document_type' ) ? lsvr_get_document_type( $document_type ) : '';
 							if ( is_array( $document_type ) ) {
-								 $document_type_icon = $document_type['class']; 
-								 $document_type_label = $document_type['label']; 
+								 $document_type_icon = $document_type['class'];
+								 $document_type_label = $document_type['label'];
 							}
 						}
-					} 
+					}
 					if ( $show_icons && $document_type_icon !== '' ) {
 						$htmlout .= '<span class="document-icon reach-inline" title="'.esc_attr( $document_type_label ).'"><i class="'.esc_attr( $document_type_icon ).'"></i></span>';
 					}
@@ -197,7 +197,7 @@ if (!function_exists('est_excise_tax')) {
 							$htmlout .= '<a href="'.esc_url($document_file ).'" '.$link_target.'> '.$doc_title.' </a>';
 							if ( $show_filesize && get_post_meta( $document->ID, 'meta_document_external_file_size', true ) !== '' ) {
 								$htmlout .= '<span class="document-filesize">'.get_post_meta( $document->ID, 'meta_document_external_file_size', true ).' )</span>';
-							} 
+							}
 					} else {
 						// LOCAL FILE
 						//$htmlout .= "Local  ";
@@ -205,12 +205,12 @@ if (!function_exists('est_excise_tax')) {
 							reset( $document_file );
 							$document_id = key( $document_file );
 							$document_link = reset( $document_file );
-						} 
+						}
 
 						$htmlout .= '<a href="'.esc_url( $document_link ).'" '.$link_target.' >'.$doc_title.'</a>';
 						if ( $show_filesize ) {
-							$document_size = (int) filesize( get_attached_file( $document_id ) ); 
-							$document_size = $document_size > 0 ? lsvr_filesize_convert( $document_size ) : false; 
+							$document_size = (int) filesize( get_attached_file( $document_id ) );
+							$document_size = $document_size > 0 ? lsvr_filesize_convert( $document_size ) : false;
 							$htmlout .= '<span class="document-filesize">('.$document_size.' )</span>';
 						}
 					}
@@ -219,8 +219,8 @@ if (!function_exists('est_excise_tax')) {
 					$htmlout .= $doc_title;
 				}
 			}
-		} else { 
-			//$htmlout .= "nada."; 
+		} else {
+			//$htmlout .= "nada.";
 		}
 		return $htmlout;
 
@@ -231,9 +231,9 @@ function alpha_order_docs( $query ) {
          $term = get_queried_object()->term_id;
 	    if ($term) {
 	    	$MetaValue = "";
-	    	if (function_exists('wp_get_terms_meta')) { 
-			  $MetaValue = wp_get_terms_meta($term, 'sort_by_date' ,true); 
-			} 
+	    	if (function_exists('wp_get_terms_meta')) {
+			  $MetaValue = wp_get_terms_meta($term, 'sort_by_date' ,true);
+			}
 			if (!$MetaValue) {
 				$query->set( 'orderby', 'title' );
 	    		$query->set( 'order', 'ASC' );
