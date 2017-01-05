@@ -7,13 +7,21 @@ function est_tax_fill_vechicle_year($choices, $args=array()) {
 	// this function returns an array of
     // label => value pairs to be used in
     // a the select field
-    $choices = array(
-        '2017' => '0.024', // year -1
-        '2016' => '0.0175', // year -2
-        '2015' => '.0135', // year -3
-        '2014' => '0.010', // year -4
-        '2013' => '0.0065', // year - 5
+    /*$choices = array(
+        '2017' => '0.024',
+        '2016' => '0.0175',
+        '2015' => '.0135',
+        '2014' => '0.010',
+        '2013' => '0.0065',
         '2012 and older' => '0.004'
+    ); */
+    $choices = array (
+        date("Y") => '0.024', // this year
+        date("Y",strtotime("-1 year")) => '0.0175', // year -1
+        date("Y",strtotime("-2 year"))  => '.0135', // year -2
+        date("Y",strtotime("-3 year")) => '0.010', // year -3
+        date("Y",strtotime("-4 year")) => '0.0065', // year - 4
+        date("Y",strtotime("-5 year")).' and older' => '0.004'
     );
     return $choices;
 }
