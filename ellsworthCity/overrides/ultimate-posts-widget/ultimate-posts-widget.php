@@ -3,9 +3,9 @@
 Plugin Name: Ultimate Posts Widget
 Plugin URI: http://wordpress.org/plugins/ultimate-posts-widget/
 Description: The ultimate widget for displaying posts, custom post types or sticky posts with an array of options.
-Version: 2.0.6
+Version: 2.0.7
 Author: Boston Dell-Vandenberg
-Author URI: http://pomelodesign.com
+Author URI: http://bostondv.com
 Text Domain: upw
 Domain Path: /languages/
 License: MIT
@@ -156,7 +156,6 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       if( $class ) {
         $before_widget = str_replace('class="', 'class="'. $class . ' ', $before_widget);
       }
-
 /* moved zig
       echo $before_widget;
 
@@ -188,7 +187,7 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       $args = apply_filters('upw_wp_query_args', $args, $instance, $this->id_base);
 
       $upw_query = new WP_Query($args);
-      if ($upw_query->have_posts()) {
+      if ($upw_query->have_posts()) { // zig moved to here.
           echo $before_widget;
 
           if ( $title ) {
@@ -213,12 +212,11 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       }
 
       // Reset the global $the_post as this query will have stomped on it
-
-
-      if ($upw_query->have_posts()) {
-          echo $after_widget;
-      } 
       wp_reset_postdata();
+      if ($upw_query->have_posts()) { // zig
+          echo $after_widget;
+      }
+
       if ($cache) {
         $cache[$args['widget_id']] = ob_get_flush();
       }
@@ -636,7 +634,7 @@ if ( !class_exists( 'WP_Widget_Ultimate_Posts' ) ) {
       </div>
 
       <p class="upw-credits">
-        <?php _e('Enjoy this plugin? Please <a href="http://pomelodesign.com/donate/" target="_blank">donate to support development</a>.', 'upw'); ?>
+        <?php _e('Enjoy this plugin? <a href="http://bostondv.com/tips/" target="_blank">Send a tip to support development</a>.', 'upw'); ?>
       </p>
 
       <?php if ( $instance ) { ?>
