@@ -212,6 +212,7 @@ div.ells-accordion-title h4.accordion-title {
 ol li ol li {
 	list-style-type: lower-alpha;
 }
+
 .c-article-list .article-image, // see media.scss for phone size adjustments.
 .article-page .article-image {
 	width: 30%;
@@ -222,8 +223,30 @@ ol li ol li {
 .article-list-content article {
 	width: 100%;
 	clear: both;
-}
 
+}
+.c-article-list { // article list on home page
+	article {
+		padding-top: 20px;
+		.article-image {
+			margin-bottom: 0px;
+			a {
+				margin-bottom: 0px;
+			}
+		}
+		.article-core {
+			padding: 0 15px;
+			.article-excerpt {
+				margin-top: 5px;
+			}
+		}
+	}
+}
+.article-archive-page {
+	.article-footer {
+		clear: both;
+	}
+}
 // Team members display
 
 .team-member {
