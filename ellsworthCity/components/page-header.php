@@ -1,5 +1,6 @@
-<?php /* 
+<?php /*
 * 20jun16 zig - move above content widget here....
+* 14jun18 zig - check for post_type_archive (ex: public notices)
 */ ?>
 <?php $page_id = lsvr_get_current_page_id(); ?>
 
@@ -21,6 +22,8 @@
 		<?php $title_string = get_post_meta( $page_id, 'meta_content_title', true ); ?>
 	<?php elseif ( $page_id ) : ?>
 		<?php $title_string = get_the_title( $page_id ); ?>
+	<?php elseif ( is_post_type_archive()) : ?>
+		<?php $title_string = post_type_archive_title('',false); ?>
 	<?php else : ?>
 		<?php $title_string = get_the_title(); ?>
 	<?php endif; ?>
@@ -46,7 +49,7 @@
 	<!-- PAGE HEADER : end -->
 
 <?php endif; ?>
-<?php /* zig  */ 
+<?php /* zig  */
 	if ( is_active_sidebar( 'coe_above_content') ) {
 		echo '<div id="coe_above_content" class="c-content-box">';
 		dynamic_sidebar( 'coe_above_content' );

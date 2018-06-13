@@ -38,12 +38,12 @@ add_action( 'wp_enqueue_scripts', 'lsvr_load_child_scripts' );
 ----------------------------------------------------------------------------- */
 
 // add your code here
-require_once(get_stylesheet_directory().'/custom/ourteam.php'); 
-require_once(get_stylesheet_directory().'/custom/language.php'); 
-require_once(get_stylesheet_directory().'/custom/custom.php'); 
-require_once(get_stylesheet_directory().'/custom/tribe-events.php'); 
-require_once(get_stylesheet_directory().'/custom/wp-job-manager.php'); 
-require_once(get_stylesheet_directory().'/custom/searchwp.php'); 
+require_once(get_stylesheet_directory().'/custom/ourteam.php');
+require_once(get_stylesheet_directory().'/custom/language.php');
+require_once(get_stylesheet_directory().'/custom/custom.php');
+require_once(get_stylesheet_directory().'/custom/tribe-events.php');
+require_once(get_stylesheet_directory().'/custom/wp-job-manager.php');
+require_once(get_stylesheet_directory().'/custom/searchwp.php');
 
 add_filter('widget_text', 'do_shortcode'); // make text widget do shortcodes....
 
@@ -56,7 +56,7 @@ function reach_custom_widgets() {
 	/* add widget area for above the content*/
 	if ( function_exists('register_sidebar') ){
 
-		 // alerts box at top of site 
+		 // alerts box at top of site
 		register_sidebar(array(
 			'name' => 'Below Header',
 			'id' => 'coe_below_header',
@@ -65,7 +65,7 @@ function reach_custom_widgets() {
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>'
-		)); 
+		));
 
 		 register_sidebar(array(
 			'name' => 'Above Content',
@@ -75,7 +75,7 @@ function reach_custom_widgets() {
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>'
-		)); 
+		));
 
 		 register_sidebar(array(
 			'name' => 'Home Top',
@@ -85,10 +85,10 @@ function reach_custom_widgets() {
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>'
-		)); 
+		));
 
-		
-	} //function_exists('register_sidebar')	
+
+	} //function_exists('register_sidebar')
 
 
 }
@@ -108,7 +108,7 @@ add_action( 'widgets_init', 'reach_custom_widgets' );
 // how to order documents in arhive....works, but...
 //  alpha is not really what we want...  (city counsel minutes should be default ordering....)
 //	menu order - doesnt make sense unless it's ASC???
-	/*add_action( 'pre_get_posts', 'my_change_sort_order'); 
+	/*add_action( 'pre_get_posts', 'my_change_sort_order');
 	function my_change_sort_order($query){
 		if ( get_query_var('lsvrdocumentcat') ) {
 			//Set the order ASC or DESC
@@ -172,11 +172,22 @@ add_action( 'widgets_init', 'reach_custom_widgets' );
 	}
 
 
-	// custom post types installed by 
+	// custom post types installed by
 	function coe_custom_posts_supports() {
 		add_post_type_support('lsvrdocument', array( 'page-attributes')); // allow as type attributes for ordering documents
-		
+
 	}
 	add_action('init', 'coe_custom_posts_supports');
-	
+
+	// Add sticky class in article title to style sticky posts differently
+	function cpt_sticky_class($classes) {
+	  if ( is_sticky() ) {
+	    $classes[] = 'sticky';
+	    return $classes;
+	  }
+	  return $classes;
+	}
+	add_filter('post_class', 'cpt_sticky_class');
+
+
 ?>
