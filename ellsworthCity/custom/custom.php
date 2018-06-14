@@ -256,3 +256,26 @@ function theme_excerpt_length( $length ) {
     return 45;
 }
 add_filter( 'excerpt_length', 'theme_excerpt_length', 1999 );
+
+//  sticky notices...return sticky notices of a custom post type.
+if ( ! function_exists( 'reach_get_stickies' ) ) {
+  // returns arrray of sticky notices int he given post type
+	function reach_get_stickies($in_cpt) {
+		$stickies = get_option( 'sticky_posts' );
+    $sticky_posts = array();
+
+    if ($stickies) {
+      $args = array(
+        'post_type' => $in_cpt,
+        'post__in'  => $stickies,
+      	'ignore_sticky_posts' => 1
+      );
+      $stickypost_results  = new WP_Query($args);
+      if ($stickypost_results->post_count) {
+
+        $sticky_posts = $stickypost_results->posts;
+      }
+    } // end if;
+    return $sticky_posts;
+	} // end reach_get_stickies
+} // end if exists

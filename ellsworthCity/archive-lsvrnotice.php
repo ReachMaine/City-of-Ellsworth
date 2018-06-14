@@ -1,5 +1,6 @@
 <?php /*
 5July16 - zig  always use excerpt for the archive page.
+14jun18 - zig put sticky notices at front of archive.
 */ ?>
 <?php get_header(); ?>
 
@@ -25,30 +26,26 @@ get_template_part( 'components/page-content-before' ); ?>
 		<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
-			<?php global $posts;
-				$sticky_posts = get_option( 'sticky_posts' );
-	      $num_posts = count( $posts );
-	      $sticky_offset = 0;
-				// Find the sticky posts
-        for ($i = 0; $i < $num_posts; $i++) {
 
-            // Put sticky posts at the top of the posts array
-            if ( in_array( $posts[$i]->ID, $sticky_posts ) ) {
-                $sticky_post = $posts[$i];
+			<?php
+			  /* put sticky notices at the front - zig */
+				if ( !is_paged() ) { // dont check on further pagination (i.e. only on first page)
+					$sticky_notices = reach_get_stickies('lsvrnotice'); /* */
+					if (!empty($sticky_notices)) {
+						 $sticky_posts = get_option( 'sticky_posts' );
+						 $num_posts = count( $posts );
+							 // Find any sticky posts
+							for ($i = 0; $i < $num_posts; $i++) {
+								// Remove sticky from $post array
+								if ( in_array( $posts[$i]->ID, $sticky_posts ) ) {
+									array_splice( $posts, $i, 1 );
+								}
+							} // end for
 
-                // Remove sticky from current position
-                array_splice( $posts, $i, 1 );
-
-                // Move to front, after other stickies
-                array_splice( $posts, $sticky_offset, 0, array($sticky_post) );
-                $sticky_offset++;
-
-                // Remove post from sticky posts array
-                $offset = array_search($sticky_post->ID, $sticky_posts);
-                unset( $sticky_posts[$offset] );
-            }
-        }
-
+							// push the stickyposts to the front of the $post  array
+							$posts = array_merge($sticky_notices, $posts);
+					}
+				}
 			?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
