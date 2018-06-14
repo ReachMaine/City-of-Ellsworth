@@ -6,3 +6,5 @@ Changes we've made:
 
 	2.  remove the LSR events
 	  - lsvr-tookkit-townpress.php
+
+  3.  Widgets -> notices.php (put sticky notices at top of the list)
