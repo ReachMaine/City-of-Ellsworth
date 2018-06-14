@@ -126,24 +126,24 @@ class Lsvr_Notices_Widget extends WP_Widget {
 
 				<?php if ( ! empty( $notices ) ) : ?>
           <?php /* zig reorder notice s.t. stickies are first */
-          $sticky_posts = get_option( 'sticky_posts' );
-          $num_posts = count( $notices );
-          $sticky_offset = 0;
-          // Find the sticky posts
-          for ($i = 0; $i < $num_posts; $i++) {
+          if (function_exists('reach_get_stickies')){
+            $sticky_notices  = reach_get_stickies('lsvrnotice');
+            if (!empty($sticky_notices)) {
+              $sticky_posts = get_option( 'sticky_posts' );
+              $num_posts = count( $notices );
+              // Find the sticky posts
+              for ($i = 0; $i < $num_posts; $i++) {
 
-              // Put sticky posts at the top of the notices array
-              if ( in_array( $notices[$i]->ID, $sticky_posts ) ) {
-                  $sticky_post = $notices[$i];
+                  //  Remove sticky from  notices array
+                  if ( in_array( $notices[$i]->ID, $sticky_posts ) ) {
 
-                  // Remove sticky from current position
-                  array_splice( $notices, $i, 1 );
-
-                  // Move to front, after other stickies
-                  array_splice( $notices, $sticky_offset, 0, array($sticky_post) );
-                  $sticky_offset++;
-
-              }
+                      // Remove sticky from current position
+                      array_splice( $notices, $i, 1 );
+                  }
+              } // end for
+              // push the stickyposts to the front of the $post  array
+              $notices = array_merge($sticky_notices, $notices);
+            }
           }
           ?>
 					<ul>
