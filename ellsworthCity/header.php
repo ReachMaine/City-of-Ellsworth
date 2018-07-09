@@ -116,24 +116,12 @@ $body_class .= lsvr_get_image_field( 'header_bg_image' ) ? ' m-has-header-bg' : 
 						<div class="header-tools">
 
 							<?php if ( $enable_header_search ) : ?>
-							<!-- HEADER SEARCH : begin -->
-							<div class="header-search coe-gsces">
-
-                                <?php /* google custom search */ ?>
-                                    <script>
-                                      (function() {
-                                        var cx = '015839424189047853552:jvd_hoouktu';
-                                        var gcse = document.createElement('script');
-                                        gcse.type = 'text/javascript';
-                                        gcse.async = true;
-                                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                                        var s = document.getElementsByTagName('script')[0];
-                                        s.parentNode.insertBefore(gcse, s);
-                                      })();
-                                    </script>
-                                    <gcse:searchbox-only></gcse:searchbox-only>
-							</div>
-							<!-- HEADER SEARCH : end -->
+  							<!-- HEADER SEARCH : begin -->
+  							<div class="header-search">
+                    <?php /* revernt back to default search */ ?>
+  	                <?php  get_search_form() ?>
+  							</div>
+  							<!-- HEADER SEARCH : end -->
 							<?php endif; ?>
 
 							<?php if ( $enable_header_login ) : ?>

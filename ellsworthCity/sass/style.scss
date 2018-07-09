@@ -10,7 +10,8 @@ Version:        1.0.0
 @import "partials/tribe-events";
 @import "partials/our_team";
 @import "partials/cf7";
-@import "partials/gcse"; // google custom search.
+//@import "partials/gcse"; // google custom search.
+@import "partials/addsearch";
 
 
 /* =Theme customization starts here */
@@ -23,6 +24,11 @@ Version:        1.0.0
 	nav>ul>li>a {
 		padding-top: 8px;
 		padding-bottom: 8px;
+	}
+}
+.header-search {
+	.screen-reader-text {
+		display: none;
 	}
 }
 // Alerts box.

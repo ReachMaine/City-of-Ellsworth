@@ -1359,33 +1359,27 @@ div.bbp-template-notice a:hover {
     width: 100%;
     text-align: left; } }
 /* --------- End Contact form 7  --------------*/
-/* styling for google custom search */
-.header-search.coe-gsces {
-  max-width: 320px; }
-  .header-search.coe-gsces .cse form.gsc-search-box,
-  .header-search.coe-gsces form.gsc-search-box {
-    background-color: white;
-    padding: 0px 0 0px 0;
-    margin-bottom: 0px; }
-    .header-search.coe-gsces .cse form.gsc-search-box td.gsc-input,
-    .header-search.coe-gsces form.gsc-search-box td.gsc-input {
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-right: 4px; }
-    .header-search.coe-gsces .cse form.gsc-search-box td.gsc-search-button,
-    .header-search.coe-gsces form.gsc-search-box td.gsc-search-button {
-      padding-left: 5px;
-      padding-right: 5px; }
-    .header-search.coe-gsces .cse form.gsc-search-box td.gsc-clear-button,
-    .header-search.coe-gsces form.gsc-search-box td.gsc-clear-button {
-      padding-left: 5px;
-      padding-right: 5px; }
+/* styling for addsearch */
+/* HIDE SCREEN CAPTURES - ONLY USE FOR SEARCH WIDGET */
+#addsearch-results #addsearch-pic {
+  display: none !important; }
 
-/* end Google custom search styling */
+#addsearch-results.addsearch-d #addsearch-results-right {
+  width: 0;
+  margin-left: 583px; }
+
+#addsearch-results.addsearch-d {
+  width: 585px !important;
+  margin-left: 192px;
+  /* REMOVE THIS LINE IF YOUR SEARCH INPUT IS ALIGNED TO THE LEFT */ }
+
 /* =Theme customization starts here */
 .header-menu nav > ul > li > a {
   padding-top: 8px;
   padding-bottom: 8px; }
+
+.header-search .screen-reader-text {
+  display: none; }
 
 #coe_below_header:not(:empty) {
   border: 6px solid #fbc22c;
