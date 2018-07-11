@@ -1,0 +1,31 @@
+/* styling for gravity forms */
+
+// coe-no-label class to hide the label
+.gform_wrapper .gfield.coe-no-label {
+  margin-top: 0px;
+  .gfield_label {
+    display: none;
+  }
+}
+.gform_wrapper {
+  .screen-reader-text { // accepted file type text.
+      font-size: .813em;
+  }
+}
+
+// over-write the padding at the opt of below desciption (too airy)
+.gform_wrapper .field_description_below .gfield_description {
+  padding-top: 2px!important;
+}
+
+.gform_wrapper .gfield.gf_list_inline {
+    ul.gfield_radio li label {
+      max-width: initial;
+    }
+}
+@media only screen and (min-width: 641px) {
+  .gform_wrapper li.gf_list_inline ul.gfield_checkbox li,
+  .gform_wrapper li.gf_list_inline ul.gfield_radio li {
+    margin-right: 20px!important;
+  }
+}

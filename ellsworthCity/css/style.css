@@ -1373,6 +1373,25 @@ div.bbp-template-notice a:hover {
   margin-left: 192px;
   /* REMOVE THIS LINE IF YOUR SEARCH INPUT IS ALIGNED TO THE LEFT */ }
 
+/* styling for gravity forms */
+.gform_wrapper .gfield.coe-no-label {
+  margin-top: 0px; }
+  .gform_wrapper .gfield.coe-no-label .gfield_label {
+    display: none; }
+
+.gform_wrapper .screen-reader-text {
+  font-size: .813em; }
+
+.gform_wrapper .field_description_below .gfield_description {
+  padding-top: 2px !important; }
+
+.gform_wrapper .gfield.gf_list_inline ul.gfield_radio li label {
+  max-width: initial; }
+
+@media only screen and (min-width: 641px) {
+  .gform_wrapper li.gf_list_inline ul.gfield_checkbox li,
+  .gform_wrapper li.gf_list_inline ul.gfield_radio li {
+    margin-right: 20px !important; } }
 /* =Theme customization starts here */
 .header-menu nav > ul > li > a {
   padding-top: 8px;
