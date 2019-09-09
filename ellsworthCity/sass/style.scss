@@ -298,6 +298,11 @@ ol li ol li {
 	border-bottom: 1px solid #a7a7a7;
 }
 
+// hide dates on sticky post
+.widget-list .lsvr-notices ul li.sticky .notice-date,
+article.notice.sticky .notice-date {
+	display: none;
+}
 
 // left and top rule for documents in tabs
 
