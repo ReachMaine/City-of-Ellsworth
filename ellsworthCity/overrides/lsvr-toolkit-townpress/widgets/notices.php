@@ -151,7 +151,9 @@ class Lsvr_Notices_Widget extends WP_Widget {
 
             <?php $notice_class = "";
             if ( $current_id === $notice->ID ) { $notice_class .= "m-active " ; }
-            if (  in_array($notice->ID,$sticky_posts ) ) { $notice_class .= "sticky "; }
+            if ( !empty($sticky_posts) ) { // zig - add check for empty 
+              if (  in_array($notice->ID,$sticky_posts ) ) { $notice_class .= "sticky "; }
+            }
             ?>
 						<li<?php if ( $notice_class ) { echo ' class="'.$notice_class.'"'; } ?>>
 							<div class="notice-inner">
