@@ -1422,8 +1422,6 @@ div.bbp-template-notice a:hover {
     padding-right: 10px;
     color: #fbc22c;
     font-size: 80px; }
-  #coe_below_header:not(:empty) * {
-    text-align: center; }
   #coe_below_header:not(:empty) time {
     font-weight: bold; }
 
