@@ -1692,15 +1692,6 @@ article.notice.sticky .notice-date {
   #bottom-panel .mc4wp-form .mc4wp-form-fields label > span {
     color: white; }
 
-/* -----------------------------------------------------------------------------
-
-    RESPONSIVE DEFINITIONS
-
------------------------------------------------------------------------------ */
-    /* -------------------------------------------------------------------------
-        LARGE DEVICES
-		devices with width between 992px and 1199px
-    ------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
   /* your CSS here */ }
     /* -------------------------------------------------------------------------
@@ -1719,11 +1710,9 @@ article.notice.sticky .notice-date {
   .show_desktop {
     display: none; } }
 @media (min-width: 768px) {
-  /* .team-members.columns-2 .team-member {
-  	width: 50%;
-  	//float: left;
-  	display: inline-block;
-  } moved to our_team.scss */ }
+  #coe_below_header:not(:empty) h3.widget-title {
+    max-width: 16%;
+    float: left; } }
 @media (min-width: 800px) {
   #coe_below_header:not(:empty) h3.widget-title {
     float: left;
@@ -1732,7 +1721,7 @@ article.notice.sticky .notice-date {
         SMALL DEVICES
 		devices with width between 481px and 767px
     ------------------------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #coe_below_header:not(:empty) h3.widget-title {
     font-size: 1.2em;
     padding-bottom: 0px; }

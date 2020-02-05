@@ -1,8 +1,11 @@
 <?php
 /**
- * Standard ultimate posts widget template
+ * Standard ultimate posts widget template - copied
  *
  * @version     2.0.0
+ * mods
+ * Sept26 - copy template, dont show message if no posts.
+ * 5Feb20 - zig add col=sm-10 to widget feed (style widget title with css) per Nate
  */
 ?>
 <?php if ($instance['before_posts']) : ?>
@@ -11,7 +14,7 @@
   </div>
 <?php endif; ?>
 <?php if ($upw_query->have_posts()) : ?>
-  <div class="upw-posts hfeed">
+  <div class="upw-posts hfeed col-sm-10">
       <?php while ($upw_query->have_posts()) : $upw_query->the_post(); ?>
 
         <?php $current_post = ($post->ID == $current_post_id && is_single()) ? 'active' : ''; ?>
