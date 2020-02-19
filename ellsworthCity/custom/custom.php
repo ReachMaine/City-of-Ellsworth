@@ -70,7 +70,7 @@ if (!function_exists('est_excise_tax')) {
 		/* $js_out .= "  console.log (document.getElementById('MSRP').value);"; */
 		$js_out .= " clear_tax(); ";
 		$js_out .= " if ( document.getElementById('MSRP').value > 0) {";
-		$js_out .= "  var etax = ( (document.getElementById('MSRP').value) * (document.getElementById('vehicle-year').value) ); ";
+		$js_out .= "  var etax = ( (document.getElementById('MSRP').value) * (document.getElementById('vehicle-year').value) ) + 5; ";
 		$js_out .= "  var reg = ( parseInt(document.getElementById('plate-type').value) + parseInt(document.getElementById('vanity-plate').value) );";
 		$js_out .= "  var tot = etax + reg;";
 		$js_out .= "  document.getElementById('ExciseTaxResults').style.display = 'block'; ";
