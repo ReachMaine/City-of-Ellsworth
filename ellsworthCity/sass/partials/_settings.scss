@@ -33,3 +33,13 @@ $coe-maroon: #781514;
 	border: 1px solid $coe-maroon;
 	padding-top: 10px;
 }
+.coe-nomore {
+	a.moretag {
+		display: none;
+	}
+}
+.coe-nodate {
+	.article-date {
+		display: none;
+	}
+}

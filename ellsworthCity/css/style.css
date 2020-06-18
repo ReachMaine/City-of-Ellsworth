@@ -27,6 +27,12 @@ Version:        1.0.0
   border: 1px solid #781514;
   padding-top: 10px; }
 
+.coe-nomore a.moretag {
+  display: none; }
+
+.coe-nodate .article-date {
+  display: none; }
+
 /* -----------------------------------------------------------------------------
 
 	TABLE OF CONTENTS
