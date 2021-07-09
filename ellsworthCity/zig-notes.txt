@@ -1,5 +1,11 @@
 zig notes
-  
+
   - post_name__in order (V4.6 in future) for Documents list widget.  else need to use post__in, since can order by that
 
-  - [lsvr_document slug="permits-issued-last-30-days" title="" show_icons="no" show_filesize="no" ] 
+  - [lsvr_document slug="permits-issued-last-30-days" title="" show_icons="no" show_filesize="no" ]
+
+July 2021
+- javascript error in metaboxes.    copied V1.6.4 folder /includes/redux/extentions/metaboxes/* to 1.4.
+errors when updated to 1.6.  TBD.
+
+NOTE: Townpress V2+ not compatable with V1.x  CPTs different!
