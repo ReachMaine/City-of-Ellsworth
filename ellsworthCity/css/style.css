@@ -1406,6 +1406,14 @@ div.bbp-template-notice a:hover {
 .header-search .screen-reader-text {
   display: none; }
 
+.header-menu .main-menu ul.menu-items .coe_menu_highlight {
+  box-shadow: 0px 0px 5px 3px white;
+  background-color: white;
+  font-size: larger;
+  font-weight: bold; }
+  .header-menu .main-menu ul.menu-items .coe_menu_highlight a {
+    color: #781514; }
+
 #coe_below_header.c-content-box {
   padding: 0px !important; }
 
