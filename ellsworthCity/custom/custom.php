@@ -148,6 +148,10 @@ if (!function_exists('est_excise_tax')) {
 						'compare' => 'NOT EXISTS',
 					),
 					array( 'key' => 'meta_document_expiration_date',
+						'value' => '',
+						'compare' => '=',
+					),
+					array( 'key' => 'meta_document_expiration_date',
 						'value' => $today,
 						'compare' => '>=',
 						'type' => 'CHAR'

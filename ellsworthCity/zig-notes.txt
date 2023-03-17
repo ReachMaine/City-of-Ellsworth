@@ -9,3 +9,6 @@ July 2021
 errors when updated to 1.6.  TBD.
 
 NOTE: Townpress V2+ not compatable with V1.x  CPTs different!
+
+March 2023
+ - add check to Documents widget to check for blank expiration date as well as empty.
