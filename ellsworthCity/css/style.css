@@ -1600,6 +1600,9 @@ ol li ol li {
 article.notice.sticky .notice-date {
   display: none; }
 
+.widget-list .coe-hide-sticky.lsvr-notices ul li.sticky {
+  display: none; }
+
 @media (max-width: 768px) {
   .coe_doc_in_tab {
     border-top: 2px solid #781514;
@@ -1763,3 +1766,5 @@ article.notice.sticky .notice-date {
   .article-page .article-image {
     width: 100%;
     max-width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */

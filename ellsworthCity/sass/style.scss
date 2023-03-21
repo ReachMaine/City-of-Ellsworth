@@ -315,6 +315,10 @@ ol li ol li {
 article.notice.sticky .notice-date {
 	display: none;
 }
+// hide sticky notices 
+.widget-list .coe-hide-sticky.lsvr-notices ul li.sticky {
+	display: none; 
+}
 
 // left and top rule for documents in tabs
 
