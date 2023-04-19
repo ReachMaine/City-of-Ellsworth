@@ -10,8 +10,6 @@ License URI: http://themeforest.net/licenses
 Text Domain: lsvrtoolkit
 Domain Path: /languages
 */
-/*  13jun16 zig - remove built in events stuff.
-*/
 
 
 /* -----------------------------------------------------------------------------
@@ -54,7 +52,7 @@ add_action( 'admin_enqueue_scripts', 'lsvr_load_lsvr_toolkit_files' );
 	// CUSTOM POST TYPES
 	require_once( 'cpt/lsvr-notice.php' );
 	require_once( 'cpt/lsvr-document.php' );
-	// require_once( 'cpt/lsvr-event.php' ); zig-out
+	require_once( 'cpt/lsvr-event.php' );
 	require_once( 'cpt/lsvr-gallery.php' );
 	require_once( 'cpt/lsvr-slide.php' );
 
