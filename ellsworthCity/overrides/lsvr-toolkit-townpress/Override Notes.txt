@@ -8,3 +8,6 @@ Changes we've made:
 	  - lsvr-tookkit-townpress.php
 
   3.  Widgets -> notices.php (put sticky notices at top of the list)
+
+  Some "overrides" are done by overriding the function in custom/townpress.php
+	ex:  lsvr_modify_document_posts_per_page function to fix the blank expiration date issue.
