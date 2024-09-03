@@ -2,7 +2,6 @@
     Sept16 zig - add coe_below_header widget area
 	4Oct16 zig - add gtm function call.
     13Dec16 zig - add google custom search to header search.
-	4Sept24 zig - add heap.io analytics
 */ ?>
 
 <!DOCTYPE html>
@@ -13,13 +12,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php if ( lsvr_get_image_field( 'favicon' ) ) { ?><link rel="shortcut icon" href="<?php echo lsvr_get_image_field( 'favicon' ); ?>"><?php } ?>
-	<?php /* zig: heap.io analytics */ ?>
-	<script type="text/javascript">
-		window.heapReadyCb=window.heapReadyCb||[],window.heap=window.heap||[],heap.load=function(e,t){window.heap.envId=e,window.heap.clientConfig=t=t||{},window.heap.clientConfig.shouldFetchServerConfig=!1;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://cdn.us.heap-api.com/config/"+e+"/heap_config.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(a,r);var n=["init","startTracking","stopTracking","track","resetIdentity","identify","getSessionId","getUserId","getIdentity","addUserProperties","addEventProperties","removeEventProperty","clearEventProperties","addAccountProperties","addAdapter","addTransformer","addTransformerFn","onReady","addPageviewProperties","removePageviewProperty","clearPageviewProperties","trackPageview"],i=function(e){return function(){var t=Array.prototype.slice.call(arguments,0);window.heapReadyCb.push({name:e,fn:function(){heap[e]&&heap[e].apply(heap,t)}})}};for(var p=0;p<n.length;p++)heap[n[p]]=i(n[p])};
-		heap.load("2528205776");
-	</script>
     <?php wp_head(); ?>
-	
 </head>
 
 <?php $page_id = lsvr_get_current_page_id(); ?>
