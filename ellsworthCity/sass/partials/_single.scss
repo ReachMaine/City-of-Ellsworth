@@ -1,0 +1,14 @@
+/*  styling for single posts, notices & documents */
+/* moving date & meta to top of single articles */
+.notice-page .notice-header,
+.article-page .article-header
+{  // similar to notice footer
+        border-bottom: 1px solid #f0f0f0;// light grey
+        margin: 0 30px 0 30px;
+        padding: 10px 0 10px 0;
+        font-size: 0.875em;
+        .notice-date,
+        .article-date {
+            padding-left: 0px;
+        }
+   }

@@ -52,3 +52,5 @@ Temporary Items
 *.zip
 ellsworthCity/overrides/lsvr-toolkit-townpress/shortcodes/documents1.3.3.php
 ellsworthCity/overrides/lsvr-toolkit-townpress/widgets/notices1.3.3.php
+*.map
+*.css

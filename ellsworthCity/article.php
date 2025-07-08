@@ -1,6 +1,7 @@
 <?php // SINGLE POST
 /* 6jul16 zig - use exceprt for archive 
  *  4Oct16 zig - single put image inside article s.t. text will wrap around.
+ *  8July25 zig - move posted date to top of article.
  */ 
 
 if ( is_single() ) : ?>
@@ -9,6 +10,47 @@ if ( is_single() ) : ?>
 		<div class="c-content-box m-no-padding article-inner">
 
 			<?php /* zxout moved image stuff. */ ?>
+			<!-- ARTICLE HEADER : begin -->
+			<div class="article-header">
+				<div class="article-header-inner">
+
+					<!-- ARTICLE DATE : begin -->
+					<div class="article-date">
+
+						<i class="ico tp tp-clock2"></i>
+						<span class="article-date-holder">
+						<?php if ( lsvr_get_field( 'article_detail_categories_enable', true, true ) ) : ?>
+							<?php $categories_html = ''; ?>
+							<?php $terms = wp_get_post_terms( get_the_id(), 'category' ); ?>
+							<?php foreach ( $terms as $term ) : ?>
+								<?php $categories_html .= '<a href="' . get_term_link( $term ) . '">' . $term->name . '</a>, '; ?>
+							<?php endforeach; ?>
+							<?php if ( $categories_html !== '' ) : ?>
+								<?php $categories_html = rtrim( $categories_html, ', ' ); ?>
+								<?php echo sprintf( '%s in %s', get_the_date(), $categories_html ); ?>
+							<?php else: ?>
+								<?php echo get_the_date(); ?>
+							<?php endif; ?>
+						<?php else: ?>
+							<?php echo get_the_date(); ?>
+						<?php endif; ?>
+						</span>
+
+					</div>
+					<!-- ARTICLE DATE : end -->
+
+					<?php if ( has_tag() && lsvr_get_field( 'article_detail_tags_enable', true, true ) ) : ?>
+					<!-- ARTICLE TAGS : begin -->
+					<div class="article-tags">
+						<i class="ico tp tp-tag"></i>
+						<?php the_tags( '', ', ', '' ); ?>
+					</div>
+					<!-- ARTICLE TAGS : end -->
+					<?php endif; ?>
+
+				</div>
+			</div>
+			<!-- ARTICLE HEADER : end -->
 
 			<!-- ARTICLE CORE : begin -->
 			<div class="article-core">
@@ -45,25 +87,6 @@ if ( is_single() ) : ?>
 					<!-- ARTICLE DATE : begin -->
 					<div class="article-date">
 
-						<i class="ico tp tp-clock2"></i>
-						<span class="article-date-holder">
-						<?php if ( lsvr_get_field( 'article_detail_categories_enable', true, true ) ) : ?>
-							<?php $categories_html = ''; ?>
-							<?php $terms = wp_get_post_terms( get_the_id(), 'category' ); ?>
-							<?php foreach ( $terms as $term ) : ?>
-								<?php $categories_html .= '<a href="' . get_term_link( $term ) . '">' . $term->name . '</a>, '; ?>
-							<?php endforeach; ?>
-							<?php if ( $categories_html !== '' ) : ?>
-								<?php $categories_html = rtrim( $categories_html, ', ' ); ?>
-								<?php echo sprintf( '%s in %s', get_the_date(), $categories_html ); ?>
-							<?php else: ?>
-								<?php echo get_the_date(); ?>
-							<?php endif; ?>
-						<?php else: ?>
-							<?php echo get_the_date(); ?>
-						<?php endif; ?>
-						</span>
-
 						<?php if ( lsvr_get_field( 'article_detail_author_enable', false, true ) ) : ?>
 						<span class="article-author">
 							<?php echo sprintf( 'by %s', get_the_author_posts_link() ); ?>
@@ -80,14 +103,6 @@ if ( is_single() ) : ?>
 					</div>
 					<!-- ARTICLE DATE : end -->
 
-					<?php if ( has_tag() && lsvr_get_field( 'article_detail_tags_enable', true, true ) ) : ?>
-					<!-- ARTICLE TAGS : begin -->
-					<div class="article-tags">
-						<i class="ico tp tp-tag"></i>
-						<?php the_tags( '', ', ', '' ); ?>
-					</div>
-					<!-- ARTICLE TAGS : end -->
-					<?php endif; ?>
 
 				</div>
 			</div>
