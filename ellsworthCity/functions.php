@@ -46,6 +46,7 @@ require_once(get_stylesheet_directory().'/custom/tribe-events.php');
 require_once(get_stylesheet_directory().'/custom/wp-job-manager.php');
 require_once(get_stylesheet_directory().'/custom/searchwp.php');
 require_once(get_stylesheet_directory().'/custom/lsr-documents-widget.php');
+require_once(get_stylesheet_directory().'/custom/gform.php');
 
 add_filter('widget_text', 'do_shortcode'); // make text widget do shortcodes....
 
