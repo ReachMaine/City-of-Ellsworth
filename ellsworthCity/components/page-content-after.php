@@ -46,8 +46,8 @@
 
 	<?php if ( $sidebar_menu_position === 'left' ) : ?>
 		<div class="side-menu<?php echo esc_attr( $side_menu_class ); ?>">
-			<?php // MAIN MENU
-			get_template_part( 'components/menu-main' ); ?>
+			<?php //sidebar menu
+			get_template_part( 'components/menu-sidebar' ); /*zig use sidebar meny */ ?>
 		</div>
 	<?php endif; ?>
 
@@ -62,8 +62,8 @@
 
 	<?php if ( $sidebar_menu_position === 'right' ) : ?>
 		<div class="side-menu<?php echo esc_attr( $side_menu_class ); ?>">
-			<?php // MAIN MENU
-			get_template_part( 'components/menu-main' ); ?>
+			<?php // SIDEBAR MENU
+			get_template_part( 'components/menu-sidebar' );  /*zig use sidebar meny */  ?>
 		</div>
 	<?php endif; ?>
 

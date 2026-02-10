@@ -1,0 +1,18 @@
+/* styling for  menus */
+
+// sidebar menu
+
+
+.side-menu nav>ul>li { // top level
+    font-size: 1.4em!important;
+    
+}
+
+.side-menu nav>ul>li>a {
+    // top level sidebar nave
+    text-transform: none!important;
+}
+
+.side-menu ul.sub-menu {
+    border: 1px solid $coe-maroon;
+}

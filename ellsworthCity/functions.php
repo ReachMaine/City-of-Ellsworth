@@ -97,8 +97,7 @@ function reach_custom_widgets() {
 }
 add_action( 'widgets_init', 'reach_custom_widgets' );
 
-	// trying to use mobile menu (instead of main menu) when on mobile
-	register_nav_menu('mobile-menu', __( 'Mobile Menu', 'lsvrtheme' ));
+
 
 	// allow shortcodes in contact form 7...
 	add_filter( 'wpcf7_form_elements', 'mycustom_wpcf7_form_elements' );
@@ -192,5 +191,16 @@ add_action( 'widgets_init', 'reach_custom_widgets' );
 	}
 	add_filter('post_class', 'cpt_sticky_class');
 
+	function register_reach_menus() {
+		//  use mobile menu (instead of main menu) when on mobile
+		register_nav_menu('mobile-menu', __( 'Mobile Menu', 'lsvrtheme' ));
+	  register_nav_menus(
+		array(
+		'sidebar-menu' => __( 'Sidebar Menu' ),
+		'top-menu' => __( 'Header Top Menu' )
+		)
+	  );
+    }
+	add_action( 'init', 'register_reach_menus' );
 
 ?>
