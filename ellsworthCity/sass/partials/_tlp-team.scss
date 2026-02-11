@@ -1,0 +1,28 @@
+/* styling for Teams plugin */
+
+/* all teams */
+.rt-team-container {
+    .single-team-area {
+        img.rt-team-img {
+            max-width: 300px;
+            margin:auto;
+        }
+        .tlp-content {
+            padding-bottom: 0px!important;
+            h3 {
+                margin-top: 0px!important;
+                margin-bottom: 0px!important;
+            }
+        }
+        .contact-info {
+            padding-top: 5px;
+            a {
+                color: $coe-maroon!important;
+                font-weight: normal!important;
+            }
+        }
+    }
+
+}
+
+/* layout 3 */
