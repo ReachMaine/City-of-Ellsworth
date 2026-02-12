@@ -3,15 +3,17 @@
 /* all teams */
 .rt-team-container {
     .single-team-area {
+        img.default-img,
         img.rt-team-img {
             max-width: 300px;
             margin:auto;
         }
         .tlp-content {
             padding-bottom: 0px!important;
-            h3 {
+            h3 { // the name
                 margin-top: 0px!important;
                 margin-bottom: 0px!important;
+                font-weight: bold;
             }
         }
         .contact-info {
