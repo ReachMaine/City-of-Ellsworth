@@ -39,7 +39,6 @@ add_action( 'wp_enqueue_scripts', 'lsvr_load_child_scripts' );
 
 // add your code here
 require_once(get_stylesheet_directory().'/custom/townpress.php');
-require_once(get_stylesheet_directory().'/custom/ourteam.php');
 require_once(get_stylesheet_directory().'/custom/language.php');
 require_once(get_stylesheet_directory().'/custom/custom.php');
 require_once(get_stylesheet_directory().'/custom/tribe-events.php');
