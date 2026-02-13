@@ -12,8 +12,8 @@ function custom_job_manager_job_listing_data_fields( $fields ) {
 	global $post;
 
 	// default values for some
-    $fields['_job_location']['value'] = metadata_exists( 'post', $post->ID, '_job_location' ) ? get_post_meta( $post->ID, '_job_location', true ) : "Ellsworth, Maine";
-	$fields['_company_name']['value'] = metadata_exists( 'post', $post->ID, '_company_name' ) ? get_post_meta( $post->ID, '_company_name', true ) : "City of Ellsworth";
+    //$fields['_job_location']['value'] = metadata_exists( 'post', $post->ID, '_job_location' ) ? get_post_meta( $post->ID, '_job_location', true ) : "Ellsworth, Maine";
+	//$fields['_company_name']['value'] = metadata_exists( 'post', $post->ID, '_company_name' ) ? get_post_meta( $post->ID, '_company_name', true ) : "City of Ellsworth";
 
 	// remove some
 	unset($fields['_company_video']);

@@ -128,6 +128,7 @@ add_action( 'widgets_init', 'reach_custom_widgets' );
  * function tied to the get_the_excerpt filter hook.
  */
 	function coe_custom_excerpt_more( $output ) {
+		global $post;
 		if ( /* has_excerpt() && */ ! is_attachment() ) {
 			$output .= '<a class="moretag" href="'. get_permalink($post->ID) . '"> ....Read More</a>';
 		} else {
