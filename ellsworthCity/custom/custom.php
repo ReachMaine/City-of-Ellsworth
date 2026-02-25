@@ -47,6 +47,7 @@
 
 		// GET POSTS
 		$documents = get_posts( $q_args );
+		$htmlout = "";
 		if ( !empty( $documents ) ) {
 			// should only be one, but JIC
 			foreach ( $documents as $document ) {
