@@ -20,3 +20,16 @@ $calendar-link-color: #781514;
 	.single-tribe_events a.tribe-events-ical {
 		color: $calendar-link-color;
 	}
+
+	/* styling of monthly calendar */
+	.tribe-events-calendar-month {
+		.tribe-events-calendar-month__header {
+			.tribe-events-calendar-month__header-column{
+				width: 100%;
+				.tribe-events-calendar-month__header-column-title {
+					color: white;
+					text-align: center;
+				}
+			}
+		}
+	}
