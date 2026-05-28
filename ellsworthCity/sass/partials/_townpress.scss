@@ -24,8 +24,8 @@
 	-------------------------------------------------------------------------- */
 
 	// MAIN PALETTE
-	$accent: #781514; // primary accent color
-	$accent-bg: #781514; // accent color as background (footer-bottom)
+	$accent: $coe-maroon; // primary accent color
+	$accent-bg: $coe-maroon; // accent color as background (footer-bottom)
 	$xx-soft-gray: #fcfcfc; // very very soft backgrounds
 	$x-soft-gray: #f0f0f0; // very soft backgrounds
 	$soft-gray: #e5e5e5; // soft background
@@ -35,7 +35,7 @@
 	$x-dark-gray: #1a1a1a; // titles, strong text on bright bg
 
 	// GENERAL
-	$body-bg: #f2f2f2;
+	$body-bg: #f7f4ed; //#f2f2f2;
 	$body-font: #565656;
 	$body-link: $accent;
 	$content-bg: #FFF;
@@ -102,7 +102,9 @@
 	pre { border-color: $soft-gray; }
 
 	// HEADINGS
-	h1, h2, h3, h4, h5, h6 { color: $dark-gray; }
+	h1, h2, h3, h4, h5, h6 { color: $dark-gray; 
+		font-family: "Fira Sans Condensed", Arial, sans-serif; 
+	}
 
 	// TABLE
 	table thead th { color: #FFF; background-color: $accent; }
@@ -477,7 +479,10 @@
 
 	// HEADER IMAGE
 	.header-image:after { background-color: transparent; @include vertical-gradient( rgba( $body-bg, 0 ), $body-bg ); }
-	.header-image .image-layer { background-color: #FFF; }
+	.header-image .image-layer { 
+		background-color: #FFF; 
+		box-shadow: inset 0 0 0 500px rgb(255 255 255 / 50%); // 2026 rebrand - white layer over header bkg image.
+	}
 
 
 /* -----------------------------------------------------------------------------

@@ -21,6 +21,9 @@ Version:        1.0.0
 /* =Theme customization starts here */
 .header-content {
 	.header-branding {
+		img {
+			max-width:300px;
+		}
 		//padding-bottom: 0px;
 	}
 }
@@ -199,7 +202,7 @@ div.ells-accordion-title h4.accordion-title {
 	//font-size: 1.5em;
 	font-size: 1.25em;
 	text-transform: none;
-	color: #781514;
+	color: $coe-maroon;
 }
 
 
@@ -327,7 +330,7 @@ article.notice.sticky .notice-date {
 
 @media (max-width: 768px) {
 	.coe_doc_in_tab {
-		border-top: 2px solid #781514;
+		border-top: 2px solid $coe-maroon;
 		padding-top: 8px;
 
 }
@@ -335,7 +338,7 @@ article.notice.sticky .notice-date {
 
 @media (min-width: 769px) {
 	.coe_doc_in_tab {
-		border-left: 2px solid #781514;
+		border-left: 2px solid $coe-maroon;
 
 }
 }
