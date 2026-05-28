@@ -35,13 +35,13 @@
 	$x-dark-gray: #1a1a1a; // titles, strong text on bright bg
 
 	// GENERAL
-	$body-bg: #f7f4ed; //#f2f2f2;
+	$body-bg: $coe-neutral;// #f7f4ed; //#f2f2f2;
 	$body-font: #565656;
 	$body-link: $accent;
 	$content-bg: #FFF;
 
 	// FOOTER
-	$footer-bg: #111111;
+	$footer-bg: $coe-maroon;//  #111111;
 
 	/* -------------------------------------------------------------------------
 		MIXINS
@@ -845,8 +845,9 @@
 
 	.footer-top { 
 		border-top: 2px solid $accent-bg;
-		color: $medium-gray; background-color: 
-		$footer-bg; background-color: rgba( $footer-bg, .8 ); 
+		color: $medium-gray; 
+		background-color:  $footer-bg; 
+		//background-color: rgba( $footer-bg, .8 ); 
 	}
 	.footer-top .c-separator { border-color: #303030; border-color: rgba( #FFF, .1 ); }
 
@@ -857,7 +858,21 @@
 	#bottom-panel {
 		a { color: #FFF;}
 		h1, h2, h3, h4, h5, h6 { color: $medium-gray; }
-		input { color: #FFF; background-color: #000; background-color: rgba( #000, .8 ); }
+		input { 
+			color: #FFF; 
+			color: black;
+			background-color: #000; 
+			background-color: rgba( #000, .8 ); 
+		}
+		input[type="email"] {
+			background-color:$coe-neutral;
+		}
+		input[type="submit"] {
+			background-color: $coe-cloud;
+		}
+		input[type="submit"]:hover {
+			background-color: $coe-neutral;
+		}
 		label { color: #FFF; }
 
 		.widget-title { color: #FFF; }
@@ -1021,7 +1036,7 @@
 		.footer-bottom-inner {
 			padding-top: 20px;
 			padding-bottom: 20px;
-			border-top: 2px solid $x-dark-gray; //#1d1d1d;
+			border-top: 2px solid rgba($coe-neutral, .6); // $x-dark-gray; //#1d1d1d;
 			.footer-text {
 				color: #f2f2f2;
 			}
