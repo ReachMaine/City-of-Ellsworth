@@ -29,3 +29,18 @@
     margin-right: 20px!important;
   }
 }
+.gform_wrapper {
+  .gform_footer {
+		// button styling
+		input[type=submit] {
+
+			background-color: $coe-maroon!important;
+
+			letter-spacing: 1px;
+		}
+
+		input[type=submit]:hover {
+			background-color: rgba($coe-maroon, 0.8)!important;
+		}
+	}
+}
