@@ -1,0 +1,19 @@
+Notes lsvrdocuments as plugin.
+
+
+Documents (and notices?)
+
+define CPT for documents  (see townpress/includes/plugins/CPT)
+
+archive-lsvrdocument.php (pulls post meta from document 
+taxonomy-lsvrdocument.php -> calls archive 
+
+single-lsvrdocument.php 
+
+
+Widgets?  townpress/lsvrtoolkit/widgets
+	- one for category  document-categories?
+	- one for ids documents
+
+shortcodes  (townpress/includes/shortcodes/documents)
+
